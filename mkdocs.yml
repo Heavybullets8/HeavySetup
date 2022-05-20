@@ -1,4 +1,11 @@
 site_name: Heavy Setup
+site_description: My personal Truenas SCALE application setups
+site_author: Heavybullets8
+site_url: https://heavybullets8.github.io/HeavySetup/
+
+repo_url: https://github.com/Heavybullets8/HeavySetup
+repo_name: HeavySetup
+
 nav:
   - Introduction: "index.md"
   - General Guides:
