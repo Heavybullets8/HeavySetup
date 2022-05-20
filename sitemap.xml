@@ -6,32 +6,62 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://heavybullets8.github.io/HeavySetup/app_installation/notifiarr/notifiarr/</loc>
+         <loc>https://heavybullets8.github.io/HeavySetup/applications/notifiarr/in-app/</loc>
          <lastmod>2022-05-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://heavybullets8.github.io/HeavySetup/app_installation/nzbget/nzbget/</loc>
+         <loc>https://heavybullets8.github.io/HeavySetup/applications/notifiarr/installation/</loc>
          <lastmod>2022-05-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://heavybullets8.github.io/HeavySetup/app_installation/qbittorrent/qbittorrent/</loc>
+         <loc>https://heavybullets8.github.io/HeavySetup/applications/nzbget/in-app/</loc>
          <lastmod>2022-05-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://heavybullets8.github.io/HeavySetup/app_installation/radarr/radarr/</loc>
+         <loc>https://heavybullets8.github.io/HeavySetup/applications/nzbget/installation/</loc>
          <lastmod>2022-05-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://heavybullets8.github.io/HeavySetup/app_installation/sonarr/sonarr/</loc>
+         <loc>https://heavybullets8.github.io/HeavySetup/applications/qbittorrent/in-app/</loc>
          <lastmod>2022-05-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://heavybullets8.github.io/HeavySetup/app_installation/syncthing/syncthing/</loc>
+         <loc>https://heavybullets8.github.io/HeavySetup/applications/qbittorrent/installation/</loc>
+         <lastmod>2022-05-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heavybullets8.github.io/HeavySetup/applications/radarr/in-app/</loc>
+         <lastmod>2022-05-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heavybullets8.github.io/HeavySetup/applications/radarr/installation/</loc>
+         <lastmod>2022-05-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heavybullets8.github.io/HeavySetup/applications/sonarr/in-app/</loc>
+         <lastmod>2022-05-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heavybullets8.github.io/HeavySetup/applications/sonarr/installation/</loc>
+         <lastmod>2022-05-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heavybullets8.github.io/HeavySetup/applications/syncthing/in-app/</loc>
+         <lastmod>2022-05-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heavybullets8.github.io/HeavySetup/applications/syncthing/installation/</loc>
          <lastmod>2022-05-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -42,26 +72,6 @@
     </url>
     <url>
          <loc>https://heavybullets8.github.io/HeavySetup/general_guides/storage_permissions/</loc>
-         <lastmod>2022-05-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://heavybullets8.github.io/HeavySetup/in_app_setup/nzbget/</loc>
-         <lastmod>2022-05-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://heavybullets8.github.io/HeavySetup/in_app_setup/qbittorrent/</loc>
-         <lastmod>2022-05-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://heavybullets8.github.io/HeavySetup/in_app_setup/radarr/</loc>
-         <lastmod>2022-05-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://heavybullets8.github.io/HeavySetup/in_app_setup/sonarr/</loc>
          <lastmod>2022-05-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
