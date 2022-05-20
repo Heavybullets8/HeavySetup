@@ -1,15 +1,19 @@
-name: ci 
+name: Deploy docs to GitHub Pages via mkdocs
+
 on:
   push:
     branches:
-      - master 
+      - master
+
 jobs:
   deploy:
+    name: Deploy docs
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: '0'
+      - uses: actions/setup-python@v3
         with:
           python-version: 3.x
-      - run: pip install mkdocs-material 
       - run: mkdocs gh-deploy --force
