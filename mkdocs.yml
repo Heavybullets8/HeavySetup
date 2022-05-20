@@ -1,0 +1,42 @@
+site_name: Heavy Setup
+nav:
+  - Introduction: "index.md"
+  - General Guides:
+    - Storage Permissions: "general_guides/storage_permissions.md"
+    - Folder Structure: "general_guides/folder_structure.md"
+  - App Installation:
+      - NZBGet: "app_installation/nzbget/nzbget.md"
+      - qBittorrent: "app_installation/qbittorrent/qbittorrent.md"
+      - Syncthing: "app_installation/syncthing/syncthing.md"
+      - Radarr: "app_installation/radarr/radarr.md"
+      - Sonarr: "app_installation/sonarr/sonarr.md"
+      - Notifiarr: "app_installation/notifiarr/notifiarr.md"
+  - App Setup:
+      - NZBGet: "in_app_setup/nzbget.md" 
+      - qBittorrent: "in_app_setup/qbittorrent.md"
+      - Radarr: "in_app_setup/radarr.md"
+      - Sonarr: "in_app_setup/sonarr.md"
+
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.top
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      primary: indigio
+      accent: blue
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: black
+      accent: blue
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
