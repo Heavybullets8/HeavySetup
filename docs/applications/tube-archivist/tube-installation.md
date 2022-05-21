@@ -70,7 +70,7 @@ ELASTIC_PASSWORD
 ```
 **Value**
 ```
-verysecure
+verysecret
 ```
 
 ![!env1: Tube](ta-env2.png)
