@@ -844,6 +844,109 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7">
+          Tube archivist
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tube archivist" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          Tube archivist
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tube-archivist/dataset/" class="md-nav__link">
+        Datasets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tube-archivist/tube-installation/" class="md-nav__link">
+        TubeArchivist Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tube-archivist/es-installation/" class="md-nav__link">
+        Elasticsearch Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tube-archivist/redis-installation/" class="md-nav__link">
+        Redis Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tube-archivist/in-app/" class="md-nav__link">
+        In App Settings
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -949,11 +1052,11 @@
 <p>There is no built in Truecharts version of this application</p>
 <p>But thats okay, we'll use Custom-app for this application instead</p>
 <p><strong>Container Repository</strong></p>
-<pre><code>golift/notifiarr
-</code></pre>
+<div class="highlight"><pre><span></span><code>golift/notifiarr
+</code></pre></div>
 <p><strong>Container Tag</strong></p>
-<pre><code>heavy
-</code></pre>
+<div class="highlight"><pre><span></span><code>heavy
+</code></pre></div>
 <p>We got our own tag for Kubernetes </p>
 <p><img alt="!Networking: NZBGet" src="../container.png" /></p>
 <p><br /></p>
@@ -985,15 +1088,15 @@
 <p>So, this isn't as easy as just taking screenshots.. </p>
 <p>You'll need to go to Notifiarrs site, and look at <a href="https://notifiarr.wiki/en/Client/Configuration">their documentation</a> as well</p>
 <p>Ensure the config file is named: </p>
-<pre><code>notifiarr.conf
-</code></pre>
+<div class="highlight"><pre><span></span><code>notifiarr.conf
+</code></pre></div>
 <p>Also ensure the directory has the following permissions:</p>
 <p><img alt="!Networking: NZBGet" src="../storage_permissions.png" /></p>
 <p>Here is a template that I use:</p>
 <ul>
 <li>Note I do not use Lidarr, or anything else, so this is a very slimmed down version of the configuration file</li>
 </ul>
-<pre><code>###############################################
+<div class="highlight"><pre><span></span><code>###############################################
 # Notifiarr Client Example Configuration File #
 # Created by Notifiarr v0.2.0   @ 212410T2154 #
 ###############################################
@@ -1020,7 +1123,7 @@ auto_update = &quot;off&quot;
 ##
 quiet = true
 debug = false
-debug_log = '/config/debug.log'
+debug_log = &#39;/config/debug.log&#39;
 
 ## All API paths start with /api. This does not affect incoming /plex webhooks.
 ## Change it to /somethingelse/api by setting urlbase to &quot;/somethingelse&quot;
@@ -1028,7 +1131,7 @@ debug_log = '/config/debug.log'
 urlbase = &quot;/&quot;
 
 ## Allowed upstream networks. The networks here are allowed to send x-forwarded-for.
-## Set this to your reverse proxy server's IP or network. If you leave off the mask,
+## Set this to your reverse proxy server&#39;s IP or network. If you leave off the mask,
 ## then /32 or /128 is assumed depending on IP version. Empty by default. Example:
 ##
 upstreams = [ &quot;172.16.0.0/12&quot; ]
@@ -1096,10 +1199,8 @@ api_key   = &quot;SONARR_API_KEY_HERE&quot;
   disabled = false   # Setting this to true disables all service checking routines.
   parallel = 1       # How many services to check concurrently. 1 should be enough.
   interval = &quot;10m0s&quot; # How often to send service states to Notifiarr.com. Minimum = 5m.
-  log_file = ''      # Service Check logs go to the app log by default. Change that by setting a services.log file here.
-
-
-</code></pre>
+  log_file = &#39;&#39;      # Service Check logs go to the app log by default. Change that by setting a services.log file here.
+</code></pre></div>
 <p><br /></p>
 
               

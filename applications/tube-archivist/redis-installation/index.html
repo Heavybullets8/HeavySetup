@@ -12,14 +12,14 @@
         <meta name="author" content="Heavybullets8">
       
       
-        <link rel="canonical" href="https://heavybullets8.github.io/HeavySetup/applications/syncthing/installation/">
+        <link rel="canonical" href="https://heavybullets8.github.io/HeavySetup/applications/tube-archivist/redis-installation/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
     
     
       
-        <title>Installation - Heavy Setup</title>
+        <title>Redis Installation - Heavy Setup</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#networking" class="md-skip">
+        <a href="#container" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installation
+              Redis Installation
             
           </span>
         </div>
@@ -706,14 +706,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
       
       
       
@@ -734,82 +732,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Installation
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../syncthing/installation/" class="md-nav__link">
         Installation
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#networking" class="md-nav__link">
-    Networking
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#storage" class="md-nav__link">
-    Storage
-  </a>
-  
-    <nav class="md-nav" aria-label="Storage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    Configuration
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data" class="md-nav__link">
-    Data
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vpn" class="md-nav__link">
-    VPN
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -821,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../in-app/" class="md-nav__link">
+      <a href="../../syncthing/in-app/" class="md-nav__link">
         In App Settings
       </a>
     </li>
@@ -840,12 +767,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" checked>
       
       
       
@@ -868,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tube-archivist/dataset/" class="md-nav__link">
+      <a href="../dataset/" class="md-nav__link">
         Datasets
       </a>
     </li>
@@ -882,7 +811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tube-archivist/tube-installation/" class="md-nav__link">
+      <a href="../tube-installation/" class="md-nav__link">
         TubeArchivist Installation
       </a>
     </li>
@@ -896,7 +825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tube-archivist/es-installation/" class="md-nav__link">
+      <a href="../es-installation/" class="md-nav__link">
         Elasticsearch Installation
       </a>
     </li>
@@ -908,11 +837,69 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../tube-archivist/redis-installation/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Redis Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Redis Installation
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#container" class="md-nav__link">
+    Container
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#networking" class="md-nav__link">
+    Networking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage" class="md-nav__link">
+    Storage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    Security
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -924,7 +911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tube-archivist/in-app/" class="md-nav__link">
+      <a href="../in-app/" class="md-nav__link">
         In App Settings
       </a>
     </li>
@@ -970,6 +957,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#container" class="md-nav__link">
+    Container
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#networking" class="md-nav__link">
     Networking
   </a>
@@ -981,31 +975,11 @@
     Storage
   </a>
   
-    <nav class="md-nav" aria-label="Storage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    Configuration
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#data" class="md-nav__link">
-    Data
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#vpn" class="md-nav__link">
-    VPN
+  <a href="#security" class="md-nav__link">
+    Security
   </a>
   
 </li>
@@ -1022,38 +996,55 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/Heavybullets8/HeavySetup/edit/master/docs/applications/syncthing/installation.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/Heavybullets8/HeavySetup/edit/master/docs/applications/tube-archivist/redis-installation.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-  <h1>Installation</h1>
+  <h1>Redis Installation</h1>
 
-<h2 id="networking">Networking</h2>
-<p>If you are wanting to use ingress, its probably better to use clusterIP instead</p>
+<p>For this application I used the <code>Custom-App</code> provided by <a href="https://truecharts.org/manual/Quick-Start%20Guides/01-Adding-TrueCharts/">TrueCharts</a>.</p>
 <ul>
-<li>I changed the UDP and TCP port to match the Mullvad ports allocated to me</li>
+<li>Available under the <code>stable</code> train</li>
 </ul>
-<p><img alt="!Networking: qbittorrent" src="../networking.png" /></p>
-<p><img alt="!Networking: qbittorrent" src="../networking_listening.png" /></p>
+<p><br /></p>
+<h2 id="container">Container</h2>
+<p><strong>Application Name</strong>
+<div class="highlight"><pre><span></span><code>ta-redis
+</code></pre></div>
+The name is very important, as it determines our DNS names, which is how we are going to connect the applications together..</p>
+<p>You don't HAVE to follow my naming scheme, but if you don't, you'll have to also change your DNS name</p>
+<p><strong>Container Repository</strong>
+<div class="highlight"><pre><span></span><code>redislabs/rejson
+</code></pre></div>
+<strong>Container Tag</strong>
+<div class="highlight"><pre><span></span><code>latest
+</code></pre></div></p>
+<p><img alt="!Container: Tube" src="../redis-container.png" /></p>
+<p><br /></p>
+<h2 id="networking">Networking</h2>
+<p><strong>Target Port</strong>
+<div class="highlight"><pre><span></span><code>6379
+</code></pre></div>
+<strong>Port</strong>
+<div class="highlight"><pre><span></span><code>6379
+</code></pre></div></p>
+<p><img alt="!Networking: Tube" src="../redis-networking.png" /></p>
 <p><br /></p>
 <h2 id="storage">Storage</h2>
-<h3 id="configuration">Configuration</h3>
-<p>The setup is default</p>
-<p><img alt="!Storage: NZBGet" src="../storage_config.png" /></p>
-<h3 id="data">Data</h3>
-<p>I always mount to the root directory of the container</p>
-<p>I also try to use the applications name for the mountpath, since its typically never going to be a file or folder thats already present </p>
-<p><img alt="!Storage: NZBGet" src="../storage_data.png" /></p>
-<p><br /></p>
-<h2 id="vpn">VPN</h2>
 <ul>
-<li>Using a Wireguard setup</li>
-<li>Added the kubernetes network, as well as my LAN network to the killswitch</li>
-<li>Using a VPN for this application is in no way mandatory at all, I just simply felt safer transmitting data encrypted</li>
+<li>I am using PVC in this case since this is not something the user will need to interact with </li>
 </ul>
-<p><img alt="!Storage: NZBGet" src="../vpn.png" /></p>
+<p>Ensure the mountpath is:
+<div class="highlight"><pre><span></span><code>/data
+</code></pre></div></p>
+<p>Redis specifically looks to that mount point, its required</p>
+<p><img alt="!Storage: Tube" src="../redis-storage.png" /></p>
+<p><br /></p>
+<h2 id="security">Security</h2>
+<p>This application runs fine with default permissions</p>
+<p><img alt="!Storage: Tube" src="../redis-security.png" /></p>
 <p><br /></p>
 
               
@@ -1073,7 +1064,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../sonarr/in-app/" class="md-footer__link md-footer__link--prev" aria-label="Previous: In App Settings" rel="prev">
+        <a href="../es-installation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Elasticsearch Installation" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1082,7 +1073,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              In App Settings
+              Elasticsearch Installation
             </div>
           </div>
         </a>
