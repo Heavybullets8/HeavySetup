@@ -68,6 +68,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#download-format" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -855,9 +860,52 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          In App Settings
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         In App Settings
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#download-format" class="md-nav__link">
+    Download Format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrations" class="md-nav__link">
+    Integrations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduler-setup" class="md-nav__link">
+    Scheduler Setup
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -895,6 +943,35 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#download-format" class="md-nav__link">
+    Download Format
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integrations" class="md-nav__link">
+    Integrations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduler-setup" class="md-nav__link">
+    Scheduler Setup
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -913,7 +990,46 @@
 
   <h1>In App Settings</h1>
 
-
+<p>Theres nothing specific to Truenas Scale after setting up your application. </p>
+<p>I will still however, share my settings.</p>
+<h2 id="download-format">Download Format</h2>
+<p>This is completely subjective, but I have been using this profile for a while, as it allows playback on my phone, embedded thumbnails, as well as good quality. 
+<div class="highlight"><pre><span></span><code>bestvideo+bestaudio/mkv
+</code></pre></div></p>
+<p>Current metadata embed setting: <code>True</code></p>
+<p>Current thumbnail embed setting: <code>True</code></p>
+<p><img alt="!DL Format: Tube" src="../in-app_Download_Format.png" /></p>
+<p><br /></p>
+<h2 id="integrations">Integrations</h2>
+<p>Integrate with returnyoutubedislike.com to get dislikes and average ratings back: <code>True</code></p>
+<ul>
+<li>I like to be able to see dislikes on videos</li>
+</ul>
+<p>Integrate with SponsorBlock to get sponsored timestamps: <code>True</code></p>
+<ul>
+<li>Skips in-video advertisements</li>
+</ul>
+<p>Current Cast integration: <code>True</code></p>
+<ul>
+<li>Ability to chromecast your videos</li>
+</ul>
+<p><img alt="!Integrations: Tube" src="../in-app_integrations.png" /></p>
+<p><br /></p>
+<h2 id="scheduler-setup">Scheduler Setup</h2>
+<p><strong>Rescan Subscriptions</strong>
+<div class="highlight"><pre><span></span><code>0 * * 
+</code></pre></div></p>
+<ul>
+<li>Scans subscriptions for new videos every hour</li>
+</ul>
+<p><strong>Start download</strong>
+<div class="highlight"><pre><span></span><code>30 * *
+</code></pre></div></p>
+<ul>
+<li>Downloads new videos picked up by <code>Rescan Subscriptions</code> every hour, on the 30 minute mark</li>
+</ul>
+<p><img alt="!Scheduler: Tube" src="../in-app_scheduler.png" /></p>
+<p><br /></p>
 
               
             </article>
