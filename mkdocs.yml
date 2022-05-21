@@ -28,15 +28,15 @@ theme:
   language: en
   palette:
     - media: "(prefers-color-scheme: dark)"
-      primary: indigio
-      accent: blue
+      primary: black
+      accent: blue gray
       scheme: slate
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       primary: black
-      accent: blue
+      accent: white
       scheme: default
       toggle:
         icon: material/toggle-switch-off-outline
