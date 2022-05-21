@@ -5,7 +5,17 @@ site_url: https://heavybullets8.github.io/HeavySetup/
 
 repo_url: https://github.com/Heavybullets8/HeavySetup
 repo_name: HeavySetup
-     
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.highlight
 plugins:
     - search
     - awesome-pages
