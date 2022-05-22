@@ -12,14 +12,14 @@
         <meta name="author" content="Heavybullets8">
       
       
-        <link rel="canonical" href="https://heavybullets8.github.io/HeavySetup/applications/tube-archivist/redis-installation/">
+        <link rel="canonical" href="https://heavybullets8.github.io/HeavySetup/applications/syncthing/cron/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
     
     
       
-        <title>Redis Installation - Heavy Setup</title>
+        <title>Cron Job - Heavy Setup</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#container" class="md-skip">
+        <a href="#reasoning" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Redis Installation
+              Cron Job
             
           </span>
         </div>
@@ -720,12 +720,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" checked>
       
       
       
@@ -748,7 +750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../syncthing/datasets/" class="md-nav__link">
+      <a href="../datasets/" class="md-nav__link">
         Datasets
       </a>
     </li>
@@ -762,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../syncthing/installation/" class="md-nav__link">
+      <a href="../installation/" class="md-nav__link">
         Installation
       </a>
     </li>
@@ -776,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../syncthing/in-app/" class="md-nav__link">
+      <a href="../in-app/" class="md-nav__link">
         In App Settings
       </a>
     </li>
@@ -788,11 +790,55 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../syncthing/cron/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Cron Job
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Cron Job
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reasoning" class="md-nav__link">
+    Reasoning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cron-job" class="md-nav__link">
+    Cron Job
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -809,14 +855,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" >
       
       
       
@@ -839,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dataset/" class="md-nav__link">
+      <a href="../../tube-archivist/dataset/" class="md-nav__link">
         Datasets
       </a>
     </li>
@@ -853,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tube-installation/" class="md-nav__link">
+      <a href="../../tube-archivist/tube-installation/" class="md-nav__link">
         TubeArchivist Installation
       </a>
     </li>
@@ -867,7 +911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../es-installation/" class="md-nav__link">
+      <a href="../../tube-archivist/es-installation/" class="md-nav__link">
         Elasticsearch Installation
       </a>
     </li>
@@ -879,69 +923,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Redis Installation
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../tube-archivist/redis-installation/" class="md-nav__link">
         Redis Installation
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#container" class="md-nav__link">
-    Container
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#networking" class="md-nav__link">
-    Networking
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#storage" class="md-nav__link">
-    Storage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#security" class="md-nav__link">
-    Security
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -953,7 +939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../in-app/" class="md-nav__link">
+      <a href="../../tube-archivist/in-app/" class="md-nav__link">
         In App Settings
       </a>
     </li>
@@ -999,29 +985,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#container" class="md-nav__link">
-    Container
+  <a href="#reasoning" class="md-nav__link">
+    Reasoning
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#networking" class="md-nav__link">
-    Networking
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#storage" class="md-nav__link">
-    Storage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#security" class="md-nav__link">
-    Security
+  <a href="#cron-job" class="md-nav__link">
+    Cron Job
   </a>
   
 </li>
@@ -1038,55 +1010,38 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/Heavybullets8/HeavySetup/edit/master/docs/applications/tube-archivist/redis-installation.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/Heavybullets8/HeavySetup/edit/master/docs/applications/syncthing/cron.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-  <h1>Redis Installation</h1>
+  <h1>Cron Job</h1>
 
-<p>For this application I used the <code>Custom-App</code> provided by <a href="https://truecharts.org/manual/Quick-Start%20Guides/01-Adding-TrueCharts/">TrueCharts</a>.</p>
+<p>I am running a cron job which find files or folders that have been there for 2 or more days, then deletes them.</p>
+<h3 id="reasoning">Reasoning</h3>
+<p>My setup has Syncthing pull in files from my remote seedbox, then places them in <code>/mnt/speed/downloads/syncthing/</code>, where it is then picked up by Sonarr or Radarr, and <strong>copied</strong> to my <code>media</code> folder, so Plex can see it.</p>
+<p>Well, after those files are <strong>copied</strong> from my Syncthing folder by Sonarr/Radarr, how are they deleted?</p>
+<p>Easy, with the script below tied to a cron job, so we can automatically run the command on our own schedule. </p>
+<p><br /></p>
+<h3 id="cron-job">Cron Job</h3>
+<p><strong>Command</strong>
+<div class="highlight"><pre><span></span><code>find /mnt/speed/downloads/syncthing/*/*  -mtime +2 -delete
+</code></pre></div></p>
+<p><strong>Run As User</strong>
+<div class="highlight"><pre><span></span><code>apps
+</code></pre></div></p>
 <ul>
-<li>Available under the <code>stable</code> train</li>
+<li>Since <code>apps</code> is the owner of the dataset, it makes sense to run the command as <code>apps</code></li>
 </ul>
-<p><br /></p>
-<h2 id="container">Container</h2>
-<p><strong>Application Name</strong>
-<div class="highlight"><pre><span></span><code>ta-redis
-</code></pre></div>
-The name is very important, as it determines our DNS names, which is how we are going to connect the applications together..</p>
-<p>You don't HAVE to follow my naming scheme, but if you don't, you'll have to also change your DNS name</p>
-<p><strong>Container Repository</strong>
-<div class="highlight"><pre><span></span><code>redislabs/rejson
-</code></pre></div>
-<strong>Container Tag</strong>
-<div class="highlight"><pre><span></span><code>latest
-</code></pre></div></p>
-<p><img alt="!Container: Tube" src="../redis-container.png" /></p>
-<p><br /></p>
-<h2 id="networking">Networking</h2>
-<p><strong>Target Port</strong>
-<div class="highlight"><pre><span></span><code>6379
-</code></pre></div>
-<strong>Port</strong>
-<div class="highlight"><pre><span></span><code>6379
-</code></pre></div></p>
-<p><img alt="!Networking: Tube" src="../redis-networking.png" /></p>
-<p><br /></p>
-<h2 id="storage">Storage</h2>
+<p><strong>Schedule</strong></p>
+<p>Up to you, I run mine daily at 12:00 AM</p>
+<p><strong>Check Boxes</strong></p>
+<p>I hide <code>Standard Output</code> and <code>Standard Error</code></p>
 <ul>
-<li>I am using PVC in this case since this is not something the user will need to interact with </li>
+<li>They both produce annoying messages saying that either the file doesn't exist (because it couldn't find a file to delete) or reports "error" messages that really don't matter.</li>
 </ul>
-<p>Ensure the mountpath is:
-<div class="highlight"><pre><span></span><code>/data
-</code></pre></div></p>
-<p>Redis specifically looks to that mount point, its required</p>
-<p><img alt="!Storage: Tube" src="../redis-storage.png" /></p>
-<p><br /></p>
-<h2 id="security">Security</h2>
-<p>This application runs fine with default permissions</p>
-<p><img alt="!Storage: Tube" src="../redis-security.png" /></p>
+<p><img alt="!Cron: syncthing" src="../cron.png" /></p>
 <p><br /></p>
 
               
@@ -1106,7 +1061,7 @@ The name is very important, as it determines our DNS names, which is how we are 
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../es-installation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Elasticsearch Installation" rel="prev">
+        <a href="../in-app/" class="md-footer__link md-footer__link--prev" aria-label="Previous: In App Settings" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1115,20 +1070,20 @@ The name is very important, as it determines our DNS names, which is how we are 
               <span class="md-footer__direction">
                 Previous
               </span>
-              Elasticsearch Installation
+              In App Settings
             </div>
           </div>
         </a>
       
       
         
-        <a href="../in-app/" class="md-footer__link md-footer__link--next" aria-label="Next: In App Settings" rel="next">
+        <a href="../../tube-archivist/dataset/" class="md-footer__link md-footer__link--next" aria-label="Next: Datasets" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              In App Settings
+              Datasets
             </div>
           </div>
           <div class="md-footer__button md-icon">

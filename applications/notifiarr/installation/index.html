@@ -237,7 +237,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../datasets/" class="md-tabs__link md-tabs__link--active">
         Applications
       </a>
     </li>
@@ -429,6 +429,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../datasets/" class="md-nav__link">
+        Preparation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -498,13 +512,6 @@
         <li class="md-nav__item">
   <a href="#security" class="md-nav__link">
     Security
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#config-file" class="md-nav__link">
-    Config File
   </a>
   
 </li>
@@ -815,6 +822,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../syncthing/datasets/" class="md-nav__link">
+        Datasets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../syncthing/installation/" class="md-nav__link">
         Installation
       </a>
@@ -831,6 +852,20 @@
     <li class="md-nav__item">
       <a href="../../syncthing/in-app/" class="md-nav__link">
         In App Settings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syncthing/cron/" class="md-nav__link">
+        Cron Job
       </a>
     </li>
   
@@ -1019,13 +1054,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#config-file" class="md-nav__link">
-    Config File
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1072,135 +1100,17 @@
 <p><br /></p>
 <h2 id="storage">Storage</h2>
 <p><img alt="!Networking: NZBGet" src="../storage_config.png" /></p>
-<p><img alt="!Networking: NZBGet" src="../storage_config1.png" /></p>
 <ul>
 <li>It's important to set the mountpath as /config</li>
-<li>Set the path to the directory that contains your config file shown below</li>
+<li>Set the path to the directory that contains your config file that you created in <code>Preparation</code></li>
 </ul>
+<p><img alt="!Networking: NZBGet" src="../storage_config1.png" /></p>
 <p><br /></p>
 <h2 id="ingress">Ingress</h2>
 <p><img alt="!Networking: NZBGet" src="../ingress.png" /></p>
 <p><br /></p>
 <h2 id="security">Security</h2>
 <p><img alt="!Networking: NZBGet" src="../security.png" /></p>
-<p><br /></p>
-<h2 id="config-file">Config File</h2>
-<p>So, this isn't as easy as just taking screenshots.. </p>
-<p>You'll need to go to Notifiarrs site, and look at <a href="https://notifiarr.wiki/en/Client/Configuration">their documentation</a> as well</p>
-<p>Ensure the config file is named: </p>
-<div class="highlight"><pre><span></span><code>notifiarr.conf
-</code></pre></div>
-<p>Also ensure the directory has the following permissions:</p>
-<p><img alt="!Networking: NZBGet" src="../storage_permissions.png" /></p>
-<p>Here is a template that I use:</p>
-<ul>
-<li>Note I do not use Lidarr, or anything else, so this is a very slimmed down version of the configuration file</li>
-</ul>
-<div class="highlight"><pre><span></span><code>###############################################
-# Notifiarr Client Example Configuration File #
-# Created by Notifiarr v0.2.0   @ 212410T2154 #
-###############################################
-
-# This API key must be copied from your notifiarr.com account.
-api_key = &quot;NOTIFIARR_API_KEY_HERE&quot;
-
-## The ip:port to listen on for incoming HTTP requests. 0.0.0.0 means all/any IP and is recommended!
-## You may use &quot;127.0.0.1:5454&quot; to listen only on localhost; good if using a local proxy.
-## This is used to receive Plex webhooks and Media Request commands.
-##
-bind_addr = &quot;0.0.0.0:80&quot;
-
-## This application can update itself on Windows systems.
-## Set this to &quot;daily&quot; to check GitHub every day for updates.
-## You may also set it to a Go duration like &quot;12h&quot; or &quot;72h&quot;.
-## THIS ONLY WORKS ON WINDOWS
-auto_update = &quot;off&quot;
-
-## Quiet makes the app not log anything to output.
-## Recommend setting log files if you make the app quiet.
-## This is always true on Windows and macOS app.
-## Log files are automatically written on those platforms.
-##
-quiet = true
-debug = false
-debug_log = &#39;/config/debug.log&#39;
-
-## All API paths start with /api. This does not affect incoming /plex webhooks.
-## Change it to /somethingelse/api by setting urlbase to &quot;/somethingelse&quot;
-##
-urlbase = &quot;/&quot;
-
-## Allowed upstream networks. The networks here are allowed to send x-forwarded-for.
-## Set this to your reverse proxy server&#39;s IP or network. If you leave off the mask,
-## then /32 or /128 is assumed depending on IP version. Empty by default. Example:
-##
-upstreams = [ &quot;172.16.0.0/12&quot; ]
-
-##
-## Set this to the number of megabytes to rotate files.
-log_file_mb = 100
-##
-## How many files to keep? 0 = all.
-log_files = 0
-##
-## Unix file mode for new log files. Umask also affects this.
-## Missing, blank or 0 uses default of 0600. Permissive is 0644. Ignored by Windows.
-file_mode = &quot;0600&quot;
-
-## Web server and application timeouts.
-##
-timeout = &quot;1m0s&quot;
-
-
-##################
-# Starr Settings #
-##################
-
-## The API keys are specific to the app. Get it from Settings -&gt; General.
-## Configurations for unused apps are harmless. Set URL and API key for
-## apps you have and want to make requests to using Media Bot.
-## See the Service Checks section below for information about setting the names.
-##
-## Examples follow. UNCOMMENT (REMOVE #), AT MINIMUM: [[header]], url, api_key
-
-[[radarr]]
-name      = &quot;Radarr&quot; # Set a name to enable checks of your service.
-url       = &quot;http://radarr.ix-radarr.svc.cluster.local:7878&quot;
-api_key   = &quot;RADARR_API_KEY_HERE&quot;
-
-
-[[sonarr]]
-name      = &quot;Sonarr&quot;  # Set a name to enable checks of your service.
-url       = &quot;http://sonarrnll-custom-app.ix-sonarrnll.svc.cluster.local:8989&quot;
-api_key   = &quot;SONARR_API_KEY_HERE&quot;
-
-
-#################
-# Plex Settings #
-#################
-
-## Find your token: https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/
-##
-[plex]
-  url     = &quot;http://plex.ix-plex.svc.cluster.local:32400&quot; # Your plex URL
-  token   = &quot;PLEX_TOKEN_HERE&quot; # your plex token; get this from a web inspector
-
-
-##################
-# Service Checks #
-##################
-
-## This application performs service checks on configured services at the specified interval.
-## The service states are sent to Notifiarr.com. Failed services generate a notification.
-## Setting names on Starr apps (above) enables service checks for that app.
-## Use the [[service]] directive to add more service checks. Example below.
-
-[services]
-  disabled = false   # Setting this to true disables all service checking routines.
-  parallel = 1       # How many services to check concurrently. 1 should be enough.
-  interval = &quot;10m0s&quot; # How often to send service states to Notifiarr.com. Minimum = 5m.
-  log_file = &#39;&#39;      # Service Check logs go to the app log by default. Change that by setting a services.log file here.
-</code></pre></div>
 <p><br /></p>
 
               
@@ -1220,7 +1130,7 @@ api_key   = &quot;SONARR_API_KEY_HERE&quot;
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../../general_guides/storage_permissions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Truenas Scale Application Permissions" rel="prev">
+        <a href="../datasets/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Preparation" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1229,7 +1139,7 @@ api_key   = &quot;SONARR_API_KEY_HERE&quot;
               <span class="md-footer__direction">
                 Previous
               </span>
-              Truenas Scale Application Permissions
+              Preparation
             </div>
           </div>
         </a>
