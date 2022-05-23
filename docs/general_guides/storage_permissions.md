@@ -1,4 +1,4 @@
-# Truenas Scale Application Permissions
+# Application Dataset Permissions
 
 This is, and probably always will be a hot topic for Truenas SCALE
 
