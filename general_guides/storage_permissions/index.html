@@ -389,8 +389,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#usergroup" class="md-nav__link">
+    User:Group
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smb-user-access" class="md-nav__link">
+    SMB User Access
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#start-off-open" class="md-nav__link">
-    Start off open
+    Start Off Open
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#after-testing" class="md-nav__link">
+    After Testing
   </a>
   
 </li>
@@ -982,8 +1003,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#usergroup" class="md-nav__link">
+    User:Group
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smb-user-access" class="md-nav__link">
+    SMB User Access
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#start-off-open" class="md-nav__link">
-    Start off open
+    Start Off Open
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#after-testing" class="md-nav__link">
+    After Testing
   </a>
   
 </li>
@@ -1009,8 +1051,44 @@
 <h1 id="truenas-scale-application-permissions">Truenas Scale Application Permissions</h1>
 <p>This is, and probably always will be a hot topic for Truenas SCALE</p>
 <p>Hopefully this guide will help clear up a few issues. </p>
-<h3 id="start-off-open">Start off open</h3>
-<p>I know, that may sound like a bad idea, but in my experience its better to start off with a wide-open dataset, rather than one thats closed off.</p>
+<p><br /></p>
+<h2 id="usergroup">User:Group</h2>
+<p>Pretty much every application runs as <code>apps</code>:<code>apps</code> (<code>user</code>:<code>group</code>)</p>
+<p>Theres a single application that I <em>don't</em> change to <code>apps</code> and simply just use one of the permissions listed below, and that application is <code>syncthing</code>.</p>
+<p><br /></p>
+<h2 id="smb-user-access">SMB User Access</h2>
+<p>This issue is solved simply by adding your SMB user to your <code>apps</code> group. That way, and dataset <code>apps</code> has access to, so will your SMB user.</p>
+<ol>
+<li>Truenas Scale GUI</li>
+<li>Credentials</li>
+<li>Local Users</li>
+<li>Click on your user</li>
+<li>Click edit</li>
+<li>Click dropdown menu for <code>auxiliary groups</code></li>
+<li>Select <code>apps</code></li>
+<li>Ensure <code>Samba Authentication</code> is ticked</li>
+<li>Save</li>
+</ol>
+<p>It should look like this once you're done:</p>
+<p><img alt="!Folder Structure: Open" src="../images/smb.png" /></p>
+<p><br /></p>
+<h2 id="start-off-open">Start Off Open</h2>
+<p>I know, but the idea is to start off open, see if the application will run with no issues, then start closing off permissions.</p>
+<p>Example of an open Dataset:</p>
+<p><img alt="!Folder Structure: Open" src="../images/open.png" /></p>
+<p><br /></p>
+<h2 id="after-testing">After Testing</h2>
+<p>After making sure the example above works, I switch to something like this:</p>
+<ul>
+<li>
+<p>The <code>other</code> group/user no longer has access to the files, which is what we obviously want to aim for</p>
+</li>
+<li>
+<p>This is what most of my applications will run with </p>
+</li>
+</ul>
+<p><img alt="!Folder Structure: Open" src="../images/closed.png" /></p>
+<p><br /></p>
 
               
             </article>
