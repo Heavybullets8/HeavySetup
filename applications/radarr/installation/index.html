@@ -1163,42 +1163,42 @@
 
   <h1>Installation</h1>
 
-<h2 id="networking">Networking</h2>
+<h2 id="networking">Networking<a class="headerlink" href="#networking" title="Permanent link">¶</a></h2>
 <p>If you are wanting to use ingress, its probably better to use clusterIP instead</p>
 <ul>
 <li>I changed the UDP and TCP port to match the Mullvad ports allocated to me</li>
 </ul>
 <p><img alt="!Networking: qbittorrent" src="../images/networking.png" /></p>
 <p><br /></p>
-<h2 id="storage">Storage</h2>
-<h3 id="configuration">Configuration</h3>
+<h2 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">¶</a></h2>
+<h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">¶</a></h3>
 <p>The setup is default</p>
 <p><img alt="!Storage: NZBGet" src="../images/storage_config.png" /></p>
-<h3 id="media-destination-folders">Media - Destination Folders</h3>
+<h3 id="media-destination-folders">Media - Destination Folders<a class="headerlink" href="#media-destination-folders" title="Permanent link">¶</a></h3>
 <ul>
 <li>Media is so that Radarr will have a location to place files once they're completed</li>
 <li>This will be the folder Radarr places files for plex to then parse through.</li>
 </ul>
 <p><img alt="!Storage: NZBGet" src="../images/storage_data_media.png" /></p>
-<h3 id="backups">Backups</h3>
+<h3 id="backups">Backups<a class="headerlink" href="#backups" title="Permanent link">¶</a></h3>
 <ul>
 <li>'/config/Backups' is the location Radarr places its automatic and manual backups</li>
 <li>I created a separate dataset meant for backups, specifically to have an easy way to restore a backup, in the event the application is wrongly deleted, or removed, corrupt, whatever</li>
 </ul>
 <p><img alt="!Storage: NZBGet" src="../images/storage_data_backups.png" /></p>
-<h3 id="nzb">NZB</h3>
+<h3 id="nzb">NZB<a class="headerlink" href="#nzb" title="Permanent link">¶</a></h3>
 <ul>
 <li>This is obviously the location Radarr will look for completed NZB files</li>
 <li>Its also the location NZBGet saves its completed movie files</li>
 </ul>
 <p><img alt="!Storage: NZBGet" src="../images/storage_data_nzb.png" /></p>
-<h3 id="bittorrent">Bittorrent</h3>
+<h3 id="bittorrent">Bittorrent<a class="headerlink" href="#bittorrent" title="Permanent link">¶</a></h3>
 <ul>
 <li>This is the location Radarr will look for completed qBittorrent files</li>
 <li>Its also the location qBittorrent saves its completed movie files</li>
 </ul>
 <p><img alt="!Storage: NZBGet" src="../images/storage_data_qbit.png" /></p>
-<h3 id="syncthing">Syncthing</h3>
+<h3 id="syncthing">Syncthing<a class="headerlink" href="#syncthing" title="Permanent link">¶</a></h3>
 <ul>
 <li>This is the location Radarr will look for completed Syncthing files</li>
 <li>Its also the location Syncthing saves its completed movie files</li>

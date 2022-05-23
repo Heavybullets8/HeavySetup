@@ -1068,12 +1068,12 @@
   <h1>Cron Job</h1>
 
 <p>I am running a cron job which find files or folders that have been there for 2 or more days, then deletes them.</p>
-<h3 id="reasoning">Reasoning</h3>
+<h3 id="reasoning">Reasoning<a class="headerlink" href="#reasoning" title="Permanent link">¶</a></h3>
 <p>My setup has Syncthing pull in files from my remote seedbox, then places them in <code>/mnt/speed/downloads/syncthing/</code>, where it is then picked up by Sonarr or Radarr, and <strong>copied</strong> to my <code>media</code> folder, so Plex can see it.</p>
 <p>Well, after those files are <strong>copied</strong> from my Syncthing folder by Sonarr/Radarr, how are they deleted?</p>
 <p>Easy, with the script below tied to a cron job, so we can automatically run the command on our own schedule. </p>
 <p><br /></p>
-<h3 id="cron-job">Cron Job</h3>
+<h3 id="cron-job">Cron Job<a class="headerlink" href="#cron-job" title="Permanent link">¶</a></h3>
 <p><strong>Command</strong>
 <div class="highlight"><pre><span></span><code>find /mnt/speed/downloads/syncthing/*/*  -mtime +2 -delete
 </code></pre></div></p>
