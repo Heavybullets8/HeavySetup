@@ -16,6 +16,8 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed
   - pymdownx.highlight
+  - toc:
+      permalink: "¶"
 plugins:
     - search
     - awesome-pages
