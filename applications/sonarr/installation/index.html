@@ -1174,54 +1174,54 @@
 <p>So, this is going to be a bit different, but I actually use custom-app for this application</p>
 <p>At the time of creating this application, I needed the additional features only available in the nightly version of the application</p>
 <p>However, you would probably be fine setting this up like the Radarr setup (using the regular Truecharts version), as the enhancements are now apart of the stable image</p>
-<p><img alt="!Networking: qbittorrent" src="../container.png" /></p>
+<p><img alt="!Networking: qbittorrent" src="../images/container.png" /></p>
 <p><br /></p>
 <h2 id="networking">Networking</h2>
 <p>If you are wanting to use ingress, its probably better to use clusterIP instead</p>
 <ul>
 <li>I changed the UDP and TCP port to match the Mullvad ports allocated to me</li>
 </ul>
-<p><img alt="!Networking: qbittorrent" src="../networking.png" /></p>
+<p><img alt="!Networking: qbittorrent" src="../images/networking.png" /></p>
 <p><br /></p>
 <h2 id="storage">Storage</h2>
 <h3 id="configuration">Configuration</h3>
 <p>The setup is default</p>
-<p><img alt="!Storage: NZBGet" src="../storage_config.png" /></p>
+<p><img alt="!Storage: NZBGet" src="../images/storage_config.png" /></p>
 <h3 id="media-destination-folders">Media - Destination Folders</h3>
 <ul>
 <li>Media is so that Radarr will have a location to place files once they're completed</li>
 <li>This will be the folder Radarr places files for plex to then parse through.</li>
 </ul>
-<p><img alt="!Storage: NZBGet" src="../storage_data_media.png" /></p>
+<p><img alt="!Storage: NZBGet" src="../images/storage_data_media.png" /></p>
 <h3 id="backups">Backups</h3>
 <ul>
 <li>'/config/Backups' is the location Radarr places its automatic and manual backups</li>
 <li>I created a separate dataset meant for backups, specifically to have an easy way to restore a backup, in the event the application is wrongly deleted, or removed, corrupt, whatever</li>
 </ul>
-<p><img alt="!Storage: NZBGet" src="../storage_data_backups.png" /></p>
+<p><img alt="!Storage: NZBGet" src="../images/storage_data_backups.png" /></p>
 <h3 id="nzb">NZB</h3>
 <ul>
 <li>This is obviously the location Radarr will look for completed NZB files</li>
 <li>Its also the location NZBGet saves its completed movie files</li>
 </ul>
-<p><img alt="!Storage: NZBGet" src="../storage_data_nzb.png" /></p>
+<p><img alt="!Storage: NZBGet" src="../images/storage_data_nzb.png" /></p>
 <h3 id="bittorrent">Bittorrent</h3>
 <ul>
 <li>This is the location Radarr will look for completed qBittorrent files</li>
 <li>Its also the location qBittorrent saves its completed movie files</li>
 </ul>
-<p><img alt="!Storage: NZBGet" src="../storage_data_qbit.png" /></p>
+<p><img alt="!Storage: NZBGet" src="../images/storage_data_qbit.png" /></p>
 <h3 id="syncthing">Syncthing</h3>
 <ul>
 <li>This is the location Radarr will look for completed Syncthing files</li>
 <li>Its also the location Syncthing saves its completed movie files</li>
 </ul>
-<p><img alt="!Storage: NZBGet" src="../storage_data_syncthing.png" /></p>
+<p><img alt="!Storage: NZBGet" src="../images/storage_data_syncthing.png" /></p>
 <p><br /></p>
 <h2 id="permissions">Permissions</h2>
 <p>Again, you can bypass this step if you use the regular Truecharts version of the Sonarr application</p>
-<p><img alt="!Storage: NZBGet" src="../security_and_perms.png" /></p>
-<p><img alt="!Storage: NZBGet" src="../security_user_group.png" /></p>
+<p><img alt="!Storage: NZBGet" src="../images/security_and_perms.png" /></p>
+<p><img alt="!Storage: NZBGet" src="../images/security_user_group.png" /></p>
 <p><br /></p>
 
               

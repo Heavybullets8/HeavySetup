@@ -68,6 +68,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#downloads" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -611,9 +616,73 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          In App Settings
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         In App Settings
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#downloads" class="md-nav__link">
+    Downloads
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection" class="md-nav__link">
+    Connection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#speed" class="md-nav__link">
+    Speed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bittorrent" class="md-nav__link">
+    BitTorrent
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webgui" class="md-nav__link">
+    WebGUI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced" class="md-nav__link">
+    Advanced
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -965,6 +1034,56 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#downloads" class="md-nav__link">
+    Downloads
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection" class="md-nav__link">
+    Connection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#speed" class="md-nav__link">
+    Speed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bittorrent" class="md-nav__link">
+    BitTorrent
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webgui" class="md-nav__link">
+    WebGUI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced" class="md-nav__link">
+    Advanced
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -983,7 +1102,148 @@
 
   <h1>In App Settings</h1>
 
-<p>Something will be here sooner or later</p>
+<h2 id="downloads">Downloads</h2>
+<details class="qbittorrent">
+<summary>qBittorrent Table + Explanation</summary>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default Torrent Management Mode:</td>
+<td>Automatic</td>
+<td>This is to automatically move the files torrents based on catagory</td>
+</tr>
+<tr>
+<td>When Torrent Category changed:</td>
+<td>Relocate Torrent</td>
+<td>This is to automatically move the files torrents based on catagory</td>
+</tr>
+<tr>
+<td>When Default Save Path changed:</td>
+<td>Relocate Affected Torrents</td>
+<td>This is to automatically move the files torrents based on catagory</td>
+</tr>
+<tr>
+<td>When Category Save Path changed:</td>
+<td>Relocate Affected Torrents</td>
+<td>This is to automatically move the files torrents based on catagory</td>
+</tr>
+<tr>
+<td>Default Save Path:</td>
+<td><code>/qbitvpn/complete</code></td>
+<td>Set this to what you set your dataset mountpoint as</td>
+</tr>
+<tr>
+<td>Keep incomplete torrents in:</td>
+<td><code>/qbitvpn/temp</code></td>
+<td>Keep incomplete torrents in a folder no apps are monitoring</td>
+</tr>
+<tr>
+<td>Copy .torrent files for finished downloads to:</td>
+<td><code>/qbitvpn/backup</code></td>
+<td>Its nice to have a backup folder of all your <code>.torrents</code> in the event of a crash</td>
+</tr>
+<tr>
+<td>Monitored Folder</td>
+<td><code>/qbitvpn/monitor</code></td>
+<td>Place <code>.torrent</code> files in this directory to automatically start those torrents</td>
+</tr>
+</tbody>
+</table>
+</details>
+<p><img alt="!Downloads: qbit" src="../images/settings_downloads.png" /></p>
+<p><br ></p>
+<h2 id="connection">Connection</h2>
+<ul>
+<li>You don't need to set a different port unless you changed your ports<ul>
+<li>I changed my ports to align with the port mullvad exposed for me</li>
+</ul>
+</li>
+</ul>
+<p><img alt="!Connection: qbit" src="../images/settings_connection.png" /></p>
+<p><br ></p>
+<h2 id="speed">Speed</h2>
+<ul>
+<li>
+<p>Set <code>Alternative Rate Limits</code> to <code>10000</code> KiB</p>
+<ul>
+<li>This is so during the day, or when users are using my Plex server, my qBittorrent instance isn't using <em>ALL</em> of my bandwidth seeding</li>
+</ul>
+</li>
+<li>
+<p>Set my schedule from <code>08:00</code> to <code>02:00</code></p>
+<ul>
+<li>8am to 2am, which is around the time users are watching Plex</li>
+</ul>
+</li>
+</ul>
+<p><img alt="!Speed: qbit" src="../images/settings_speed.png" /></p>
+<p><br ></p>
+<h2 id="bittorrent">BitTorrent</h2>
+<ul>
+<li>Nothing really changed here, just increased some numbers is all</li>
+</ul>
+<p><img alt="!Speed: qbit" src="../images/settings_bittorrent.png" /></p>
+<p><br ></p>
+<h2 id="webgui">WebGUI</h2>
+<ul>
+<li>Changed the password to something I would remember</li>
+</ul>
+<p>Added both my LAN and Kubernetes LAN to the bypass list, this way neither of them have to authenticate, it gets annoying to log in over and over on your own network</p>
+<p><strong>Bypass authentication for clients in whitelisted IP subnets</strong>
+<div class="highlight"><pre><span></span><code>192.168.0.0/16
+172.16.0.0/16
+</code></pre></div></p>
+<p><img alt="!Speed: qbit" src="../images/settings_webgui1.png" /></p>
+<p>Since I am using <code>Traefik</code>, I decided to add the Kubernetes LAN to:</p>
+<p><strong>Enable reverse proxy support</strong>
+<div class="highlight"><pre><span></span><code>172.16.0.0/16
+</code></pre></div></p>
+<p><img alt="!Speed: qbit" src="../images/settings_webgui2.png" /></p>
+<p><br ></p>
+<h2 id="advanced">Advanced</h2>
+<details class="qbittorrent">
+<summary>qBittorrent Table + Explanation</summary>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Network interface:</td>
+<td><code>wg0</code> or <code>tun0</code></td>
+<td>Bind this to <code>wg0</code> or <code>tun0</code> if you are using Wireguard (wg0) or Openvpn(tun0)</td>
+</tr>
+<tr>
+<td>Optional IP address to bind to:</td>
+<td>All Ipv4 Addresses</td>
+<td>Kubernetes doesnt support ipv6 now anyway so, I set this to just ipv4</td>
+</tr>
+<tr>
+<td>Resolve peer countries:</td>
+<td>True</td>
+<td>Just so I can see what countries I am leeching/seeding from</td>
+</tr>
+<tr>
+<td>Reannounce to all trackers when IP or port changed:</td>
+<td>True</td>
+<td>In the event my IP or port changes, I want everyone to know, so I can seed or leech</td>
+</tr>
+</tbody>
+</table>
+</details>
+<p><img alt="!Speed: qbit" src="../images/settings_advanced.png" /></p>
+<p><br ></p>
 
               
             </article>

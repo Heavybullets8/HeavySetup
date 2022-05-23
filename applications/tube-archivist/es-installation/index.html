@@ -1105,7 +1105,7 @@ The name is very important, as it determines our DNS names, which is how we are 
 <strong>Container Tag</strong>
 <div class="highlight"><pre><span></span><code>latest
 </code></pre></div></p>
-<p><img alt="!Container: Tube" src="../es-container.png" /></p>
+<p><img alt="!Container: Tube" src="../images/es-container.png" /></p>
 <p><br /></p>
 <h2 id="environment-variables">Environment Variables</h2>
 <p><strong>Name</strong>
@@ -1121,7 +1121,7 @@ The name is very important, as it determines our DNS names, which is how we are 
 <strong>Value</strong>
 <div class="highlight"><pre><span></span><code>verysecret
 </code></pre></div></p>
-<p><img alt="!env1: Tube" src="../es-env1.png" /></p>
+<p><img alt="!env1: Tube" src="../images/es-env1.png" /></p>
 <p><strong>Name</strong>
 <div class="highlight"><pre><span></span><code>discovery.type
 </code></pre></div>
@@ -1135,7 +1135,7 @@ The name is very important, as it determines our DNS names, which is how we are 
 <strong>Value</strong>
 <div class="highlight"><pre><span></span><code>-Xms512m -Xmx512m
 </code></pre></div></p>
-<p><img alt="!env1: Tube" src="../es-env2.png" /></p>
+<p><img alt="!env1: Tube" src="../images/es-env2.png" /></p>
 <p><br /></p>
 <h2 id="networking">Networking</h2>
 <p><strong>Target Port</strong>
@@ -1144,7 +1144,7 @@ The name is very important, as it determines our DNS names, which is how we are 
 <strong>Port</strong>
 <div class="highlight"><pre><span></span><code>9200
 </code></pre></div></p>
-<p><img alt="!Networking: Tube" src="../es-networking.png" /></p>
+<p><img alt="!Networking: Tube" src="../images/es-networking.png" /></p>
 <p><br /></p>
 <h2 id="storage">Storage</h2>
 <ul>
@@ -1154,15 +1154,15 @@ The name is very important, as it determines our DNS names, which is how we are 
 <div class="highlight"><pre><span></span><code>/usr/share/elasticsearch/data
 </code></pre></div></p>
 <p>Elasticsearch specifically looks to that mount point, its required</p>
-<p><img alt="!Storage: Tube" src="../es-storage.png" /></p>
+<p><img alt="!Storage: Tube" src="../images/es-storage.png" /></p>
 <p><br /></p>
 <h2 id="security">Security</h2>
 <p>Running the application without user:group <code>0</code> or <code>root</code>, resulted in the container not starting.</p>
-<p><img alt="!Storage: Tube" src="../es-security1.png" /></p>
+<p><img alt="!Storage: Tube" src="../images/es-security1.png" /></p>
 <ul>
 <li>Also, in this case, <code>fsgroup</code> was also required to be <code>0</code></li>
 </ul>
-<p><img alt="!Storage: Tube" src="../es-security2.png" /></p>
+<p><img alt="!Storage: Tube" src="../images/es-security2.png" /></p>
 <p><br /></p>
 
               
