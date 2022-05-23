@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://heavybullets8.github.io/HeavySetup/applications/home/</loc>
+         <lastmod>2022-05-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://heavybullets8.github.io/HeavySetup/applications/notifiarr/datasets/</loc>
          <lastmod>2022-05-23</lastmod>
          <changefreq>daily</changefreq>
@@ -117,6 +122,11 @@
     </url>
     <url>
          <loc>https://heavybullets8.github.io/HeavySetup/general_guides/folder_structure/</loc>
+         <lastmod>2022-05-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heavybullets8.github.io/HeavySetup/general_guides/home/</loc>
          <lastmod>2022-05-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
