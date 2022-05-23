@@ -4,7 +4,7 @@ The setup is completely default
 
 However, if you are wanting to use ingress, its probably better to use clusterIP instead
 
-![!Networking: NZBGet](networking.png)
+![!Networking: NZBGet](images/networking.png)
 
 <br />
 
@@ -14,11 +14,11 @@ However, if you are wanting to use ingress, its probably better to use clusterIP
 
 The setup is also default
 
-![!Storage: NZBGet](storage_config.png)
+![!Storage: NZBGet](images/storage_config.png)
 
 ### Data
 
 I always mount to the root directory of the container
 
-![!Storage: NZBGet](storage_data.png)
+![!Storage: NZBGet](images/storage_data.png)
 

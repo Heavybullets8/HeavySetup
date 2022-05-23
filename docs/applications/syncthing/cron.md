@@ -34,6 +34,6 @@ I hide `Standard Output` and `Standard Error`
 
 - They both produce annoying messages saying that either the file doesn't exist (because it couldn't find a file to delete) or reports "error" messages that really don't matter.
 
-![!Cron: syncthing](cron.png)
+![!Cron: syncthing](images/cron.png)
 
 <br />

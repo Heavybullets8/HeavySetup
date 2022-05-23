@@ -128,6 +128,6 @@ Here is a template that I use:
 
 After you have created your `notifiarr.conf` file, and filled out the required fields, you will need to create a dataset for the file to reside in
 
-![!Networking: NZBGet](storage_permissions.png)
+![!Networking: NZBGet](images/storage_permissions.png)
 
 <br />

@@ -22,7 +22,7 @@ heavy
 
 We got our own tag for Kubernetes 
 
-![!Networking: NZBGet](container.png)
+![!Networking: NZBGet](images/container.png)
 
 <br />
 
@@ -31,32 +31,32 @@ We got our own tag for Kubernetes
 - I specifically use clusterIP for this setup
     - This is so I can link notifiarr with a DNS name as shown.
 
-![!Networking: NZBGet](networking_site.png)
+![!Networking: NZBGet](images/networking_site.png)
 
-![!Networking: NZBGet](networking.png)
+![!Networking: NZBGet](images/networking.png)
 
 <br />
 
 ## Storage
 
-![!Networking: NZBGet](storage_config.png)
+![!Networking: NZBGet](images/storage_config.png)
 
 - It's important to set the mountpath as /config
 - Set the path to the directory that contains your config file that you created in `Preparation`
 
-![!Networking: NZBGet](storage_config1.png)
+![!Networking: NZBGet](images/storage_config1.png)
 
 
 <br />
 
 ## Ingress
 
-![!Networking: NZBGet](ingress.png)
+![!Networking: NZBGet](images/ingress.png)
 
 <br />
 
 ## Security 
 
-![!Networking: NZBGet](security.png)
+![!Networking: NZBGet](images/security.png)
 
 <br />

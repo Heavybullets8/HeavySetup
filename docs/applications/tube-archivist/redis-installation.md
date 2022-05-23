@@ -24,7 +24,7 @@ redislabs/rejson
 latest
 ```
 
-![!Container: Tube](redis-container.png)
+![!Container: Tube](images/redis-container.png)
 
 <br />
 
@@ -40,7 +40,7 @@ latest
 6379
 ```
 
-![!Networking: Tube](redis-networking.png)
+![!Networking: Tube](images/redis-networking.png)
 
 <br />
 
@@ -55,7 +55,7 @@ Ensure the mountpath is:
 
 Redis specifically looks to that mount point, its required
 
-![!Storage: Tube](redis-storage.png)
+![!Storage: Tube](images/redis-storage.png)
 
 
 <br />
@@ -64,6 +64,6 @@ Redis specifically looks to that mount point, its required
 
 This application runs fine with default permissions
 
-![!Storage: Tube](redis-security.png)
+![!Storage: Tube](images/redis-security.png)
 
 <br />

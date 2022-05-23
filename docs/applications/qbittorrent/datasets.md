@@ -4,6 +4,6 @@ Typical setting user:group to `apps`, nothing fancy here
 
 - Placed the created `nzb` dataset within the `downloads` folder
 
-![!Dataset: Tube](dataset.png)
+![!Dataset: Tube](images/dataset.png)
 
 <br />

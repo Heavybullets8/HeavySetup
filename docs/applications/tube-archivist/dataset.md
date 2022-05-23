@@ -6,4 +6,4 @@ Unfortunately, I could not find a way to run this application without using 777.
 
 But as you can see I left the permissions wide open, and set the user:group to `apps`
 
-![!Dataset: Tube](dataset.png)
+![!Dataset: Tube](images/dataset.png)

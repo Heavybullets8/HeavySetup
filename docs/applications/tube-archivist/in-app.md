@@ -15,7 +15,7 @@ Current metadata embed setting: `True`
 
 Current thumbnail embed setting: `True`
 
-![!DL Format: Tube](in-app_download_format.png)
+![!DL Format: Tube](images/in-app_download_format.png)
 
 
 <br />
@@ -35,7 +35,7 @@ Current Cast integration: `True`
 
 - Ability to chromecast your videos
 
-![!Integrations: Tube](in-app_integrations.png)
+![!Integrations: Tube](images/in-app_integrations.png)
 
 <br />
 
@@ -55,6 +55,6 @@ Current Cast integration: `True`
 
 - Downloads new videos picked up by `Rescan Subscriptions` every hour, on the 30 minute mark
 
-![!Scheduler: Tube](in-app_scheduler.png)
+![!Scheduler: Tube](images/in-app_scheduler.png)
 
 <br />

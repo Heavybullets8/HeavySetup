@@ -23,7 +23,7 @@ bbilly1/tubearchivist-es
 latest
 ```
 
-![!Container: Tube](es-container.png)
+![!Container: Tube](images/es-container.png)
 
 <br />
 
@@ -48,7 +48,7 @@ ELASTIC_PASSWORD
 verysecret
 ```
 
-![!env1: Tube](es-env1.png)
+![!env1: Tube](images/es-env1.png)
 
 **Name**
 ```
@@ -70,7 +70,7 @@ ES_JAVA_OPTS
 -Xms512m -Xmx512m
 ```
 
-![!env1: Tube](es-env2.png)
+![!env1: Tube](images/es-env2.png)
 
 <br />
 
@@ -86,7 +86,7 @@ ES_JAVA_OPTS
 9200
 ```
 
-![!Networking: Tube](es-networking.png)
+![!Networking: Tube](images/es-networking.png)
 
 <br />
 
@@ -101,7 +101,7 @@ Ensure the mountpath is:
 
 Elasticsearch specifically looks to that mount point, its required
 
-![!Storage: Tube](es-storage.png)
+![!Storage: Tube](images/es-storage.png)
 
 
 <br />
@@ -110,10 +110,10 @@ Elasticsearch specifically looks to that mount point, its required
 
 Running the application without user:group `0` or `root`, resulted in the container not starting.
 
-![!Storage: Tube](es-security1.png)
+![!Storage: Tube](images/es-security1.png)
 
 - Also, in this case, `fsgroup` was also required to be `0`
 
-![!Storage: Tube](es-security2.png)
+![!Storage: Tube](images/es-security2.png)
 
 <br />

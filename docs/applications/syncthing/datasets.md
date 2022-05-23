@@ -6,4 +6,4 @@ So, as you can see I created a `POSIX ACL` and set all of the users to `apps` an
 
 Unsafe I know, but I really could not find another way to get this working.
 
-![!Dataset: syncthing](dataset.png)
+![!Dataset: syncthing](images/dataset.png)

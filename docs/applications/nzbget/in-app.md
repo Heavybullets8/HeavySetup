@@ -46,7 +46,7 @@ I use 5 catagories
 
     - I also always enable `Remove Completed` for NZBs 
 
-    ![!Settings: Radarr](radarr.png)
+    ![!Settings: Radarr](images/radarr.png)
 
 - `Series` is used by:
 
@@ -54,7 +54,7 @@ I use 5 catagories
 
     - I also always enable `Remove Completed` for NZBs 
 
-    ![!Settings: Sonarr](sonarr.png)
+    ![!Settings: Sonarr](images/sonarr.png)
     
 - `Music` is used by:
 
@@ -62,7 +62,7 @@ I use 5 catagories
 
     - I also always enable `Remove Completed` for NZBs 
 
-    ![!Settings: Lidarr](lidarr.png)
+    ![!Settings: Lidarr](images/lidarr.png)
 
 - `Manual` is ignored by all of my applications and only for my personal use
     
@@ -73,7 +73,7 @@ I use 5 catagories
 
 While creating these catagories, I _ONLY_ changed the name, no other field was changed, the files once completed, will still go into their own directory as shown below.
 
-![!Structure: NZBGet](catagories_files.png)
+![!Structure: NZBGet](images/catagories_files.png)
 
 <br />
 
@@ -91,7 +91,7 @@ Clean.py, Flatten.py, HashRenamer.py
 
 As long as the scripts are in your scripts directory you should be set
 
-![!Extensions: NZBGet](extensions.png)
+![!Extensions: NZBGet](images/extensions.png)
 
 <br />
 

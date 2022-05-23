@@ -15,7 +15,7 @@ bbilly1/tubearchivist
 latest
 ```
 
-![!Container: Tube](ta_container.png)
+![!Container: Tube](images/ta_container.png)
 
 <br />
 
@@ -40,7 +40,7 @@ REDIS_HOST
 ta-redis-custom-app.ix-ta-redis.svc.cluster.local
 ```
 
-![!env1: Tube](ta-env1.png)
+![!env1: Tube](images/ta-env1.png)
 
 **Name**
 ```
@@ -73,7 +73,7 @@ ELASTIC_PASSWORD
 verysecret
 ```
 
-![!env1: Tube](ta-env2.png)
+![!env1: Tube](images/ta-env2.png)
 
 <br />
 
@@ -89,7 +89,7 @@ verysecret
 8000
 ```
 
-![!Networking: Tube](ta-networking.png)
+![!Networking: Tube](images/ta-networking.png)
 
 <br />
 
@@ -106,7 +106,7 @@ Ensure the mountpath is:
 
 TubeArchivist specifically looks to that mount point, its required
 
-![!Storage: Tube](ta-storage_data.png)
+![!Storage: Tube](images/ta-storage_data.png)
 
 <br />
 
@@ -118,7 +118,7 @@ Ensure the mountpath is:
 ```
 
 
-![!Storage: Tube](ta-storage_config.png)
+![!Storage: Tube](images/ta-storage_config.png)
 
 
 <br />
@@ -127,8 +127,8 @@ Ensure the mountpath is:
 
 Running the application without user:group `0` or `root`, resulted in a Django import error.
 
-![!Storage: Tube](ta-security1.png)
+![!Storage: Tube](images/ta-security1.png)
 
-![!Storage: Tube](ta-security2.png)
+![!Storage: Tube](images/ta-security2.png)
 
 <br />
