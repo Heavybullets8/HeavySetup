@@ -12,7 +12,7 @@ This guide is purely my opinion and what works and makes things easier for me, i
     - _Otherwise you will have to deal with escaping spaces in file paths and annoying stuff like that_
 - Capitalization 
     - _Personal preference, I like to keep all of my files lowercase and uniform_
-    - _That wa you don't have to remember whether or not the file or folder _is_ lowercase or not its just simply always lowercase_
+    - _That wa you don't have to remember whether or not the file or folder **is** lowercase or not its just simply always lowercase_
     - _Linux is `CaSe SeNsIsTiVe` after all, so you HAVE to remember_
 - Any sort of special character besides "_" or "-"
 

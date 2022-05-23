@@ -28,6 +28,8 @@ The setup is default
 
 ![!Storage: NZBGet](images/storage_config.png)
 
+<br >
+
 ### Media - Destination Folders
 
 - Media is so that Radarr will have a location to place files once they're completed
@@ -35,6 +37,7 @@ The setup is default
 
 ![!Storage: NZBGet](images/storage_data_media.png)
 
+<br >
 
 ### Backups
 
@@ -43,6 +46,8 @@ The setup is default
 
 ![!Storage: NZBGet](images/storage_data_backups.png)
 
+<br >
+
 ### NZB 
 
 - This is obviously the location Radarr will look for completed NZB files
@@ -50,12 +55,16 @@ The setup is default
 
 ![!Storage: NZBGet](images/storage_data_nzb.png)
 
+<br >
+
 ### Bittorrent 
 
 - This is the location Radarr will look for completed qBittorrent files
 - Its also the location qBittorrent saves its completed movie files
 
 ![!Storage: NZBGet](images/storage_data_qbit.png)
+
+<br >
 
 ### Syncthing
 
