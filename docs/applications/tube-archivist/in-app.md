@@ -4,16 +4,18 @@ I will still however, share my settings.
 
 ## Download Format
 
-This is completely subjective, but I have been using this profile for a while, as it allows playback on my phone, embedded thumbnails, as well as good quality. 
+This is completely subjective, and I am also continuously changing this setting until I land on something that I like. 
+
+However, this is what I am currently using:
 ```
-bestvideo+bestaudio/mkv
+(bv*[vcodec~='^((he|a)vc|h26[45])']+ba) / (bv*+ba/b)
 ```
 
 Current metadata embed setting: `True`
 
 Current thumbnail embed setting: `True`
 
-![!DL Format: Tube](in-app_Download_Format.png)
+![!DL Format: Tube](in-app_download_format.png)
 
 
 <br />
