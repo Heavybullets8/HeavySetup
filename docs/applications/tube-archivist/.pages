@@ -1,7 +1,8 @@
 title: Tube Archivist
 nav:
     - Datasets: dataset.md
-    - TubeArchivist Installation: tube-installation.md
-    - Elasticsearch Installation: es-installation.md
-    - Redis Installation: redis-installation.md
+    - Installation:
+        - TubeArchivist Installation: tube-installation.md
+        - Elasticsearch Installation: es-installation.md
+        - Redis Installation: redis-installation.md
     - In App Settings: in-app.md

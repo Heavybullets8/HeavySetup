@@ -12,12 +12,12 @@ But feel free to search for guides.
 
 ## Guide Descriptions
 
-[General Guides](https://heavysetup.info/general_guides/folder_structure/)
+[General Guides](https://heavysetup.info/general_guides/about/)
 
 
 - Covers topics that don't _specifically_ have to do with application setups.
 
-[Applications](https://heavysetup.info/applications/notifiarr/datasets/)
+[Applications](https://heavysetup.info/applications/about/)
 
 - Covers my personal setups for my applications, including but not limited to: _installation_, _in-app settings_, _dataset permissions_ and _misc information_
 
