@@ -44,7 +44,7 @@ I use 5 catagories
 
 ??? Radarr "Radarr"
 
-    - I also always enable `Remove Completed`
+    - I also always enable `Remove Completed` for NZBs 
 
     ![!Settings: Radarr](radarr.png)
 
@@ -52,15 +52,15 @@ I use 5 catagories
 
 ??? Sonarr "Sonarr"
 
-    - I also always enable `Remove Completed`
+    - I also always enable `Remove Completed` for NZBs 
 
     ![!Settings: Sonarr](sonarr.png)
     
-- `Music` is for Lidarr
+- `Music` is used by:
 
 ??? Lidarr "Lidarr"
 
-    - I also always enable `Remove Completed`
+    - I also always enable `Remove Completed` for NZBs 
 
     ![!Settings: Lidarr](lidarr.png)
 
