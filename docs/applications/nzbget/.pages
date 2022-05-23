@@ -1,3 +1,4 @@
 nav:
+    - Datasets: datasets.md
     - Installation: installation.md
     - In App Settings: in-app.md
