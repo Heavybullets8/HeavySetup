@@ -1035,12 +1035,13 @@
 <p>Theres nothing specific to Truenas Scale after setting up your application. </p>
 <p>I will still however, share my settings.</p>
 <h2 id="download-format">Download Format</h2>
-<p>This is completely subjective, but I have been using this profile for a while, as it allows playback on my phone, embedded thumbnails, as well as good quality. 
-<div class="highlight"><pre><span></span><code>bestvideo+bestaudio/mkv
+<p>This is completely subjective, and I am also continuously changing this setting until I land on something that I like. </p>
+<p>However, this is what I am currently using:
+<div class="highlight"><pre><span></span><code>(bv*[vcodec~=&#39;^((he|a)vc|h26[45])&#39;]+ba) / (bv*+ba/b)
 </code></pre></div></p>
 <p>Current metadata embed setting: <code>True</code></p>
 <p>Current thumbnail embed setting: <code>True</code></p>
-<p><img alt="!DL Format: Tube" src="../in-app_Download_Format.png" /></p>
+<p><img alt="!DL Format: Tube" src="../in-app_download_format.png" /></p>
 <p><br /></p>
 <h2 id="integrations">Integrations</h2>
 <p>Integrate with returnyoutubedislike.com to get dislikes and average ratings back: <code>True</code></p>

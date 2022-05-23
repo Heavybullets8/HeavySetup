@@ -1026,8 +1026,10 @@
 </code></pre></div>
 <p>Here is a template that I use:</p>
 <ul>
-<li>Note I do not use Lidarr, or anything else, so this is a very slimmed down version of the configuration file</li>
+<li>Note: this is a very slimmed down version of the configuration file</li>
 </ul>
+<details class="notifiarr">
+<summary>notifiarr.conf</summary>
 <div class="highlight"><pre><span></span><code>###############################################
 # Notifiarr Client Example Configuration File #
 # Created by Notifiarr v0.2.0   @ 212410T2154 #
@@ -1133,6 +1135,7 @@ api_key   = &quot;SONARR_API_KEY_HERE&quot;
   interval = &quot;10m0s&quot; # How often to send service states to Notifiarr.com. Minimum = 5m.
   log_file = &#39;&#39;      # Service Check logs go to the app log by default. Change that by setting a services.log file here.
 </code></pre></div>
+</details>
 <p><br /></p>
 <h2 id="dataset-permissions">Dataset Permissions</h2>
 <p>After you have created your <code>notifiarr.conf</code> file, and filled out the required fields, you will need to create a dataset for the file to reside in</p>
