@@ -1,3 +1,5 @@
 nav:
     - Installation: installation.md
-    - In App Settings: in-app.md
+    - Integrations: 
+        - qBittorrent: qbittorrent.md
+        - NZBGet: nzbget.md
