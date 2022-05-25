@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#purpose" class="md-skip">
+        <a href="#container" class="md-skip">
           Skip to content
         </a>
       
@@ -452,6 +452,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../datasets/" class="md-nav__link">
         Preparation
       </a>
@@ -496,13 +510,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
-    Purpose
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#container" class="md-nav__link">
     Container
   </a>
@@ -513,6 +520,26 @@
   <a href="#networking" class="md-nav__link">
     Networking
   </a>
+  
+    <nav class="md-nav" aria-label="Networking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns-settings" class="md-nav__link">
+    DNS Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-forwarding" class="md-nav__link">
+    Port Forwarding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -527,6 +554,40 @@
   <a href="#ingress" class="md-nav__link">
     Ingress
   </a>
+  
+    <nav class="md-nav" aria-label="Ingress">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-services" class="md-nav__link">
+    External Services
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-services-container" class="md-nav__link">
+    External Services Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-services-ingress" class="md-nav__link">
+    External Services Ingress
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1142,13 +1203,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
-    Purpose
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#container" class="md-nav__link">
     Container
   </a>
@@ -1159,6 +1213,26 @@
   <a href="#networking" class="md-nav__link">
     Networking
   </a>
+  
+    <nav class="md-nav" aria-label="Networking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns-settings" class="md-nav__link">
+    DNS Settings
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-forwarding" class="md-nav__link">
+    Port Forwarding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1173,6 +1247,40 @@
   <a href="#ingress" class="md-nav__link">
     Ingress
   </a>
+  
+    <nav class="md-nav" aria-label="Ingress">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-services" class="md-nav__link">
+    External Services
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-services-container" class="md-nav__link">
+    External Services Container
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-services-ingress" class="md-nav__link">
+    External Services Ingress
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1203,40 +1311,58 @@
 
   <h1>Installation</h1>
 
-<h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">¶</a></h2>
-<p>This is an awesome application</p>
 <h2 id="container">Container<a class="headerlink" href="#container" title="Permanent link">¶</a></h2>
-<p>There is no built in Truecharts version of this application</p>
-<p>But thats okay, we'll use Custom-app for this application instead</p>
+<p>I use the big blue <code>Launch Docker Container</code> Button</p>
+<p><img alt="!Networking: NZBGet" src="../images/launch-docker-image.png" /></p>
+<p><br /></p>
 <p><strong>Container Repository</strong></p>
 <div class="highlight"><pre><span></span><code>golift/notifiarr
 </code></pre></div>
 <p><strong>Container Tag</strong></p>
-<div class="highlight"><pre><span></span><code>heavy
+<div class="highlight"><pre><span></span><code>latest
 </code></pre></div>
-<p>We got our own tag for Kubernetes </p>
 <p><img alt="!Networking: NZBGet" src="../images/container.png" /></p>
 <p><br /></p>
 <h2 id="networking">Networking<a class="headerlink" href="#networking" title="Permanent link">¶</a></h2>
+<h3 id="dns-settings">DNS Settings<a class="headerlink" href="#dns-settings" title="Permanent link">¶</a></h3>
 <ul>
-<li>I specifically use clusterIP for this setup<ul>
-<li>This is so I can link notifiarr with a DNS name as shown.</li>
+<li>I use the following setting so we can use the Kubernetes DNS names when linking applications together</li>
 </ul>
-</li>
-</ul>
-<p><img alt="!Networking: NZBGet" src="../images/networking_site.png" /></p>
 <p><img alt="!Networking: NZBGet" src="../images/networking.png" /></p>
+<h3 id="port-forwarding">Port Forwarding<a class="headerlink" href="#port-forwarding" title="Permanent link">¶</a></h3>
+<p>Container Port
+<div class="highlight"><pre><span></span><code>54544
+</code></pre></div>
+Node Port 
+<div class="highlight"><pre><span></span><code>54544
+</code></pre></div></p>
+<p>Protocol
+<div class="highlight"><pre><span></span><code>UDP
+</code></pre></div>
+We cannot use Ports Lower than 9000, which is why I did not use the default <code>5454</code> port as suggested in their documentation
+<img alt="!Networking: NZBGet" src="../images/networking1.png" /></p>
 <p><br /></p>
 <h2 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">¶</a></h2>
-<p><img alt="!Networking: NZBGet" src="../images/storage_config.png" /></p>
 <ul>
-<li>It's important to set the mountpath as /config</li>
+<li>It's important to set the mountpath as <code>/config</code></li>
 <li>Set the path to the directory that contains your config file that you created in <code>Preparation</code></li>
 </ul>
-<p><img alt="!Networking: NZBGet" src="../images/storage_config1.png" /></p>
+<p><img alt="!Networking: NZBGet" src="../images/storage_config.png" /></p>
 <p><br /></p>
 <h2 id="ingress">Ingress<a class="headerlink" href="#ingress" title="Permanent link">¶</a></h2>
+<h3 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">¶</a></h3>
+<p>We want to link <code>external services</code> to notifiarr so we can use a domain name when connecting their site to our client as shown:</p>
+<p><img alt="!Networking: NZBGet" src="../images/networking_site.png" /></p>
+<h3 id="external-services">External Services<a class="headerlink" href="#external-services" title="Permanent link">¶</a></h3>
+<p>You will need to launch an <code>external services</code> application, offered by Truecharts</p>
+<p><a href="https://truecharts.org/manual/Quick-Start%20Guides/11-external-services/">External-Services Documentation</a></p>
 <p><img alt="!Networking: NZBGet" src="../images/ingress.png" /></p>
+<h3 id="external-services-container">External Services Container<a class="headerlink" href="#external-services-container" title="Permanent link">¶</a></h3>
+<p><code>External Service IP</code> is the local IP address of your Truenas SCALE server</p>
+<p><code>Service Port</code> is the <a href="https://heavysetup.info/HeavySetup/applications/notifiarr/installation/#port-forwarding">port used by Notifiarr</a>
+<img alt="!Networking: NZBGet" src="../images/ingress-container.png" /></p>
+<h3 id="external-services-ingress">External Services Ingress<a class="headerlink" href="#external-services-ingress" title="Permanent link">¶</a></h3>
+<p><img alt="!Networking: NZBGet" src="../images/ingress-ingress.png" /></p>
 <p><br /></p>
 <h2 id="security">Security<a class="headerlink" href="#security" title="Permanent link">¶</a></h2>
 <p><img alt="!Networking: NZBGet" src="../images/security.png" /></p>
