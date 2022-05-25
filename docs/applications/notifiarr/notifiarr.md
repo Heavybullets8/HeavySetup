@@ -56,7 +56,7 @@ YOURAPIKEYHERE
 
 This is supposed to just be `0.0.0.0:YOURPORT`
 
-If you follow [my guide](https://heavysetup.info/applications/notifiarr/installation/#port-forwarding), it will be `54544`
+If you follow [my guide](https://heavysetup.info/applications/notifiarr/notifiarr/#port-forwarding), it will be `54544`
 
 **Environment Variable Name**
 ```
@@ -86,6 +86,7 @@ DN_UPSTREAMS_0
 ??? picture "Picture"
     ![!Networking: NZBGet](images/env_var-rev-proxy.png)
 
+<br >
 
 ### Radarr
 
@@ -235,6 +236,7 @@ YOURAPIKEYHERE
 
 ![!Networking: NZBGet](images/networking.png)
 
+<br >
 
 ### Port Forwarding
 

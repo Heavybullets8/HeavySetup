@@ -16,7 +16,7 @@ You will need to launch an `external services` application, offered by Truechart
 
 `External Service IP` is the local IP address of your Truenas SCALE server
 
-`Service Port` is the [port used by Notifiarr](https://heavysetup.info/applications/notifiarr/installation/#port-forwarding)
+`Service Port` is the [port used by Notifiarr](https://heavysetup.info/applications/notifiarr/notifiarr/#port-forwarding)
 ![!Networking: NZBGet](images/ingress-container.png)
 
 ## Ingress
