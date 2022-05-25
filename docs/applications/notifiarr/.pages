@@ -4,4 +4,4 @@ nav:
     - Installation: 
         - Notifiarr: notifiarr.md
         - External Services: ext_services.md
-    - In App Settings: in-app.md
+    - WebGUI Settings: in-app.md
