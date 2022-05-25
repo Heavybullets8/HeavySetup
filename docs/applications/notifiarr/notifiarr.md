@@ -241,38 +241,40 @@ YOURAPIKEYHERE
 ### Port Forwarding
 
 Configure both `TCP` and `UDP` for `54544`
-??? ports "Ports"
-    Container Port
-    ```
-    54544
-    ```
-    Node Port 
-    ```
-    54544
-    ```
-
-    Protocol
-    ```
-    UDP
-    ```
-    <br >
-
-    Container Port
-    ```
-    54544
-    ```
-    Node Port 
-    ```
-    54544
-    ```
-
-    Protocol
-    ```
-    TCP
-    ```
 
 We cannot use Ports Lower than 9000, which is why I did not use the default `5454` port as suggested in their documentation
-![!Networking: NZBGet](images/networking1.png)
+
+Container Port
+```
+54544
+```
+Node Port 
+```
+54544
+```
+
+Protocol
+```
+UDP
+```
+<br >
+
+Container Port
+```
+54544
+```
+Node Port 
+```
+54544
+```
+
+Protocol
+```
+TCP
+```
+
+??? picture "Picture"
+    ![!Networking: NZBGet](images/networking1.png)
 
 
 <br />
