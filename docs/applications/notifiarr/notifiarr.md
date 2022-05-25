@@ -116,9 +116,3 @@ var
 
 
 <br />
-
-## Security 
-
-![!Networking: NZBGet](images/security.png)
-
-<br />
