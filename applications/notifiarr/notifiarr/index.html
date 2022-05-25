@@ -545,6 +545,14 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#head" class="md-nav__link">
+    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#environment-variables" class="md-nav__link">
     Environment Variables
   </a>
@@ -598,8 +606,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#networking" class="md-nav__link">
     Networking
   </a>
@@ -625,18 +633,43 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#storage" class="md-nav__link">
     Storage
   </a>
   
+    <nav class="md-nav" aria-label="Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#host-path" class="md-nav__link">
+    Host Path
+  </a>
+  
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#volume" class="md-nav__link">
+    Volume
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#security" class="md-nav__link">
     Security
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -677,7 +710,7 @@
   
     <li class="md-nav__item">
       <a href="../in-app/" class="md-nav__link">
-        In App Settings
+        WebGUI Settings
       </a>
     </li>
   
@@ -1273,6 +1306,14 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#head" class="md-nav__link">
+    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#environment-variables" class="md-nav__link">
     Environment Variables
   </a>
@@ -1326,8 +1367,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#networking" class="md-nav__link">
     Networking
   </a>
@@ -1353,18 +1394,43 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#storage" class="md-nav__link">
     Storage
   </a>
   
+    <nav class="md-nav" aria-label="Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#host-path" class="md-nav__link">
+    Host Path
+  </a>
+  
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#volume" class="md-nav__link">
+    Volume
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#security" class="md-nav__link">
     Security
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1386,8 +1452,6 @@
 
 
 
-  <h1>Notifiarr</h1>
-
 <h2 id="container">Container<a class="headerlink" href="#container" title="Permanent link">¶</a></h2>
 <p>I use the big blue <code>Launch Docker Container</code> Button</p>
 <p><img alt="!Networking: NZBGet" src="../images/launch-docker-image.png" /></p>
@@ -1400,6 +1464,7 @@
 </code></pre></div>
 <p><img alt="!Networking: NZBGet" src="../images/container.png" /></p>
 <p><br /></p>
+<h1 id="head">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD<a class="headerlink" href="#head" title="Permanent link">¶</a></h1>
 <h2 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">¶</a></h2>
 <p>Here we will be: </p>
 <ul>
@@ -1415,7 +1480,7 @@
 <summary>Where to find API Key</summary>
 <p><a href="https://notifiarr.com/profile.php">Login to Notifiarr.com</a></p>
 <p>Then your API key will be found here:
-<img alt="!Networking: NZBGet" src="../images/env_var-notifiarr-api.png" /></p>
+<img alt="!Networking: NZBGet" src="images/env_var-notifiarr-api.png" /></p>
 </details>
 <p><strong>Environment Variable Name</strong>
 <div class="highlight"><pre><span></span><code>DN_API_KEY
@@ -1425,7 +1490,7 @@
 </code></pre></div></p>
 <details class="picture">
 <summary>Picture</summary>
-<p><img alt="!Networking: NZBGet" src="../images/env_var-notifiarr.png" /></p>
+<p><img alt="!Networking: NZBGet" src="images/env_var-notifiarr.png" /></p>
 </details>
 <p><br /></p>
 <h3 id="bind-address">Bind Address<a class="headerlink" href="#bind-address" title="Permanent link">¶</a></h3>
@@ -1439,7 +1504,7 @@
 </code></pre></div></p>
 <details class="picture">
 <summary>Picture</summary>
-<p><img alt="!Networking: NZBGet" src="../images/env_var-bind-address.png" /></p>
+<p><img alt="!Networking: NZBGet" src="images/env_var-bind-address.png" /></p>
 </details>
 <p><br /></p>
 <h3 id="reverse-proxy-support">Reverse Proxy Support<a class="headerlink" href="#reverse-proxy-support" title="Permanent link">¶</a></h3>
@@ -1452,7 +1517,7 @@
 </code></pre></div></p>
 <details class="picture">
 <summary>Picture</summary>
-<p><img alt="!Networking: NZBGet" src="../images/env_var-rev-proxy.png" /></p>
+<p><img alt="!Networking: NZBGet" src="images/env_var-rev-proxy.png" /></p>
 </details>
 <p><br ></p>
 <h3 id="radarr">Radarr<a class="headerlink" href="#radarr" title="Permanent link">¶</a></h3>
@@ -1493,7 +1558,7 @@
 <p><br /></p>
 <details class="picture">
 <summary>Picture</summary>
-<p><img alt="!Networking: NZBGet" src="../images/env_var-radarr.png" /></p>
+<p><img alt="!Networking: NZBGet" src="images/env_var-radarr.png" /></p>
 </details>
 <p><br /></p>
 <h3 id="sonarr">Sonarr<a class="headerlink" href="#sonarr" title="Permanent link">¶</a></h3>
@@ -1535,7 +1600,7 @@
 <p><br /></p>
 <details class="picture">
 <summary>Picture</summary>
-<p><img alt="!Networking: NZBGet" src="../images/env_var-sonarr.png" /></p>
+<p><img alt="!Networking: NZBGet" src="images/env_var-sonarr.png" /></p>
 </details>
 <p><br /></p>
 <h3 id="plex">Plex<a class="headerlink" href="#plex" title="Permanent link">¶</a></h3>
@@ -1562,6 +1627,21 @@
 <p>Plex themselves have a <a href="https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/">good guide</a> for finding your Plex token</p>
 </details>
 <p><br /></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>abeb96fd1413f4d24ea52e6be2a893a754e6b88d</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 <h2 id="networking">Networking<a class="headerlink" href="#networking" title="Permanent link">¶</a></h2>
 <h3 id="dns-settings">DNS Settings<a class="headerlink" href="#dns-settings" title="Permanent link">¶</a></h3>
 <ul>
@@ -1597,10 +1677,30 @@ Node Port
 </details>
 <p><br /></p>
 <h2 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">¶</a></h2>
+<h3 id="host-path">Host Path<a class="headerlink" href="#host-path" title="Permanent link">¶</a></h3>
+<p><strong>Host Path</strong></p>
 <ul>
-<li>It's important to set the mountpath as <code>/config</code></li>
-<li>Set the path to the directory that contains your config file that you created in <code>Preparation</code></li>
+<li>This is path you to the dataset you created on the <a href="https://heavysetup.info/applications/notifiarr/datasets/#dataset-permissions">preparation page</a></li>
 </ul>
+<div class="highlight"><pre><span></span><code>/mnt/speed/notifiarr
+</code></pre></div>
+<p><strong>Mount Path</strong></p>
+<ul>
+<li>The Mount Path is REQUIRED to be <code>/config</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code>/config
+</code></pre></div>
+<p><br ></p>
+<h3 id="volume">Volume<a class="headerlink" href="#volume" title="Permanent link">¶</a></h3>
+<p><strong>Mount Path</strong>
+<div class="highlight"><pre><span></span><code>/var/run/utmp
+</code></pre></div></p>
+<p><strong>Dataset Name</strong></p>
+<ul>
+<li>This doesnt really matter, just make sure theres no special characters in the name</li>
+</ul>
+<div class="highlight"><pre><span></span><code>var
+</code></pre></div>
 <p><img alt="!Networking: NZBGet" src="../images/storage_config.png" /></p>
 <p><br /></p>
 <h2 id="security">Security<a class="headerlink" href="#security" title="Permanent link">¶</a></h2>

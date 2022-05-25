@@ -19,7 +19,7 @@
     
     
       
-        <title>In App Settings - Heavy Setup</title>
+        <title>WebGUI Settings - Heavy Setup</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#video" class="md-skip">
+        <a href="#webgui-settings" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              In App Settings
+              WebGUI Settings
             
           </span>
         </div>
@@ -549,12 +549,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          In App Settings
+          WebGUI Settings
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        In App Settings
+        WebGUI Settings
       </a>
       
         
@@ -571,8 +571,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#video" class="md-nav__link">
-    Video
+  <a href="#webgui-settings" class="md-nav__link">
+    WEBGUI Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="WEBGUI Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#radarr" class="md-nav__link">
+    Radarr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sonarr" class="md-nav__link">
+    Sonarr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plex" class="md-nav__link">
+    Plex
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saving" class="md-nav__link">
+    Saving
   </a>
   
 </li>
@@ -1168,8 +1202,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#video" class="md-nav__link">
-    Video
+  <a href="#webgui-settings" class="md-nav__link">
+    WEBGUI Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="WEBGUI Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#radarr" class="md-nav__link">
+    Radarr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sonarr" class="md-nav__link">
+    Sonarr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plex" class="md-nav__link">
+    Plex
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#saving" class="md-nav__link">
+    Saving
   </a>
   
 </li>
@@ -1192,14 +1260,183 @@
 
 
 
-  <h1>In App Settings</h1>
+  <h1>WebGUI Settings</h1>
 
-<h2 id="video">Video<a class="headerlink" href="#video" title="Permanent link">¶</a></h2>
-<p>I will only have to add a few things at a later date, that better include my specific settings. </p>
+<h2 id="webgui-settings">WEBGUI Settings<a class="headerlink" href="#webgui-settings" title="Permanent link">¶</a></h2>
+<ol>
+<li>
+<p>Enter your web GUI</p>
+<p>Your WEBGUI should be accessible at either:</p>
+<p>SERVERIP:PORT   <code>192.168.0.77:54544</code></p>
+<p>or </p>
+<p>DOMAIN NAME     <code>notifiarr.myfakesite.net</code></p>
+</li>
+<li>
+<p>Enter your Username and password you set in your <a href="https://heavysetup.info/applications/notifiarr/datasets/#config-file">configuation file</a></p>
+</li>
+<li>Click on <code>configuration</code></li>
+</ol>
+<p><br ></p>
+<h3 id="radarr">Radarr<a class="headerlink" href="#radarr" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p>Go to your <code>Starr Apps</code> Setting</p>
+<p><img alt="!Networking: NZBGet" src="../images/starr_apps.png" /></p>
+</li>
+<li>
+<p>Click the + icon to the right of <code>Radarr</code></p>
+</li>
+<li>
+<p>Fill out the information:</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>Radarr</td>
+<td>Doesn't matter what you call it, just call it something memorable</td>
+</tr>
+<tr>
+<td>URL</td>
+<td>http://radarr.ix-radarr.svc.cluster.local:7878</td>
+<td>You will need to generate a different DNS name if your app name is not <code>radarr</code> Generate a new name with <a href="https://truecharts.org/manual/Quick-Start%20Guides/06-linking-apps/"> Truecharts Guide </a></td>
+</tr>
+<tr>
+<td>API Key</td>
+<td>APIKEYHERE</td>
+<td>Go to Radarr &gt; Settings &gt; General &gt; Under <code>Security</code> Copy your <code>API Key</code></td>
+</tr>
+<tr>
+<td>Username</td>
+<td>NULL</td>
+<td>Not required</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>NULL</td>
+<td>Not required</td>
+</tr>
+</tbody>
+</table>
+<details class="picture">
+<summary>picture</summary>
+<p><img alt="!Networking: NZBGet" src="../images/radarr.png" /></p>
+</details>
+<p><br ></p>
+<h3 id="sonarr">Sonarr<a class="headerlink" href="#sonarr" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p>Go to your <code>Starr Apps</code> Setting</p>
+<p><img alt="!Networking: NZBGet" src="../images/starr_apps.png" /></p>
+</li>
+<li>
+<p>Click the + icon to the right of <code>Radarr</code></p>
+</li>
+<li>
+<p>Fill out the information:</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>Sonarr</td>
+<td>Doesn't matter what you call it, just call it something memorable</td>
+</tr>
+<tr>
+<td>URL</td>
+<td>http://sonarrnll-custom-app.ix-sonarrnll.svc.cluster.local:8989</td>
+<td>You will need to generate a different DNS name if your app name is not <code>sonarrnll</code> Generate a new name with <a href="https://truecharts.org/manual/Quick-Start%20Guides/06-linking-apps/"> Truecharts Guide </a></td>
+</tr>
+<tr>
+<td>API Key</td>
+<td>APIKEYHERE</td>
+<td>Go to Sonarr &gt; Settings &gt; General &gt; Under <code>Security</code> Copy your <code>API Key</code></td>
+</tr>
+<tr>
+<td>Username</td>
+<td>NULL</td>
+<td>Not required</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>NULL</td>
+<td>Not required</td>
+</tr>
+</tbody>
+</table>
+<details class="picture">
+<summary>picture</summary>
+<p><img alt="!Networking: NZBGet" src="../images/sonarr.png" /></p>
+</details>
+<p><br ></p>
+<h3 id="plex">Plex<a class="headerlink" href="#plex" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p>Go to your <code>Media Apps</code> Setting</p>
+<p><img alt="!Networking: NZBGet" src="../images/media_apps.png" /></p>
+</li>
+<li>
+<p>Click the + icon to the right of <code>Plex</code></p>
+</li>
+<li>
+<p>Fill out the information:</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>NULL</td>
+<td>This will be filled out after refreshing your config. Leave it blank</td>
+</tr>
+<tr>
+<td>URL</td>
+<td>http://plex.ix-plex.svc.cluster.local:32400</td>
+<td>You will need to generate a different DNS name if your app name is not <code>plex</code> Generate a new name with <a href="https://truecharts.org/manual/Quick-Start%20Guides/06-linking-apps/"> Truecharts Guide </a></td>
+</tr>
+<tr>
+<td>Plex Token</td>
+<td>PLEX_TOKEN_HERE</td>
+<td>Plex themselves have a <a href="https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/"> good guide </a> for finding your Plex token</td>
+</tr>
+</tbody>
+</table>
+<details class="picture">
+<summary>picture</summary>
+<p><img alt="!Networking: NZBGet" src="../images/plex.png" /></p>
+</details>
+<p><br /></p>
+<h2 id="saving">Saving<a class="headerlink" href="#saving" title="Permanent link">¶</a></h2>
+<p>After you are done, make sure to save your configuration</p>
 <ul>
-<li>Thank Goodness for IBRACORP, I thought I would have to make a video myself covering this topic. However, it seems they got most of everything I would have covered. </li>
+<li>This will edit your <code>notifiarr.conf</code> file with your new settings</li>
 </ul>
-<p><div class="video-container"><iframe src="https://www.youtube.com/embed/DCxU3Vzaz6k" style="position: relative; width: 100%; height: 22.172vw" frameborder="0" allowfullscreen></iframe></div></p>
+<p>Click <code>Save &amp; Reload</code>, located at the bottom left of your screen</p>
+<p><img alt="!Networking: NZBGet" src="../images/save_and_reload.png" /></p>
+<p><br /></p>
 
               
             </article>

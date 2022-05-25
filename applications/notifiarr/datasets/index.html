@@ -500,6 +500,19 @@
     Config File
   </a>
   
+    <nav class="md-nav" aria-label="Config File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notifiarrconf" class="md-nav__link">
+    notifiarr.conf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -586,7 +599,7 @@
   
     <li class="md-nav__item">
       <a href="../in-app/" class="md-nav__link">
-        In App Settings
+        WebGUI Settings
       </a>
     </li>
   
@@ -1179,6 +1192,19 @@
     Config File
   </a>
   
+    <nav class="md-nav" aria-label="Config File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notifiarrconf" class="md-nav__link">
+    notifiarr.conf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1214,20 +1240,63 @@
 <p>Ensure the config file is named: </p>
 <div class="highlight"><pre><span></span><code>notifiarr.conf
 </code></pre></div>
-<p>Luckily, the only thing you need to set FIRST is your User Interface password, we will configure the rest of the application with Environment Variables.</p>
-<details class="notifiarr">
-<summary>notifiarr.conf</summary>
-<div class="highlight"><pre><span></span><code>###############################################
-# Notifiarr Client Example Configuration File #
-# Created by Notifiarr v0.3.1   @ 222505T0022 #
-###############################################
+<p><br ></p>
+<h3 id="notifiarrconf">notifiarr.conf<a class="headerlink" href="#notifiarrconf" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code>## This API key must be copied from your notifiarr.com account.
+api_key = &quot;API_KEY_HERE&quot;
 
 ## Setting a UI password enables the human accessible web GUI. Must be at least 16 characters.
 ## The default username is admin; change it by setting ui_password to &quot;username:password&quot;
 ## Set to &quot;webauth&quot; to disable the login form and use only proxy authentication. See upstreams, below.
 ## Your proxy auth must pass x-webauth-user header if you set this to &quot;webauth&quot;.
-ui_password = &quot;username:password123456789&quot;
+ui_password = &quot;USERNAME:PASSWORD&quot;
+
+## The ip:port to listen on for incoming HTTP requests. 0.0.0.0 means all/any IP and is recommended!
+## You may use &quot;127.0.0.1:5454&quot; to listen only on localhost; good if using a local proxy.
+## This is used to receive Plex webhooks and Media Request commands.
+##
+bind_addr = &quot;0.0.0.0:54544&quot;
+
+## Allowed upstream networks. Networks here are allowed to send two special headers:
+## (1) x-forwarded-for (2) x-webauth-user
+## The first header sets the IPs in logs.
+## The second header allows an auth proxy to set a logged-in username. Be careful.
+##
+## Set this to your reverse proxy server&#39;s IP or network. If you leave off the mask,
+## then /32 or /128 is assumed depending on IP version. Empty by default. Example:
+##
+upstreams = [&quot;172.16.0.0/16&quot;,]
 </code></pre></div>
+<details class="api_key">
+<summary>api_key</summary>
+<ol>
+<li>
+<p><a href="https://notifiarr.com/profile.php">Login to Notifiarr.com</a></p>
+</li>
+<li>
+<p>Then your API key will be found here:
+  <img alt="!Networking: NZBGet" src="../images/profile.png" /></p>
+</li>
+</ol>
+</details>
+<details class="ui_password">
+<summary>ui_password</summary>
+<p>Make sure you read the requirements within the text above.</p>
+<p>It specifically says it needs:</p>
+<ul>
+<li>A password of at LEAST 16 characters</li>
+</ul>
+</details>
+<details class="bind">
+<summary>bind_addr</summary>
+<p>You need to set this to <code>0.0.0.0</code> followed by the port you wish to use</p>
+<p>If you follow my guide exactly, you'll end up using port <code>54544</code></p>
+<p>This is the port you will access the WEBGUI from</p>
+</details>
+<details class="upstreams">
+<summary>upstreams</summary>
+<p>This is just supposed to be your kubernetes network</p>
+<p>By default your network is <code>172.16.0.0/16</code></p>
 </details>
 <p><br /></p>
 <h2 id="dataset-permissions">Dataset Permissions<a class="headerlink" href="#dataset-permissions" title="Permanent link">¶</a></h2>
