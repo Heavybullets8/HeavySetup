@@ -1,12 +1,10 @@
-## Purpose
-
-This is an awesome application
-
 ## Container
 
-There is no built in Truecharts version of this application
+I use the big blue `Launch Docker Container` Button
 
-But thats okay, we'll use Custom-app for this application instead
+![!Networking: NZBGet](images/launch-docker-image.png)
+
+<br />
 
 **Container Repository**
 
@@ -17,10 +15,8 @@ golift/notifiarr
 **Container Tag**
 
 ```
-heavy
+latest
 ```
-
-We got our own tag for Kubernetes 
 
 ![!Networking: NZBGet](images/container.png)
 
@@ -28,30 +24,70 @@ We got our own tag for Kubernetes
 
 ## Networking
 
-- I specifically use clusterIP for this setup
-    - This is so I can link notifiarr with a DNS name as shown.
+### DNS Settings
 
-![!Networking: NZBGet](images/networking_site.png)
+- I use the following setting so we can use the Kubernetes DNS names when linking applications together
 
 ![!Networking: NZBGet](images/networking.png)
+
+
+### Port Forwarding
+
+Container Port
+```
+54544
+```
+Node Port 
+```
+54544
+```
+
+Protocol
+```
+UDP
+```
+We cannot use Ports Lower than 9000, which is why I did not use the default `5454` port as suggested in their documentation
+![!Networking: NZBGet](images/networking1.png)
+
 
 <br />
 
 ## Storage
 
-![!Networking: NZBGet](images/storage_config.png)
-
-- It's important to set the mountpath as /config
+- It's important to set the mountpath as `/config`
 - Set the path to the directory that contains your config file that you created in `Preparation`
 
-![!Networking: NZBGet](images/storage_config1.png)
+![!Networking: NZBGet](images/storage_config.png)
 
 
 <br />
 
 ## Ingress
 
+### Purpose
+
+We want to link `external services` to notifiarr so we can use a domain name when connecting their site to our client as shown:
+
+![!Networking: NZBGet](images/networking_site.png)
+
+### External Services
+
+You will need to launch an `external services` application, offered by Truecharts
+
+[External-Services Documentation](https://truecharts.org/manual/Quick-Start%20Guides/11-external-services/)
+
 ![!Networking: NZBGet](images/ingress.png)
+
+### External Services Container
+
+`External Service IP` is the local IP address of your Truenas SCALE server
+
+`Service Port` is the [port used by Notifiarr](https://heavysetup.info/HeavySetup/applications/notifiarr/installation/#port-forwarding)
+![!Networking: NZBGet](images/ingress-container.png)
+
+### External Services Ingress
+
+![!Networking: NZBGet](images/ingress-ingress.png)
 
 <br />
 
