@@ -1,5 +1,7 @@
 nav:
     - About: about.md
     - Preparation: datasets.md
-    - Installation: installation.md
+    - Installation: 
+        - Notifiarr: notifiarr.md
+        - External Services: ext_services.md
     - In App Settings: in-app.md
