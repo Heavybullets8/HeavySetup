@@ -2,3 +2,4 @@ nav:
     - Introduction: index.md
     - general_guides
     - applications
+    - FAQ: faq.md

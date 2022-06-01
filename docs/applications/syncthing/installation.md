@@ -1,3 +1,13 @@
+## Container
+
+For this application I used `Syncthing` provided by [TrueCharts](https://truecharts.org/manual/Quick-Start%20Guides/01-Adding-TrueCharts/).
+
+- Available under the `stable` train
+
+![!Syncthing: Container](images/container.png)
+
+<br >
+
 ## Networking 
 
 

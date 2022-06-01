@@ -36,3 +36,5 @@ tcp4://0.0.0.0:54914, tcp4://:54914
 
 
 ![!Name: GUI](images/settings_connections.png)
+
+<br >
