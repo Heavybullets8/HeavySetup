@@ -1025,6 +1025,26 @@
     Networking
   </a>
   
+    <nav class="md-nav" aria-label="Networking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#webui" class="md-nav__link">
+    WebUI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listening-ports" class="md-nav__link">
+    Listening Ports
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1290,6 +1310,26 @@
     Networking
   </a>
   
+    <nav class="md-nav" aria-label="Networking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#webui" class="md-nav__link">
+    WebUI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listening-ports" class="md-nav__link">
+    Listening Ports
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1348,10 +1388,25 @@
 
 <h2 id="networking">Networking<a class="headerlink" href="#networking" title="Permanent link">¶</a></h2>
 <p>If you are wanting to use ingress, its probably better to use clusterIP instead</p>
-<ul>
-<li>I changed the UDP and TCP port to match the Mullvad ports allocated to me</li>
-</ul>
+<h3 id="webui">WebUI<a class="headerlink" href="#webui" title="Permanent link">¶</a></h3>
+<p>Nothing changed here, this is just the port your app will use for its web service</p>
 <p><img alt="!Networking: qbittorrent" src="../images/networking.png" /></p>
+<h3 id="listening-ports">Listening Ports<a class="headerlink" href="#listening-ports" title="Permanent link">¶</a></h3>
+<p><strong>These are the ports your other Syncthing service will connect to. You will need to either: </strong></p>
+<details class="vpn">
+<summary>If you are using a VPN</summary>
+<ul>
+<li>Port forward this port on whatever VPN service you are using, as I have stated, I am using Mullvad</li>
+<li>You only need to change the first TWO ports, not the last port</li>
+</ul>
+</details>
+<details class="vpn">
+<summary>If you are NOT using a VPN</summary>
+<ul>
+<li>Port forward this port on your router</li>
+<li>Also, if you are NOT using a VPN you can leave the two ports default, the only reason I changed my port is because Mullvad does not give you the option to choose which port to use</li>
+</ul>
+</details>
 <p><img alt="!Networking: qbittorrent" src="../images/networking_listening.png" /></p>
 <p><br /></p>
 <h2 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">¶</a></h2>

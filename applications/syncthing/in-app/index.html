@@ -68,6 +68,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#settings" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1007,9 +1012,65 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          In App Settings
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         In App Settings
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    General
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gui" class="md-nav__link">
+    GUI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connections" class="md-nav__link">
+    Connections
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1211,6 +1272,48 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    Settings
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    General
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gui" class="md-nav__link">
+    GUI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connections" class="md-nav__link">
+    Connections
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1229,7 +1332,28 @@
 
   <h1>In App Settings</h1>
 
-<p>Something will be here sooner or later</p>
+<h2 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">¶</a></h2>
+<p><img alt="!To Settings: syncthing" src="../images/to_settings.png" /></p>
+<p><br ></p>
+<h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">¶</a></h3>
+<p>Only thing I changed was my <code>Device Name</code> on here, this is unimportant and up to you.</p>
+<p><img alt="!Name: Device Name" src="../images/settings_general.png" /></p>
+<p><br ></p>
+<h3 id="gui">GUI<a class="headerlink" href="#gui" title="Permanent link">¶</a></h3>
+<p>Changed my Username/Password</p>
+<p><img alt="!Name: GUI" src="../images/settings_gui.png" /></p>
+<p><br ></p>
+<h3 id="connections">Connections<a class="headerlink" href="#connections" title="Permanent link">¶</a></h3>
+<p>I was having issues with Synthing ONLY using a relay connection, which resulted in a super slow download speed from my Seedbox. The solution was to use the following format. </p>
+<p>If you are still having an issue with relaying, you can try un-ticking the <code>Enable Relaying</code> box, but I didn't, because I still want a fallback option incase for whatever reason my port forwarding fails. </p>
+<p><strong>Sync Protocol Listen Addresses</strong>
+<div class="highlight"><pre><span></span><code>tcp4://0.0.0.0:54914, tcp4://:54914
+</code></pre></div></p>
+<details class="note">
+<summary>Note</summary>
+<p>You should be using whatever port is listed in your networking settings</p>
+</details>
+<p><img alt="!Name: GUI" src="../images/settings_connections.png" /></p>
 
               
             </article>
