@@ -1,3 +1,18 @@
+## Purpose
+
+I personally use this to:
+
+- Synchronize TRaSH Guides Custom Radarr/Sonarr profiles with my Sonarr/Radarr instance
+
+- Send statistics to my discord server
+    - Current Plex streams
+    - Changes in TRaSH Guides profile settings
+    - Sonarr/Radarr recently grabbed releases
+    - Recently downloaded media
+    - Upcoming media
+
+<br >
+
 ## Sources
 
 #### [Website](https://notifiarr.com/)
@@ -19,7 +34,7 @@ Source code for the project, active issues etc.
 
 <br >
 
-#### IBRACORP's Video 
+## Video 
 
 The video below covers
 
@@ -32,16 +47,3 @@ Keep in mind though, the video doesn't cover Truenas SCALE specific settings tho
 ![type:video](https://www.youtube.com/embed/DCxU3Vzaz6k)
 
 <br >
-
-## Purpose
-
-I personally use this to:
-
-- Synchronize TRaSH Guides Custom Radarr/Sonarr profiles with my Sonarr/Radarr instance
-
-- Send statistics to my discord server
-    - Current Plex streams
-    - Changes in TRaSH Guides profile settings
-    - Sonarr/Radarr recently grabbed releases
-    - Recently downloaded media
-    - Upcoming media

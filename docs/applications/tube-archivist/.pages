@@ -1,5 +1,6 @@
 title: Tube Archivist
 nav:
+    - About: about.md
     - Datasets: dataset.md
     - Installation:
         - TubeArchivist Installation: tube-installation.md
