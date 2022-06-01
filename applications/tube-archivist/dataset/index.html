@@ -1260,6 +1260,11 @@
 <p>As you can see I created a dataset in <code>media</code>, since this is media after all.</p>
 <p>Unfortunately, I could not find a way to run this application without using 777.. </p>
 <p>But as you can see I left the permissions wide open, and set the user:group to <code>apps</code></p>
+<details class="note">
+<summary>Note</summary>
+<p>The <code>apps</code>:<code>apps</code> user:group is built into Truenas SCALE, it is the default user for most applications on Truenas SCALE. You do not have to create a separate user for each application.</p>
+<p>When configuring your application you'll typically see user:group <code>568</code>, this is the UID for <code>apps</code> and its recommended not to change it.</p>
+</details>
 <p><img alt="!Dataset: Tube" src="../images/dataset.png" /></p>
 
               

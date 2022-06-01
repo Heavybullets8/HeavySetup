@@ -1260,6 +1260,11 @@
 <p>For some reason, using the regular permissions settings would result in permissions errors off and on, it was incredibly annoying.</p>
 <p>So, as you can see I created a <code>POSIX ACL</code> and set all of the users to <code>apps</code> and I gave <code>other</code> full permissions as well.</p>
 <p>Unsafe I know, but I really could not find another way to get this working.</p>
+<details class="note">
+<summary>Note</summary>
+<p>The <code>apps</code>:<code>apps</code> user:group is built into Truenas SCALE, it is the default user for most applications on Truenas SCALE. You do not have to create a separate user for each application.</p>
+<p>When configuring your application you'll typically see user:group <code>568</code>, this is the UID for <code>apps</code> and its recommended not to change it.</p>
+</details>
 <p><img alt="!Dataset: syncthing" src="../images/dataset.png" /></p>
 
               

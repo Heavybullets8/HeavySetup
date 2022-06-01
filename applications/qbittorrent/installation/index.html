@@ -751,6 +751,26 @@
     Networking
   </a>
   
+    <nav class="md-nav" aria-label="Networking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#webgui" class="md-nav__link">
+    WebGUI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listening-ports" class="md-nav__link">
+    Listening Ports
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1317,6 +1337,26 @@
     Networking
   </a>
   
+    <nav class="md-nav" aria-label="Networking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#webgui" class="md-nav__link">
+    WebGUI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listening-ports" class="md-nav__link">
+    Listening Ports
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1374,11 +1414,29 @@
   <h1>Installation</h1>
 
 <h2 id="networking">Networking<a class="headerlink" href="#networking" title="Permanent link">¶</a></h2>
-<p>If you are wanting to use ingress, its probably better to use clusterIP instead</p>
-<ul>
-<li>I changed the UDP and TCP port to match the Mullvad ports allocated to me</li>
-</ul>
+<p>If you are wanting to use ingress, its probably better to use <code>clusterIP</code> instead of <code>Simple</code></p>
 <p><img alt="!Networking: qbittorrent" src="../images/networking.png" /></p>
+<h3 id="webgui">WebGUI<a class="headerlink" href="#webgui" title="Permanent link">¶</a></h3>
+<p>I left this default since there was no reason for me to change the WebGUI port</p>
+<p>This is ALSO the port Sonarr/Radarr and other services will use to connect to qBittorrent</p>
+<p><img alt="!Networking: qbittorrent" src="../images/networking_webgui.png" /></p>
+<h3 id="listening-ports">Listening Ports<a class="headerlink" href="#listening-ports" title="Permanent link">¶</a></h3>
+<details class="vpn">
+<summary>With VPN</summary>
+<ul>
+<li>No need to port forward on your router</li>
+<li>If you want fast seeding, you will need a service that supports port forwarding</li>
+<li>I use Mullvad, and changed the two ports below to the port that was allocated to me by Mullvad</li>
+</ul>
+</details>
+<details class="novpn">
+<summary>Without VPN</summary>
+<ul>
+<li>You can leave the two ports default without a VPN</li>
+<li>If you want fast seeding though, you will need to port forward this port on your router</li>
+</ul>
+</details>
+<p><img alt="!Networking: qbittorrent" src="../images/networking_listening.png" /></p>
 <p><br /></p>
 <h2 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">¶</a></h2>
 <h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">¶</a></h3>

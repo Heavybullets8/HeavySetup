@@ -1435,9 +1435,9 @@
 <p><img alt="!Syncthing: Container" src="../images/container.png" /></p>
 <p><br ></p>
 <h2 id="networking">Networking<a class="headerlink" href="#networking" title="Permanent link">¶</a></h2>
-<p>If you are wanting to use ingress, its probably better to use clusterIP instead</p>
 <h3 id="webui">WebUI<a class="headerlink" href="#webui" title="Permanent link">¶</a></h3>
 <p>Nothing changed here, this is just the port your app will use for its web service</p>
+<p>If you are wanting to use ingress, its probably better to use <code>clusterIP</code> instead of <code>Simple</code></p>
 <p><img alt="!Networking: qbittorrent" src="../images/networking.png" /></p>
 <h3 id="listening-ports">Listening Ports<a class="headerlink" href="#listening-ports" title="Permanent link">¶</a></h3>
 <p><strong>These are the ports your other Syncthing service will connect to. You will need to either: </strong></p>
@@ -1445,7 +1445,7 @@
 <summary>If you are using a VPN</summary>
 <ul>
 <li>Port forward this port on whatever VPN service you are using, as I have stated, I am using Mullvad</li>
-<li>You only need to change the first TWO ports, not the last port</li>
+<li>You only need to change the first TWO ports (marked with red), not the last port</li>
 </ul>
 </details>
 <details class="vpn">

@@ -1412,6 +1412,11 @@ upstreams = [&quot;172.16.0.0/16&quot;,]
 <p><br /></p>
 <h2 id="dataset-permissions">Dataset Permissions<a class="headerlink" href="#dataset-permissions" title="Permanent link">¶</a></h2>
 <p>After you have created your <code>notifiarr.conf</code> file, and filled out the required fields, you will need to create a dataset for the file to reside in</p>
+<details class="note">
+<summary>Note</summary>
+<p>The <code>apps</code>:<code>apps</code> user:group is built into Truenas SCALE, it is the default user for most applications on Truenas SCALE. You do not have to create a separate user for each application.</p>
+<p>When configuring your application you'll typically see user:group <code>568</code>, this is the UID for <code>apps</code> and its recommended not to change it.</p>
+</details>
 <p><img alt="!Networking: NZBGet" src="../images/storage_permissions.png" /></p>
 <p><br /></p>
 
