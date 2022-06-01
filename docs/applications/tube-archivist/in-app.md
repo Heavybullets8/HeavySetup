@@ -2,7 +2,13 @@ Theres nothing specific to Truenas Scale after setting up your application.
 
 I will still however, share my settings.
 
-## Download Format
+## Settings
+
+To get to the settings just click the Cog Wheel at the top right
+
+![!To Settings: Tube](images/to-settings.png)
+
+### Download Format
 
 This is completely subjective, and I am also continuously changing this setting until I land on something that I like. 
 
@@ -20,7 +26,7 @@ Current thumbnail embed setting: `True`
 
 <br />
 
-## Integrations
+### Integrations
 
 Integrate with returnyoutubedislike.com to get dislikes and average ratings back: `True`
 
@@ -39,7 +45,7 @@ Current Cast integration: `True`
 
 <br />
 
-## Scheduler Setup
+### Scheduler Setup
 
 **Rescan Subscriptions**
 ```

@@ -82,6 +82,8 @@ verysecret
 
 ## Networking
 
+### Ports
+
 **Target Port**
 ```
 8000
@@ -92,6 +94,18 @@ verysecret
 ```
 
 ![!Networking: Tube](images/ta-networking.png)
+
+
+### DNS
+
+A change is required here, otherwise sometimes the application will start and will be unable to find the `redis` and `elastic search` containers by DNS name
+
+**dnsPolicy**
+```
+ClusterFirst
+```
+
+![!Networking: Tube](images/ta-networking_dns.png)
 
 <br />
 

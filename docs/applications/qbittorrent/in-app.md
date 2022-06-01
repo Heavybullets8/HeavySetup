@@ -21,8 +21,7 @@
 
 ## Connection
 
-- You don't need to set a different port unless you changed your ports
-    - I changed my ports to align with the port mullvad exposed for me
+This should equal to your listening port you set [during the installation](https://heavysetup.info/applications/qbittorrent/installation/#listening-ports)
 
 ![!Connection: qbit](images/settings_connection.png)
 
@@ -42,7 +41,9 @@
 
 ## BitTorrent
 
-- Nothing really changed here, just increased some numbers is all
+- Disabled `Local Peer Discovery`
+    - This is only useful if you are on a huge network, like a college campus or something like that
+
 
 ![!Speed: qbit](images/settings_bittorrent.png)
 

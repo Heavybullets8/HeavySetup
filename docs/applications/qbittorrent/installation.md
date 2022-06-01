@@ -1,11 +1,30 @@
 ## Networking 
 
-
-If you are wanting to use ingress, its probably better to use clusterIP instead
-
-- I changed the UDP and TCP port to match the Mullvad ports allocated to me
+If you are wanting to use ingress, its probably better to use `clusterIP` instead of `Simple`
 
 ![!Networking: qbittorrent](images/networking.png)
+
+### WebGUI
+
+I left this default since there was no reason for me to change the WebGUI port
+
+This is ALSO the port Sonarr/Radarr and other services will use to connect to qBittorrent
+
+![!Networking: qbittorrent](images/networking_webgui.png)
+
+
+### Listening Ports
+
+??? VPN "With VPN"
+    - No need to port forward on your router
+    - If you want fast seeding, you will need a service that supports port forwarding
+    - I use Mullvad, and changed the two ports below to the port that was allocated to me by Mullvad
+
+??? NOVPN "Without VPN"
+    - You can leave the two ports default without a VPN
+    - If you want fast seeding though, you will need to port forward this port on your router
+
+![!Networking: qbittorrent](images/networking_listening.png)
 
 <br />
 

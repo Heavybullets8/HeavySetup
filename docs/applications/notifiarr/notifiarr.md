@@ -111,8 +111,8 @@ TCP
 var
 ```
 
-
-![!Networking: NZBGet](images/storage_config.png)
+??? picture "Picture"
+    ![!Networking: NZBGet](images/storage_config.png)
 
 
 <br />

@@ -74,6 +74,11 @@ upstreams = ["172.16.0.0/16",]
 
 After you have created your `notifiarr.conf` file, and filled out the required fields, you will need to create a dataset for the file to reside in
 
+??? Note "Note"
+    The `apps`:`apps` user:group is built into Truenas SCALE, it is the default user for most applications on Truenas SCALE. You do not have to create a separate user for each application.
+
+    When configuring your application you'll typically see user:group `568`, this is the UID for `apps` and its recommended not to change it.
+
 ![!Networking: NZBGet](images/storage_permissions.png)
 
 <br />

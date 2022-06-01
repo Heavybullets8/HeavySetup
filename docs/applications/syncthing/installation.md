@@ -10,13 +10,11 @@ For this application I used `Syncthing` provided by [TrueCharts](https://truecha
 
 ## Networking 
 
-
-If you are wanting to use ingress, its probably better to use clusterIP instead
-
-
 ### WebUI
 
 Nothing changed here, this is just the port your app will use for its web service
+
+If you are wanting to use ingress, its probably better to use `clusterIP ` instead of `Simple`
 
 ![!Networking: qbittorrent](images/networking.png)
 
@@ -27,7 +25,7 @@ Nothing changed here, this is just the port your app will use for its web servic
 ??? VPN "If you are using a VPN"
 
     - Port forward this port on whatever VPN service you are using, as I have stated, I am using Mullvad
-    - You only need to change the first TWO ports, not the last port
+    - You only need to change the first TWO ports (marked with red), not the last port
 
 ??? VPN "If you are NOT using a VPN"
 
