@@ -3,9 +3,26 @@
 
 If you are wanting to use ingress, its probably better to use clusterIP instead
 
-- I changed the UDP and TCP port to match the Mullvad ports allocated to me
+
+### WebUI
+
+Nothing changed here, this is just the port your app will use for its web service
 
 ![!Networking: qbittorrent](images/networking.png)
+
+### Listening Ports
+
+**These are the ports your other Syncthing service will connect to. You will need to either: **
+
+??? VPN "If you are using a VPN"
+
+    - Port forward this port on whatever VPN service you are using, as I have stated, I am using Mullvad
+    - You only need to change the first TWO ports, not the last port
+
+??? VPN "If you are NOT using a VPN"
+
+    - Port forward this port on your router
+    - Also, if you are NOT using a VPN you can leave the two ports default, the only reason I changed my port is because Mullvad does not give you the option to choose which port to use
 
 ![!Networking: qbittorrent](images/networking_listening.png)
 
