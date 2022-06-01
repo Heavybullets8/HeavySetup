@@ -32,6 +32,7 @@ tcp4://0.0.0.0:54914, tcp4://:54914
 ```
 
 ??? Note "Note"
-    You should be using whatever port is listed in your networking settings
+    You should be using whatever port is listed in your [Networking Listening Ports](https://heavysetup.info/applications/syncthing/installation/#listening-ports)
+
 
 ![!Name: GUI](images/settings_connections.png)
