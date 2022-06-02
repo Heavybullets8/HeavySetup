@@ -11,4 +11,4 @@ Unsafe I know, but I really could not find another way to get this working.
 
     When configuring your application you'll typically see user:group `568`, this is the UID for `apps` and its recommended not to change it.
 
-![!Dataset: syncthing](images/dataset.png)
+![!Dataset: syncthing](images/datasets/dataset.png)

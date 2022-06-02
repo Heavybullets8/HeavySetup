@@ -4,7 +4,7 @@ For this application I used `Syncthing` provided by [TrueCharts](https://truecha
 
 - Available under the `stable` train
 
-![!Syncthing: Container](images/container.png)
+![!Syncthing: Container](images/installation/container.png)
 
 <br >
 
@@ -16,7 +16,7 @@ Nothing changed here, this is just the port your app will use for its web servic
 
 If you are wanting to use ingress, its probably better to use `clusterIP ` instead of `Simple`
 
-![!Networking: qbittorrent](images/networking.png)
+![!Networking: qbittorrent](images/installation/networking.png)
 
 ### Listening Ports
 
@@ -32,7 +32,7 @@ If you are wanting to use ingress, its probably better to use `clusterIP ` inste
     - Port forward this port on your router
     - Also, if you are NOT using a VPN you can leave the two ports default, the only reason I changed my port is because Mullvad does not give you the option to choose which port to use
 
-![!Networking: qbittorrent](images/networking_listening.png)
+![!Networking: qbittorrent](images/installation/networking_listening.png)
 
 <br />
 
@@ -42,7 +42,7 @@ If you are wanting to use ingress, its probably better to use `clusterIP ` inste
 
 The setup is default
 
-![!Storage: NZBGet](images/storage_config.png)
+![!Storage: NZBGet](images/installation/storage_config.png)
 
 ### Data
 
@@ -50,7 +50,7 @@ I always mount to the root directory of the container
 
 I also try to use the applications name for the mountpath, since its typically never going to be a file or folder thats already present 
 
-![!Storage: NZBGet](images/storage_data.png)
+![!Storage: NZBGet](images/installation/storage_data.png)
 
 <br />
 
@@ -60,6 +60,6 @@ I also try to use the applications name for the mountpath, since its typically n
 - Added the kubernetes network, as well as my LAN network to the killswitch
 - Using a VPN for this application is in no way mandatory at all, I just simply felt safer transmitting data encrypted
 
-![!Storage: NZBGet](images/vpn.png)
+![!Storage: NZBGet](images/installation/vpn.png)
 
 <br />

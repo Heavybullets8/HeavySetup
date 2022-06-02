@@ -1,6 +1,6 @@
 ## Settings
 
-![!To Settings: syncthing](images/to_settings.png)
+![!To Settings: syncthing](images/in-app/to_settings.png)
 
 <br >
 
@@ -8,7 +8,7 @@
 
 Only thing I changed was my `Device Name` on here, this is unimportant and up to you.
 
-![!Name: Device Name](images/settings_general.png)
+![!Name: Device Name](images/in-app/settings_general.png)
 
 <br >
 
@@ -16,7 +16,7 @@ Only thing I changed was my `Device Name` on here, this is unimportant and up to
 
 Changed my Username/Password
 
-![!Name: GUI](images/settings_gui.png)
+![!Name: GUI](images/in-app/settings_gui.png)
 
 <br >
 
@@ -35,6 +35,6 @@ tcp4://0.0.0.0:54914, tcp4://:54914
     You should be using whatever port is listed in your [Networking Listening Ports](https://heavysetup.info/applications/syncthing/installation/#listening-ports)
 
 
-![!Name: GUI](images/settings_connections.png)
+![!Name: GUI](images/in-app/settings_connections.png)
 
 <br >
