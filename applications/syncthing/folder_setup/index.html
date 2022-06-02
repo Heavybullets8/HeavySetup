@@ -215,7 +215,7 @@
   
     <li class="md-tabs__item">
       <a href="../../../general_guides/about/" class="md-tabs__link">
-        General guides
+        General Guides
       </a>
     </li>
   
@@ -234,6 +234,22 @@
     <li class="md-tabs__item">
       <a href="../../about/" class="md-tabs__link md-tabs__link--active">
         Applications
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../seedbox/about/" class="md-tabs__link">
+        Seedbox
       </a>
     </li>
   
@@ -327,14 +343,14 @@
       
       
         <label class="md-nav__link" for="__nav_2">
-          General guides
+          General Guides
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="General guides" data-md-level="1">
+      <nav class="md-nav" aria-label="General Guides" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          General guides
+          General Guides
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1398,6 +1414,143 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Seedbox
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seedbox" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Seedbox
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seedbox/about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          rTorrent/ruTorrent
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="rTorrent/ruTorrent" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          rTorrent/ruTorrent
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seedbox/rTorrent/about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seedbox/rTorrent/requirements/" class="md-nav__link">
+        Requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seedbox/rTorrent/rtorrnetrc/" class="md-nav__link">
+        rTorrent.rc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seedbox/rTorrent/in-app/" class="md-nav__link">
+        In app
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../../faq/" class="md-nav__link">
         FAQ
@@ -1562,7 +1715,7 @@
 <div class="highlight"><pre><span></span><code>/syncthing
 </code></pre></div></p>
 <ul>
-<li>This needs to be the same thing you set during <a href="https://heavysetup.info/applications/syncthing/installation/#data">installation</a></li>
+<li>This needs to be the same Mount Point you set during <a href="https://heavysetup.info/applications/syncthing/installation/#data">installation</a></li>
 </ul>
 <p><img alt="!Sync: Syncthing" src="../images/seedbox/folder/local_general.png" /></p>
 <h3 id="sharing">Sharing<a class="headerlink" href="#sharing" title="Permanent link">¶</a></h3>
@@ -1611,7 +1764,7 @@
 </details>
 <p><img alt="!Sync: Syncthing" src="../images/seedbox/folder/local_advanced.png" /></p>
 <h3 id="ignore-prompt">Ignore Prompt<a class="headerlink" href="#ignore-prompt" title="Permanent link">¶</a></h3>
-<p>As of right now I only include <code>/ingore</code> in here. This is in the event I want to add something to my my Truenas SCALE folder, but have it NOT sent to my Seedbox Syncthing</p>
+<p>As of right now I only include <code>/ignore</code> in here. This is in the event I want to add something to my my Truenas SCALE folder, but have it NOT sent to my Seedbox Syncthing</p>
 <p><img alt="!Sync: Syncthing" src="../images/seedbox/folder/local_ignore1.png" /></p>
 <p><br ></p>
 <h2 id="remote-setup">Remote Setup<a class="headerlink" href="#remote-setup" title="Permanent link">¶</a></h2>
@@ -1632,9 +1785,9 @@
 <p>If you plan on using my exact setup, expand the option below</p>
 <details class="rtorrent">
 <summary>rTorrent Save Path</summary>
-<p>I use rTorrent, because it actually supports hardlinks, unlike pretty much ANY other torrent client for whatever reason..</p>
+<p>I use rTorrent, because it actually supports hard-links, unlike pretty much ANY other torrent client for whatever reason..</p>
 <p>We will specifically use the file path listed under <code>Autotools</code> -&gt; <code>Path to finished downloads</code>, because this is where our hardlinks are created.</p>
-<p>Hardlinks are awesome because they create instructions from the completed torrent, to our save location. So theres no need to copy, or move files just to get them to where Syncthing can see them. AND, once the script in the cron job section deletes the file on our Truenas SCALE server, the hardlink is deleted from the Seedbox as well, but the torrents will continue to seed just fine. The link is broken, but the file is intact.</p>
+<p>Hard-links are awesome because they create instructions from the completed torrent, to our save location. So theres no need to copy, or move files just to get them to where Syncthing can see them. AND, once the script in the cron job section deletes the file on our Truenas SCALE server, the hard-link is deleted from the Seedbox as well, but the torrents will continue to seed just fine. The link is broken, but the file is untouched.</p>
 <p><img alt="!Sync: Syncthing" src="../images/seedbox/folder/rtorrent.png" /></p>
 </details>
 <p><img alt="!Sync: Syncthing" src="../images/seedbox/folder/remote_general.png" /></p>
@@ -1684,7 +1837,7 @@
 </details>
 <p><img alt="!Sync: Syncthing" src="../images/seedbox/folder/local_advanced.png" /></p>
 <h3 id="ignore-prompt_1">Ignore Prompt<a class="headerlink" href="#ignore-prompt_1" title="Permanent link">¶</a></h3>
-<p>As of right now I only include <code>/ingore</code> in here. This is in the event I want to add something to my seedbox, but NOT have it sent to my Truenas Scale syncthing, I will simply save it to the <code>ignore</code> catagory in rTorrent, and it will be ignored</p>
+<p>As of right now I only include <code>/ignore</code> in here. This is in the event I want to add something to my seedbox, but NOT have it sent to my Truenas Scale Syncthing, I will simply save it to the <code>ignore</code> category in rTorrent, and it will be ignored</p>
 <p><img alt="!Sync: Syncthing" src="../images/seedbox/folder/local_ignore1.png" /></p>
 <p><br ></p>
 

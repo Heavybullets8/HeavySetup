@@ -12,21 +12,21 @@
         <meta name="author" content="Heavybullets8">
       
       
-        <link rel="canonical" href="https://heavybullets8.github.io/HeavySetup/">
+        <link rel="canonical" href="https://heavybullets8.github.io/HeavySetup/seedbox/rTorrent/rtorrnetrc/">
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.16">
     
     
       
-        <title>Heavy Setup</title>
+        <title>rTorrent.rc - Heavy Setup</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.1c3799f8.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1c3799f8.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.cc9b2e1e.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cc9b2e1e.min.css">
         
       
     
@@ -41,7 +41,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-heavy-setup" class="md-skip">
+        <a href="#configuration" class="md-skip">
           Skip to content
         </a>
       
@@ -83,7 +83,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Heavy Setup" class="md-header__button md-logo" aria-label="Heavy Setup" data-md-component="logo">
+    <a href="../../.." title="Heavy Setup" class="md-header__button md-logo" aria-label="Heavy Setup" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              rTorrent.rc
             
           </span>
         </div>
@@ -196,12 +196,10 @@
         
   
   
-    
-  
 
 
   <li class="md-tabs__item">
-    <a href="." class="md-tabs__link md-tabs__link--active">
+    <a href="../../.." class="md-tabs__link">
       Introduction
     </a>
   </li>
@@ -216,7 +214,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="general_guides/about/" class="md-tabs__link">
+      <a href="../../../general_guides/about/" class="md-tabs__link">
         General Guides
       </a>
     </li>
@@ -232,7 +230,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="applications/about/" class="md-tabs__link">
+      <a href="../../../applications/about/" class="md-tabs__link">
         Applications
       </a>
     </li>
@@ -242,13 +240,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="seedbox/about/" class="md-tabs__link">
+      <a href="../../about/" class="md-tabs__link md-tabs__link--active">
         Seedbox
       </a>
     </li>
@@ -261,7 +261,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="faq/" class="md-tabs__link">
+    <a href="../../../faq/" class="md-tabs__link">
       FAQ
     </a>
   </li>
@@ -288,7 +288,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Heavy Setup" class="md-nav__button md-logo" aria-label="Heavy Setup" data-md-component="logo">
+    <a href="../../.." title="Heavy Setup" class="md-nav__button md-logo" aria-label="Heavy Setup" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -317,59 +317,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Introduction
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         Introduction
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
-    Purpose
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inspiration" class="md-nav__link">
-    Inspiration
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -408,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="general_guides/about/" class="md-nav__link">
+      <a href="../../../general_guides/about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -422,7 +374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="general_guides/folder_structure/" class="md-nav__link">
+      <a href="../../../general_guides/folder_structure/" class="md-nav__link">
         Folder Structure
       </a>
     </li>
@@ -436,7 +388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="general_guides/storage_permissions/" class="md-nav__link">
+      <a href="../../../general_guides/storage_permissions/" class="md-nav__link">
         Application Dataset Permissions
       </a>
     </li>
@@ -484,7 +436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/about/" class="md-nav__link">
+      <a href="../../../applications/about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -524,7 +476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/notifiarr/about/" class="md-nav__link">
+      <a href="../../../applications/notifiarr/about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -538,7 +490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/notifiarr/datasets/" class="md-nav__link">
+      <a href="../../../applications/notifiarr/datasets/" class="md-nav__link">
         Preparation
       </a>
     </li>
@@ -578,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/notifiarr/notifiarr/" class="md-nav__link">
+      <a href="../../../applications/notifiarr/notifiarr/" class="md-nav__link">
         Notifiarr
       </a>
     </li>
@@ -592,7 +544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/notifiarr/ext_services/" class="md-nav__link">
+      <a href="../../../applications/notifiarr/ext_services/" class="md-nav__link">
         External Services
       </a>
     </li>
@@ -613,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/notifiarr/in-app/" class="md-nav__link">
+      <a href="../../../applications/notifiarr/in-app/" class="md-nav__link">
         WebGUI Settings
       </a>
     </li>
@@ -660,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/nzbget/about/" class="md-nav__link">
+      <a href="../../../applications/nzbget/about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -674,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/nzbget/datasets/" class="md-nav__link">
+      <a href="../../../applications/nzbget/datasets/" class="md-nav__link">
         Datasets
       </a>
     </li>
@@ -688,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/nzbget/installation/" class="md-nav__link">
+      <a href="../../../applications/nzbget/installation/" class="md-nav__link">
         Installation
       </a>
     </li>
@@ -702,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/nzbget/in-app/" class="md-nav__link">
+      <a href="../../../applications/nzbget/in-app/" class="md-nav__link">
         In App Settings
       </a>
     </li>
@@ -749,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/qbittorrent/about/" class="md-nav__link">
+      <a href="../../../applications/qbittorrent/about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -763,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/qbittorrent/datasets/" class="md-nav__link">
+      <a href="../../../applications/qbittorrent/datasets/" class="md-nav__link">
         Datasets
       </a>
     </li>
@@ -777,7 +729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/qbittorrent/installation/" class="md-nav__link">
+      <a href="../../../applications/qbittorrent/installation/" class="md-nav__link">
         Installation
       </a>
     </li>
@@ -791,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/qbittorrent/in-app/" class="md-nav__link">
+      <a href="../../../applications/qbittorrent/in-app/" class="md-nav__link">
         In App Settings
       </a>
     </li>
@@ -838,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/radarr/about/" class="md-nav__link">
+      <a href="../../../applications/radarr/about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -852,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/radarr/installation/" class="md-nav__link">
+      <a href="../../../applications/radarr/installation/" class="md-nav__link">
         Installation
       </a>
     </li>
@@ -892,7 +844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/radarr/qbittorrent/" class="md-nav__link">
+      <a href="../../../applications/radarr/qbittorrent/" class="md-nav__link">
         qBittorrent
       </a>
     </li>
@@ -906,7 +858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/radarr/nzbget/" class="md-nav__link">
+      <a href="../../../applications/radarr/nzbget/" class="md-nav__link">
         NZBGet
       </a>
     </li>
@@ -960,7 +912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/sonarr/about/" class="md-nav__link">
+      <a href="../../../applications/sonarr/about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -974,7 +926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/sonarr/installation/" class="md-nav__link">
+      <a href="../../../applications/sonarr/installation/" class="md-nav__link">
         Installation
       </a>
     </li>
@@ -988,7 +940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/sonarr/in-app/" class="md-nav__link">
+      <a href="../../../applications/sonarr/in-app/" class="md-nav__link">
         In App Settings
       </a>
     </li>
@@ -1035,7 +987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/syncthing/about/" class="md-nav__link">
+      <a href="../../../applications/syncthing/about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -1049,7 +1001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/syncthing/datasets/" class="md-nav__link">
+      <a href="../../../applications/syncthing/datasets/" class="md-nav__link">
         Datasets
       </a>
     </li>
@@ -1063,7 +1015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/syncthing/installation/" class="md-nav__link">
+      <a href="../../../applications/syncthing/installation/" class="md-nav__link">
         Installation
       </a>
     </li>
@@ -1077,7 +1029,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/syncthing/in-app/" class="md-nav__link">
+      <a href="../../../applications/syncthing/in-app/" class="md-nav__link">
         In App Settings
       </a>
     </li>
@@ -1117,7 +1069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/syncthing/establish/" class="md-nav__link">
+      <a href="../../../applications/syncthing/establish/" class="md-nav__link">
         Establishing Connection
       </a>
     </li>
@@ -1131,7 +1083,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/syncthing/folder_setup/" class="md-nav__link">
+      <a href="../../../applications/syncthing/folder_setup/" class="md-nav__link">
         Folder Setup
       </a>
     </li>
@@ -1152,7 +1104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/syncthing/cron/" class="md-nav__link">
+      <a href="../../../applications/syncthing/cron/" class="md-nav__link">
         Cron Job
       </a>
     </li>
@@ -1199,7 +1151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/tube-archivist/about/" class="md-nav__link">
+      <a href="../../../applications/tube-archivist/about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -1213,7 +1165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/tube-archivist/dataset/" class="md-nav__link">
+      <a href="../../../applications/tube-archivist/dataset/" class="md-nav__link">
         Datasets
       </a>
     </li>
@@ -1253,7 +1205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/tube-archivist/tube-installation/" class="md-nav__link">
+      <a href="../../../applications/tube-archivist/tube-installation/" class="md-nav__link">
         TubeArchivist Installation
       </a>
     </li>
@@ -1267,7 +1219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/tube-archivist/es-installation/" class="md-nav__link">
+      <a href="../../../applications/tube-archivist/es-installation/" class="md-nav__link">
         Elasticsearch Installation
       </a>
     </li>
@@ -1281,7 +1233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/tube-archivist/redis-installation/" class="md-nav__link">
+      <a href="../../../applications/tube-archivist/redis-installation/" class="md-nav__link">
         Redis Installation
       </a>
     </li>
@@ -1302,7 +1254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="applications/tube-archivist/in-app/" class="md-nav__link">
+      <a href="../../../applications/tube-archivist/in-app/" class="md-nav__link">
         In App Settings
       </a>
     </li>
@@ -1329,12 +1281,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -1357,7 +1311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="seedbox/about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -1369,12 +1323,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
       
       
       
@@ -1397,7 +1353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="seedbox/rTorrent/about/" class="md-nav__link">
+      <a href="../about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -1411,7 +1367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="seedbox/rTorrent/requirements/" class="md-nav__link">
+      <a href="../requirements/" class="md-nav__link">
         Requirements
       </a>
     </li>
@@ -1423,11 +1379,55 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="seedbox/rTorrent/rtorrnetrc/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          rTorrent.rc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         rTorrent.rc
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rtorrentrc-save-location" class="md-nav__link">
+    rtorrent.rc Save Location
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1439,7 +1439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="seedbox/rTorrent/in-app/" class="md-nav__link">
+      <a href="../in-app/" class="md-nav__link">
         In app
       </a>
     </li>
@@ -1468,7 +1468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="faq/" class="md-nav__link">
+      <a href="../../../faq/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -1492,8 +1492,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1502,15 +1500,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
-    Purpose
+  <a href="#configuration" class="md-nav__link">
+    Configuration
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#inspiration" class="md-nav__link">
-    Inspiration
+  <a href="#rtorrentrc-save-location" class="md-nav__link">
+    rtorrent.rc Save Location
   </a>
   
 </li>
@@ -1527,20 +1525,130 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/Heavybullets8/HeavySetup/edit/master/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/Heavybullets8/HeavySetup/edit/master/docs/seedbox/rTorrent/rtorrnetrc.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-<h1 id="welcome-to-heavy-setup">Welcome to Heavy Setup<a class="headerlink" href="#welcome-to-heavy-setup" title="Permanent link">¶</a></h1>
-<h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">¶</a></h2>
-<p>Provide guides for setting up applications specifically for Truenas SCALE</p>
-<p>This site is still under development and has a long way to go at the moment. </p>
-<p>But feel free to search for guides.</p>
-<p><br /></p>
-<h2 id="inspiration">Inspiration<a class="headerlink" href="#inspiration" title="Permanent link">¶</a></h2>
-<p>This site takes a lot of inspiration from <a href="https://trash-guides.info/">TRaSH Guides</a></p>
+  <h1>rTorrent.rc</h1>
+
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">¶</a></h2>
+<p>I will only be covering the most important stuff in this section.. but you can still expand my whole config file below.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Value</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>network.port_range.set</code></td>
+<td><code>62000-62000</code></td>
+<td>This is not mandatory. But I wanted to set a static port because I have Uptime Kuma consistently pinging this port to see if rTorrent is up. In the event rTorrent crashes, Uptime Kuma will notify me.</td>
+</tr>
+<tr>
+<td><code>network.port_random.set</code></td>
+<td><code>no</code></td>
+<td>Same reason as above</td>
+</tr>
+<tr>
+<td><code>directory.default.set</code></td>
+<td><code>/home/USERNAME/downloads/rtorrent/seeding</code></td>
+<td>This is the folder I want my files to be moved to once completed Note: This is NOT the Hard Link location we will be setting later. So you need to ensure those two locations are different.</td>
+</tr>
+</tbody>
+</table>
+<p>Also note </p>
+<ul>
+<li>number of peers - global slots</li>
+<li>per torrent connection maximums, in progress</li>
+<li>per torrent connection maximums, seeding</li>
+<li>per torrent active downloads/uploads</li>
+</ul>
+<p>I changed the values under those catagories to be huge. You may need to set yours lower. But since my box is ONLY seeding torrents, I wanted to make sure it was doing just that.</p>
+<details class="rtorrentrc">
+<summary>rtorrent.rc</summary>
+<div class="highlight"><pre><span></span><code>#################################################
+## These settings are mostly user customizable ##
+#################################################
+
+## These control where rTorrent looks for .torrents and where files are saved
+directory.default.set = /home/USERNAME/downloads/rtorrent/seeding
+
+schedule2 = watch_directory,5,5,load.start=~/watch/rtorrent/*.torrent
+#schedule2 = untied_directory,5,5,close_untied=
+
+# If there&#39;s less than 256MB of disk space, it will stop torrents from
+# downloading.  Keep in mind that we receive alerts about low disk space, so
+# it shouldn&#39;t actually get this low.  However, if the server runs out of space,
+# all of the rTorrents will lock up, eating all of the CPU and spiking loads.
+schedule2 = low_diskspace,5,60,close_low_diskspace=5120M
+
+trackers.use_udp.set = yes
+# Upload/download rate in KB/s. 0 for unlimited
+throttle.global_down.max_rate.set_kb = 0
+throttle.global_up.max_rate.set_kb = 0
+
+# number of peers - global slots
+throttle.max_downloads.global.set = 150
+throttle.max_uploads.global.set   = 5000
+
+# per torrent connection maximums, in progress
+throttle.min_peers.normal.set = 5000
+throttle.max_peers.normal.set = 5000
+
+# per torrent connection maximums, seeding
+throttle.min_peers.seed.set = 5000
+throttle.max_peers.seed.set = 5000
+
+# per torrent active downloads/uploads
+throttle.max_uploads.set = 5000
+throttle.max_downloads.set = 5000
+
+#################################################
+## These settings shouldn&#39;t need to be changed ##
+#################################################
+network.scgi.open_local = ~/.config/rtorrent/socket
+session.path.set = ~/.config/rtorrent/session
+
+encoding.add = UTF-8
+network.port_range.set = 62000-62000
+network.port_random.set = no
+network.http.dns_cache_timeout.set = 0
+##network.http.ssl_verify_peer.set = 0
+##network.http.ssl_verify_host.set = 0
+protocol.encryption.set = allow_incoming,enable_retry,try_outgoing
+
+# This chmods the downloaded files to 770.  This will allow them to be deleted
+# by w/ruTorrent, while not allowing any other users to touch them.
+system.umask.set = 007
+
+# XMLRPC Size Limit
+network.xmlrpc.size_limit.set = 16M
+system.file.max_size.set = 1024G
+
+method.set_key = event.download.resumed,foo,&quot;execute.nothrow=rtcheck,$d.name=,$d.hash=&quot;
+method.set_key = event.download.finished,foo2,&quot;execute.nothrow=rtcheck,$d.name=,$d.hash=&quot;
+method.set_key = event.download.finished,filebot,&quot;execute.nothrow={.filebot/scripts-enabled/rtorrent-postprocess.sh,$d.base_path=,$d.name=,$d.custom1=}&quot;
+#debug method.set_key = event.download.finished, finished_try, &quot;print=finished-triggered!&quot;
+
+pieces.hash.on_completion.set = no
+dht.mode.set = off
+pieces.memory.max.set = 4096M
+protocol.pex.set = no
+pieces.preload.type.set = 1
+pieces.preload.min_size.set = 1
+pieces.preload.min_rate.set = 1
+#ruTorrent plugins
+schedule2 = init_plugins, 10, 0, &quot;execute2 = {sh,-c,/usr/bin/php ~/www/rutorrent/php/initplugins.php &amp;}&quot;
+</code></pre></div>
+</details>
+<h2 id="rtorrentrc-save-location">rtorrent.rc Save Location<a class="headerlink" href="#rtorrentrc-save-location" title="Permanent link">¶</a></h2>
+<p>This again, is dependant on your seedbox. Mine was in <code>home/.config/rtorrent/rtorrent.rc</code></p>
+<p><br ></p>
 
               
             </article>
@@ -1558,15 +1666,30 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
+        
+        <a href="../requirements/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Requirements" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Requirements
+            </div>
+          </div>
+        </a>
+      
       
         
-        <a href="general_guides/about/" class="md-footer__link md-footer__link--next" aria-label="Next: About" rel="next">
+        <a href="../in-app/" class="md-footer__link md-footer__link--next" aria-label="Next: In app" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              About
+              In app
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1596,10 +1719,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "search": "assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.3a4b43e5.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.3a4b43e5.min.js"></script>
       
     
   </body>
