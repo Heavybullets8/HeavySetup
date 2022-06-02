@@ -1,0 +1,6 @@
+title: rTorrent/ruTorrent
+nav:
+    - About: about.md
+    - Requirements: requirements.md
+    - rTorrent.rc: rtorrnetrc.md
+    - ...
