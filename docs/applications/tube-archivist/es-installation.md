@@ -110,12 +110,11 @@ Elasticsearch specifically looks to that mount point, its required
 
 ## Security
 
-Running the application without user:group `0` or `root`, resulted in the container not starting.
+- Just run the application as 568
+
+- Add a __Supplemental Group__ and input `0`
 
 ![!Storage: Tube](images/es-security1.png)
 
-- Also, in this case, `fsgroup` was also required to be `0`
-
-![!Storage: Tube](images/es-security2.png)
 
 <br />
