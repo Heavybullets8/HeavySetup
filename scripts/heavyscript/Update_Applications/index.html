@@ -1,0 +1,2164 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="My personal Truenas SCALE application setups">
+      
+      
+        <meta name="author" content="Heavybullets8">
+      
+      
+        <link rel="canonical" href="https://heavybullets8.github.io/HeavySetup/scripts/heavyscript/Update_Applications/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
+    
+    
+      
+        <title>Update Applications - Heavy Setup</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1d29e8d0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="blue-gray">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#flag-table" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Heavy Setup" class="md-header__button md-logo" aria-label="Heavy Setup" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Heavy Setup
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Update Applications
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="blue-gray"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="white"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Heavybullets8/HeavySetup" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HeavySetup
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Introduction
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../general_guides/about/" class="md-tabs__link">
+        General Guides
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../applications/about/" class="md-tabs__link">
+        Applications
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link md-tabs__link--active">
+        Scripts
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../seedbox/about/" class="md-tabs__link">
+        Seedbox
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../faq/" class="md-tabs__link">
+      FAQ
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Heavy Setup" class="md-nav__button md-logo" aria-label="Heavy Setup" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Heavy Setup
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Heavybullets8/HeavySetup" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    HeavySetup
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          General Guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="General Guides" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          General Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general_guides/about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general_guides/folder_structure/" class="md-nav__link">
+        Folder Structure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general_guides/storage_permissions/" class="md-nav__link">
+        Application Dataset Permissions
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Applications
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Applications" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Applications
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Notifiarr
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Notifiarr" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Notifiarr
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/notifiarr/about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/notifiarr/datasets/" class="md-nav__link">
+        Preparation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_3" type="checkbox" id="__nav_3_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2_3">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Installation" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/notifiarr/notifiarr/" class="md-nav__link">
+        Notifiarr
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/notifiarr/ext_services/" class="md-nav__link">
+        External Services
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/notifiarr/in-app/" class="md-nav__link">
+        WebGUI Settings
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Nzbget
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Nzbget" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Nzbget
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/nzbget/about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/nzbget/datasets/" class="md-nav__link">
+        Datasets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/nzbget/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/nzbget/in-app/" class="md-nav__link">
+        In App Settings
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4">
+          Qbittorrent
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Qbittorrent" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Qbittorrent
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/qbittorrent/about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/qbittorrent/datasets/" class="md-nav__link">
+        Datasets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/qbittorrent/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/qbittorrent/in-app/" class="md-nav__link">
+        In App Settings
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5">
+          Radarr
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Radarr" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Radarr
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/radarr/about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/radarr/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_3" type="checkbox" id="__nav_3_5_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5_3">
+          Integrations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Integrations" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Integrations
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/radarr/qbittorrent/" class="md-nav__link">
+        qBittorrent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/radarr/nzbget/" class="md-nav__link">
+        NZBGet
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6">
+          Sonarr
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sonarr" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Sonarr
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/sonarr/about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/sonarr/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/sonarr/in-app/" class="md-nav__link">
+        In App Settings
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7">
+          Syncthing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Syncthing" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          Syncthing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/syncthing/about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/syncthing/datasets/" class="md-nav__link">
+        Datasets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/syncthing/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/syncthing/in-app/" class="md-nav__link">
+        In App Settings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7_5" type="checkbox" id="__nav_3_7_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7_5">
+          Seedbox
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seedbox" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_7_5">
+          <span class="md-nav__icon md-icon"></span>
+          Seedbox
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/syncthing/establish/" class="md-nav__link">
+        Establishing Connection
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/syncthing/folder_setup/" class="md-nav__link">
+        Folder Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/syncthing/cron/" class="md-nav__link">
+        Cron Job
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_8" type="checkbox" id="__nav_3_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8">
+          Tube Archivist
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tube Archivist" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_8">
+          <span class="md-nav__icon md-icon"></span>
+          Tube Archivist
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/tube-archivist/about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/tube-archivist/dataset/" class="md-nav__link">
+        Datasets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_8_3" type="checkbox" id="__nav_3_8_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_8_3">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Installation" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_8_3">
+          <span class="md-nav__icon md-icon"></span>
+          Installation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/tube-archivist/tube-installation/" class="md-nav__link">
+        TubeArchivist Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/tube-archivist/es-installation/" class="md-nav__link">
+        Elasticsearch Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/tube-archivist/redis-installation/" class="md-nav__link">
+        Redis Installation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../applications/tube-archivist/in-app/" class="md-nav__link">
+        In App Settings
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Scripts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Scripts" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Scripts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cmd_to_container/" class="md-nav__link">
+        Command to Container
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          Heavyscript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Heavyscript" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Heavyscript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Update Applications
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Update Applications
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#flag-table" class="md-nav__link">
+    Flag Table
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-explanation" class="md-nav__link">
+    Further Explanation
+  </a>
+  
+    <nav class="md-nav" aria-label="Further Explanation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-options" class="md-nav__link">
+    Update Options
+  </a>
+  
+    <nav class="md-nav" aria-label="Update Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#asynchronous-updates" class="md-nav__link">
+    Asynchronous Updates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backing-up" class="md-nav__link">
+    Backing Up
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ignoring" class="md-nav__link">
+    Ignoring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rolling-back" class="md-nav__link">
+    Rolling Back
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verbose" class="md-nav__link">
+    Verbose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shutdown-before-update" class="md-nav__link">
+    Shutdown Before Update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeout" class="md-nav__link">
+    Timeout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync" class="md-nav__link">
+    Sync
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prune" class="md-nav__link">
+    Prune
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../utilities/" class="md-nav__link">
+        Utilities
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Seedbox
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seedbox" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Seedbox
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seedbox/about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          rTorrent/ruTorrent
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="rTorrent/ruTorrent" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          rTorrent/ruTorrent
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seedbox/rTorrent/about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seedbox/rTorrent/requirements/" class="md-nav__link">
+        Requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seedbox/rTorrent/rtorrnetrc/" class="md-nav__link">
+        rTorrent.rc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../seedbox/rTorrent/in-app/" class="md-nav__link">
+        In app
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#flag-table" class="md-nav__link">
+    Flag Table
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-explanation" class="md-nav__link">
+    Further Explanation
+  </a>
+  
+    <nav class="md-nav" aria-label="Further Explanation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-options" class="md-nav__link">
+    Update Options
+  </a>
+  
+    <nav class="md-nav" aria-label="Update Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#asynchronous-updates" class="md-nav__link">
+    Asynchronous Updates
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backing-up" class="md-nav__link">
+    Backing Up
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ignoring" class="md-nav__link">
+    Ignoring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rolling-back" class="md-nav__link">
+    Rolling Back
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verbose" class="md-nav__link">
+    Verbose
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shutdown-before-update" class="md-nav__link">
+    Shutdown Before Update
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeout" class="md-nav__link">
+    Timeout
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sync" class="md-nav__link">
+    Sync
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prune" class="md-nav__link">
+    Prune
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+  <a href="https://github.com/Heavybullets8/HeavySetup/edit/master/docs/scripts/heavyscript/Update_Applications.md" title="Edit this page" class="md-content__button md-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+
+  <h1>Update Applications</h1>
+
+<h2 id="flag-table">Flag Table<a class="headerlink" href="#flag-table" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Example</th>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-U</td>
+<td>-U <br>-U 5</td>
+<td>None or Integer</td>
+<td>Update applications, ignoring major version changes<br><em>Optionally, you can supply a number after the argument to update multiple applications at once</em></td>
+</tr>
+<tr>
+<td>-u</td>
+<td>-u<br>-u 5</td>
+<td>None or Integer</td>
+<td>Update applications, do NOT update if there was a major version change<br><em>Optionally, you can supply a number after the argument to update multiple applications at once</em></td>
+</tr>
+<tr>
+<td>-b</td>
+<td>-b 14</td>
+<td>Integer</td>
+<td>Backup <code>ix-appliactions</code> dataset<br><em>Creates backups up to the number you've chosen</em></td>
+</tr>
+<tr>
+<td>-i</td>
+<td>-i nextcloud -i sonarr</td>
+<td>String</td>
+<td>Applications listed will be ignored during updating<br><em>List one application after another as shown in the example</em></td>
+</tr>
+<tr>
+<td>-r</td>
+<td>-r</td>
+<td>None</td>
+<td>Monitors applications after they update<br>If the app does not become "ACTIVE" after either:<br>The custom Timeout, or Default Timeout,<br>rollback the application.</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>-v</td>
+<td>None</td>
+<td>Verbose Output<br><em>Look at the bottom of this page for an example</em></td>
+</tr>
+<tr>
+<td>-S</td>
+<td>-S</td>
+<td>None</td>
+<td>Shutdown the application prior to updating it</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>-t 150</td>
+<td>Integer</td>
+<td>Set a custom timeout to be used with either:<br><code>-m</code> <br><em>Time the script will wait for application to be "STOPPED"</em><br>or<br><code>-(u\|U)</code> <br><em>Time the script will wait for application to be either "STOPPED" or "ACTIVE"</em></td>
+</tr>
+<tr>
+<td>-s</td>
+<td>-s</td>
+<td>None</td>
+<td>Sync Catalogs prior to updating</td>
+</tr>
+<tr>
+<td>-p</td>
+<td>-p</td>
+<td>None</td>
+<td>Prune old/unused docker images</td>
+</tr>
+</tbody>
+</table>
+<p><br >
+<br ></p>
+<h2 id="further-explanation">Further Explanation<a class="headerlink" href="#further-explanation" title="Permanent link">¶</a></h2>
+<h3 id="update-options">Update Options<a class="headerlink" href="#update-options" title="Permanent link">¶</a></h3>
+<p>There are two options for updating</p>
+<div class="highlight"><pre><span></span><code>-U
+</code></pre></div>
+<p>This option does not care about major version changes, and will update even if there is one</p>
+<blockquote>
+<p>A major version change example:</p>
+<blockquote>
+<p><code>3.14.2</code> ---&gt; <code>4.14.2</code> </p>
+</blockquote>
+</blockquote>
+<p><br ></p>
+<div class="highlight"><pre><span></span><code>-u
+</code></pre></div>
+<p>This option will NOT update if there was a major version change</p>
+<blockquote>
+<p><code>3.14.2</code> ---&gt; <code>4.14.2</code> </p>
+<blockquote>
+<p>In this case, this application would NOT update, this is useful because a lot of the time, major version changes include breaking changes</p>
+</blockquote>
+</blockquote>
+<p><br ></p>
+<h4 id="asynchronous-updates">Asynchronous Updates<a class="headerlink" href="#asynchronous-updates" title="Permanent link">¶</a></h4>
+<p>Both of the update options have the ability to update multiple applications at one time</p>
+<p>You can do this by placing a number after the <code>-u</code> or <code>-U</code></p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>-U 5
+</code></pre></div>
+<p>or</p>
+<div class="highlight"><pre><span></span><code>-u 5
+</code></pre></div>
+<ul>
+<li>This will keep <strong>up to </strong> 5 applications updating at one time<blockquote>
+<p>You can place any whole number after the flag, except for 0</p>
+</blockquote>
+</li>
+</ul>
+<p><br ></p>
+<p>If you wish to NOT have multiple applications updating at once, simply use:</p>
+<div class="highlight"><pre><span></span><code>-u 1
+</code></pre></div>
+<p>or</p>
+<div class="highlight"><pre><span></span><code>-u
+</code></pre></div>
+<blockquote>
+<p>If you do not place a number after <code>-u</code>, it will default to 1</p>
+</blockquote>
+<p><br >
+<br ></p>
+<h3 id="backing-up">Backing Up<a class="headerlink" href="#backing-up" title="Permanent link">¶</a></h3>
+<p>This does NOT backup individual applications (this is already taken care of when updating your app, a snapshot is taken, this is what allows you to rollback applications)</p>
+<p>Instead, the script will back up your entire <code>ix-applications</code> dataset</p>
+<blockquote>
+<p>I will talk more about why this is useful in another section</p>
+</blockquote>
+<p><br ></p>
+<p>You can backup your dataset prior to updating by:</p>
+<div class="highlight"><pre><span></span><code>-b 14
+</code></pre></div>
+<blockquote>
+<p>You can use any whole number after <code>-b</code> besides 0</p>
+</blockquote>
+<p>The number you choose is the <strong>MAXIMUM</strong> number of <code>HeavyScript</code> backups that will be on your system</p>
+<blockquote>
+<p>It is important to not have this number be so high, if you have too many backups your system will slow down</p>
+</blockquote>
+<p><br ></p>
+<p>Any number of backups that EXCEEDS the number you choose will be deleted</p>
+<blockquote>
+<p>If you started with 18 backups, and run <code>-b 14</code>, the 5 oldest backups will be deleted, because they exceed 14</p>
+</blockquote>
+<p><br >
+<br ></p>
+<h3 id="ignoring">Ignoring<a class="headerlink" href="#ignoring" title="Permanent link">¶</a></h3>
+<p>If you have an application that seems to break after every update, add it to the ignore list</p>
+<p>Adding an application to the ignore list will completely ignore it when it comes to updating, neither <code>-u</code> or <code>-U</code> will update that application</p>
+<blockquote>
+<p>Just make sure you spell it right, capitalization does not matter however. </p>
+</blockquote>
+<p><br ></p>
+<p>Ignored applications MUST be added one by one</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>-i sonarr -i radarr -i nextcloud
+</code></pre></div>
+<blockquote>
+<p>As you can see I am spacing out each <code>-i</code> away from each other</p>
+<blockquote>
+<p>Using something like <code>-i sonarr radarr nextcloud</code> will NOT work, each app needs its own flag</p>
+</blockquote>
+</blockquote>
+<p><em>Note: The name you type after <code>-i</code> is the exact name YOU gave the application when creating it</em></p>
+<p><br >
+<br ></p>
+<h3 id="rolling-back">Rolling Back<a class="headerlink" href="#rolling-back" title="Permanent link">¶</a></h3>
+<p>This is by far one of my favorite features, especially since a lot of the updates that have been pushed lately seem to fail, this has saved me a ton of time</p>
+<div class="highlight"><pre><span></span><code>-r
+</code></pre></div>
+<p>Will rollback an application to its previous version if it does not become active after your timeout</p>
+<p>Example:</p>
+<blockquote>
+<p>Nextcloud is going from <code>3.1.14</code> to <code>3.1.15</code>, it fails to come back up for whatever reason, it will be rolled back to <code>3.1.14</code></p>
+</blockquote>
+<p><br >
+<br ></p>
+<h3 id="verbose">Verbose<a class="headerlink" href="#verbose" title="Permanent link">¶</a></h3>
+<p>Sounds just as it is, it will produce more of an output when updating apps</p>
+<p><br >
+<br ></p>
+<h3 id="shutdown-before-update">Shutdown Before Update<a class="headerlink" href="#shutdown-before-update" title="Permanent link">¶</a></h3>
+<p>This will shutdown the individual application before it sends it the update command</p>
+<p>Some people think this is a safer way to update applications, so I have it as an option, I personally don't use it</p>
+<div class="highlight"><pre><span></span><code>-S
+</code></pre></div>
+<p>Example:</p>
+<blockquote>
+<p>Jackett has an update, it is <code>active</code>, before updating Jackett the script will send it the shutdown command and wait for it to be fully <code>stopped</code> before continuing with the update</p>
+</blockquote>
+<p><br >
+<br ></p>
+<h3 id="timeout">Timeout<a class="headerlink" href="#timeout" title="Permanent link">¶</a></h3>
+<p>This is used in two places in the script</p>
+<ol>
+<li>
+<p>How long HeavyScript waits for the application to be <code>Active</code> before rolling it back</p>
+<blockquote>
+<p>If you are using <code>-r</code> anyway</p>
+</blockquote>
+</li>
+<li>
+<p>How long HeavyScript waits for the application to Shutdown before it times out</p>
+</li>
+</ol>
+<p><br ></p>
+<p>Example:
+<div class="highlight"><pre><span></span><code>-t 400
+</code></pre></div></p>
+<blockquote>
+<p>Must use a whole number</p>
+<p>The number is in seconds</p>
+<p>If unset, the script uses 500 by default</p>
+</blockquote>
+<p><br >
+<br ></p>
+<h3 id="sync">Sync<a class="headerlink" href="#sync" title="Permanent link">¶</a></h3>
+<p>This just syncs the catalog prior to updating</p>
+<blockquote>
+<p>Syncing the catalog will ensure the latest application versions are being pulled down from the repository</p>
+</blockquote>
+<p><br >
+<br ></p>
+<h3 id="prune">Prune<a class="headerlink" href="#prune" title="Permanent link">¶</a></h3>
+<p>Prunes Old/Unused docker images</p>
+<blockquote>
+<p>If this is not done regularly, you can waste a lot of space with old images</p>
+</blockquote>
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../about/" class="md-footer__link md-footer__link--prev" aria-label="Previous: About" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              About
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../utilities/" class="md-footer__link md-footer__link--next" aria-label="Next: Utilities" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Utilities
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top"], "search": "../../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+    
+  </body>
+</html>

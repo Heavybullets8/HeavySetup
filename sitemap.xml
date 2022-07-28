@@ -201,6 +201,31 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://heavybullets8.github.io/HeavySetup/scripts/about/</loc>
+         <lastmod>2022-07-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heavybullets8.github.io/HeavySetup/scripts/cmd_to_container/</loc>
+         <lastmod>2022-07-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heavybullets8.github.io/HeavySetup/scripts/heavyscript/Update_Applications/</loc>
+         <lastmod>2022-07-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heavybullets8.github.io/HeavySetup/scripts/heavyscript/about/</loc>
+         <lastmod>2022-07-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://heavybullets8.github.io/HeavySetup/scripts/heavyscript/utilities/</loc>
+         <lastmod>2022-07-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://heavybullets8.github.io/HeavySetup/seedbox/about/</loc>
          <lastmod>2022-07-28</lastmod>
          <changefreq>daily</changefreq>
