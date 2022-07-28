@@ -17,7 +17,7 @@ container='hpb'
 # You may not need this, if that is the case, comment it out, Then delete the `--container "$container"` in the last line below, chances are you don't need it. 
 
 
-# Command to Pod here:
+# Command to Container/Pod here:
 command='php occ files:scan --all'
 
 
@@ -36,4 +36,13 @@ pod=$(k3s kubectl get -n "$namespace" pods | awk '{print $1}' | grep ^"$app_name
 k3s kubectl exec -n "$namespace" --stdin --tty "$pod" --container "$container" -- $command
 
 ```
+
+> This specific example will send the command `php occ files:scan --all` to Nextcloud's `hpb` container (which will then re-scan all of the files, adding them to the WEB-GUI if they are not already there)
+>> Nextcloud REQUIRES that you specify the `hpb` container to run this command however
+
+<br >
+
+- Usually you don't need to specify the container, so you can delete `container='hpb` and `--container "$container"` if you do not need them..
+
+    -  If you don't know if you need them.. you likely don't need them
 
