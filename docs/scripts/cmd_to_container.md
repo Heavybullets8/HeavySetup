@@ -14,10 +14,11 @@ app_name='nextcloud'
 
 # Container Name Here:
 container='hpb'
+# You may not need this, if that is the case, comment it out, Then delete the `--container "$container"` in the last line below, chances are you don't need it. 
+
 
 # Command to Pod here:
 command='php occ files:scan --all'
-# You may not need this, if that is the case, comment it out, Then delete the `--container "$container"` in the last line below, chances are you don't need it. 
 
 
 # Note: if the command has single quotes in it, you will have
