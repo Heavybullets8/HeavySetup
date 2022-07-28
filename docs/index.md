@@ -22,4 +22,4 @@ Also in the future, I would like the community to submit guides to this site as 
 
 This site takes a lot of inspiration from [TRaSH Guides](https://trash-guides.info/)
 
-This guide also references a lot of [Trucharts](https://truecharts.org) guides and applications
+This guide also references a lot of [TrueCharts](https://truecharts.org) guides and applications
