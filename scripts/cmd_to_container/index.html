@@ -1689,7 +1689,7 @@
 <span class="c1"># You may not need this, if that is the case, comment it out, Then delete the `--container &quot;$container&quot;` in the last line below, chances are you don&#39;t need it. </span>
 
 
-<span class="c1"># Command to Pod here:</span>
+<span class="c1"># Command to Container/Pod here:</span>
 <span class="nv">command</span><span class="o">=</span><span class="s1">&#39;php occ files:scan --all&#39;</span>
 
 
@@ -1707,6 +1707,21 @@
 
 k3s kubectl <span class="nb">exec</span> -n <span class="s2">&quot;</span><span class="nv">$namespace</span><span class="s2">&quot;</span> --stdin --tty <span class="s2">&quot;</span><span class="nv">$pod</span><span class="s2">&quot;</span> --container <span class="s2">&quot;</span><span class="nv">$container</span><span class="s2">&quot;</span> -- <span class="nv">$command</span>
 </code></pre></div>
+<blockquote>
+<p>This specific example will send the command <code>php occ files:scan --all</code> to Nextcloud's <code>hpb</code> container (which will then re-scan all of the files, adding them to the WEB-GUI if they are not already there)</p>
+<blockquote>
+<p>Nextcloud REQUIRES that you specify the <code>hpb</code> container to run this command however</p>
+</blockquote>
+</blockquote>
+<p><br ></p>
+<ul>
+<li>
+<p>Usually you don't need to specify the container, so you can delete <code>container='hpb</code> and <code>--container "$container"</code> if you do not need them..</p>
+<ul>
+<li>If you don't know if you need them.. you likely don't need them</li>
+</ul>
+</li>
+</ul>
 
               
             </article>
