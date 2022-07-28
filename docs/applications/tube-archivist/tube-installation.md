@@ -75,10 +75,25 @@ ELASTIC_PASSWORD
 verysecret
 ```
 
-![!env1: Tube](images/ta-env2.png)
+![!env2: Tube](images/ta-env2.png)
 
 <br />
 
+
+**Name**
+```
+TA_HOST
+```
+**Value**
+```
+youtube.myserver.com
+```
+
+>If you are NOT using a reverse proxy, put your IP address here instead
+
+![!env3: Tube](images/ta-env3.png)
+
+<br />
 
 ## Networking
 
