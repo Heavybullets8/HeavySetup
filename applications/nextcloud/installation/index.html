@@ -12,7 +12,7 @@
         <meta name="author" content="Heavybullets8">
       
       
-        <link rel="canonical" href="https://heavybullets8.github.io/HeavySetup/applications/radarr/installation/">
+        <link rel="canonical" href="https://heavybullets8.github.io/HeavySetup/applications/nextcloud/installation/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#networking" class="md-skip">
+        <a href="#container" class="md-skip">
           Skip to content
         </a>
       
@@ -467,12 +467,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
       
       
       
@@ -495,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nextcloud/about/" class="md-nav__link">
+      <a href="../about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -509,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nextcloud/datasets/" class="md-nav__link">
+      <a href="../datasets/" class="md-nav__link">
         Datasets
       </a>
     </li>
@@ -521,11 +523,69 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../nextcloud/installation/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Installation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Installation
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#container" class="md-nav__link">
+    Container
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage" class="md-nav__link">
+    Storage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ingress" class="md-nav__link">
+    Ingress
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -856,14 +916,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
       
       
       
@@ -886,7 +944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+      <a href="../../radarr/about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -898,103 +956,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Installation
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../radarr/installation/" class="md-nav__link">
         Installation
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#networking" class="md-nav__link">
-    Networking
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#storage" class="md-nav__link">
-    Storage
-  </a>
-  
-    <nav class="md-nav" aria-label="Storage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    Configuration
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#media-destination-folders" class="md-nav__link">
-    Media - Destination Folders
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#backups" class="md-nav__link">
-    Backups
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nzb" class="md-nav__link">
-    NZB
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bittorrent" class="md-nav__link">
-    Bittorrent
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#syncthing" class="md-nav__link">
-    Syncthing
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1032,7 +998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../qbittorrent/" class="md-nav__link">
+      <a href="../../radarr/qbittorrent/" class="md-nav__link">
         qBittorrent
       </a>
     </li>
@@ -1046,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nzbget/" class="md-nav__link">
+      <a href="../../radarr/nzbget/" class="md-nav__link">
         NZBGet
       </a>
     </li>
@@ -1777,8 +1743,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#networking" class="md-nav__link">
-    Networking
+  <a href="#container" class="md-nav__link">
+    Container
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment Variables
   </a>
   
 </li>
@@ -1788,53 +1761,12 @@
     Storage
   </a>
   
-    <nav class="md-nav" aria-label="Storage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    Configuration
-  </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#media-destination-folders" class="md-nav__link">
-    Media - Destination Folders
+      
+        <li class="md-nav__item">
+  <a href="#ingress" class="md-nav__link">
+    Ingress
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#backups" class="md-nav__link">
-    Backups
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nzb" class="md-nav__link">
-    NZB
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bittorrent" class="md-nav__link">
-    Bittorrent
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#syncthing" class="md-nav__link">
-    Syncthing
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1850,7 +1782,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/Heavybullets8/HeavySetup/edit/master/docs/applications/radarr/installation.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/Heavybullets8/HeavySetup/edit/master/docs/applications/nextcloud/installation.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
@@ -1858,53 +1790,81 @@
 
   <h1>Installation</h1>
 
-<h2 id="networking">Networking<a class="headerlink" href="#networking" title="Permanent link">¶</a></h2>
-<p>If you are wanting to use ingress, its probably better to use clusterIP instead</p>
+<p>For this application I used the <code>Nextcloud</code> provided by <a href="https://truecharts.org/manual/Quick-Start%20Guides/01-Adding-TrueCharts/">TrueCharts</a>.</p>
 <ul>
-<li>I changed the UDP and TCP port to match the Mullvad ports allocated to me</li>
+<li>Available under the <code>stable</code> train</li>
 </ul>
-<p><img alt="!Networking: qbittorrent" src="../images/networking.png" /></p>
+<p><img alt="!Container: Tube" src="../images/nextcloud.png" /></p>
+<p><br ></p>
+<h2 id="container">Container<a class="headerlink" href="#container" title="Permanent link">¶</a></h2>
+<p><strong>Application Name</strong>
+<div class="highlight"><pre><span></span><code>nextcloud
+</code></pre></div></p>
+<p>Name it whatever you want, I stick with the chart name</p>
+<p><strong>NEXTCLOUD_ADMIN_USER (First Install Only)</strong>
+<div class="highlight"><pre><span></span><code>USERNAME
+</code></pre></div></p>
+<blockquote>
+<p>This is up to you</p>
+</blockquote>
 <p><br /></p>
+<p><strong>NEXTCLOUD_ADMIN_PASSWORD (First Install Only)</strong> 
+<div class="highlight"><pre><span></span><code>PASSWORD
+</code></pre></div></p>
+<blockquote>
+<p>This is up to you</p>
+</blockquote>
+<p><br />
+<br /></p>
+<h2 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>This is the ONLY environment variable, and you can SKIP this if you did not create a separate dataset</p>
+</blockquote>
+<p><strong>Name</strong>
+<div class="highlight"><pre><span></span><code>NEXTCLOUD_DATA_DIR
+</code></pre></div>
+<strong>Value</strong>
+<div class="highlight"><pre><span></span><code>/cloud
+</code></pre></div></p>
+<p><img alt="!Container: Env_Var" src="../images/env1.png" /></p>
+<p><br />
+<br /></p>
 <h2 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">¶</a></h2>
-<h3 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">¶</a></h3>
-<p>The setup is default</p>
-<p><img alt="!Storage: NZBGet" src="../images/storage_config.png" /></p>
-<p><br ></p>
-<h3 id="media-destination-folders">Media - Destination Folders<a class="headerlink" href="#media-destination-folders" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>This is also an optional step, if you did not create a separate dataset, you can skip this</p>
+</blockquote>
 <ul>
-<li>Media is so that Radarr will have a location to place files once they're completed</li>
-<li>This will be the folder Radarr places files for plex to then parse through.</li>
+<li>It is vital that your mountpath matches your <code>value</code> for the environment variable you created above</li>
 </ul>
-<p><img alt="!Storage: NZBGet" src="../images/storage_data_media.png" /></p>
-<p><br ></p>
-<h3 id="backups">Backups<a class="headerlink" href="#backups" title="Permanent link">¶</a></h3>
+<p><img alt="!Container: Env_Var" src="../images/storage.png" /></p>
+<p><br />
+<br /></p>
+<h2 id="ingress">Ingress<a class="headerlink" href="#ingress" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>This is another optional step, if you never plan on using ingress, you can skip this.</p>
+</blockquote>
 <ul>
-<li>'/config/Backups' is the location Radarr places its automatic and manual backups</li>
-<li>I created a separate dataset meant for backups, specifically to have an easy way to restore a backup, in the event the application is wrongly deleted, or removed, corrupt, whatever</li>
+<li>This is by FAR the most important thing to get right the very first time, if you fail to setup ingress on the applications VERY FIRST deployment, you will not be able to access Nextcloud via a domain name</li>
 </ul>
-<p><img alt="!Storage: NZBGet" src="../images/storage_data_backups.png" /></p>
 <p><br ></p>
-<h3 id="nzb">NZB<a class="headerlink" href="#nzb" title="Permanent link">¶</a></h3>
-<ul>
-<li>This is obviously the location Radarr will look for completed NZB files</li>
-<li>Its also the location NZBGet saves its completed movie files</li>
-</ul>
-<p><img alt="!Storage: NZBGet" src="../images/storage_data_nzb.png" /></p>
+<ol>
+<li>Configure Hosts &gt; Add</li>
+<li>Configure Paths &gt; Add</li>
+<li>Type your hostname under <code>HostName</code></li>
+</ol>
+<p><img alt="!Container: Ingres" src="../images/ingress1.png" /></p>
 <p><br ></p>
-<h3 id="bittorrent">Bittorrent<a class="headerlink" href="#bittorrent" title="Permanent link">¶</a></h3>
-<ul>
-<li>This is the location Radarr will look for completed qBittorrent files</li>
-<li>Its also the location qBittorrent saves its completed movie files</li>
-</ul>
-<p><img alt="!Storage: NZBGet" src="../images/storage_data_qbit.png" /></p>
+<ol>
+<li>Configure TLS-Settings &gt; Add</li>
+<li>Configure Certificate Hosts &gt; Add</li>
+<li>Type your hostname under <code>HostName</code></li>
+<li>Select your correct cert</li>
+</ol>
+<blockquote>
+<p>I do not add any middlewares, since Nextcloud has its own authentication, and adding middlewares breaks phone backups, since it has no way to authenticate through Authelia</p>
+</blockquote>
+<p><img alt="!Container: Ingres" src="../images/ingress2.png" /></p>
 <p><br ></p>
-<h3 id="syncthing">Syncthing<a class="headerlink" href="#syncthing" title="Permanent link">¶</a></h3>
-<ul>
-<li>This is the location Radarr will look for completed Syncthing files</li>
-<li>Its also the location Syncthing saves its completed movie files</li>
-</ul>
-<p><img alt="!Storage: NZBGet" src="../images/storage_data_syncthing.png" /></p>
-<p><br /></p>
 
               
             </article>
@@ -1925,7 +1885,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../about/" class="md-footer__link md-footer__link--prev" aria-label="Previous: About" rel="prev">
+        <a href="../datasets/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Datasets" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1934,20 +1894,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              About
+              Datasets
             </div>
           </div>
         </a>
       
       
         
-        <a href="../qbittorrent/" class="md-footer__link md-footer__link--next" aria-label="Next: qBittorrent" rel="next">
+        <a href="../../notifiarr/about/" class="md-footer__link md-footer__link--next" aria-label="Next: About" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              qBittorrent
+              About
             </div>
           </div>
           <div class="md-footer__button md-icon">
