@@ -1,0 +1,4 @@
+nav:
+    - About: about.md
+    - Datasets: datasets.md
+    - Installation: installation.md
