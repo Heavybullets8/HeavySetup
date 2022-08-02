@@ -33,27 +33,13 @@ PASSWORD
 <br />
 <br />
 
-## Environment Variables
->This is the ONLY environment variable, and you can SKIP this if you did not create a separate dataset
-
-**Name**
-```
-NEXTCLOUD_DATA_DIR
-```
-**Value**
-```
-/cloud
-```
-
-![!Container: Env_Var](images/env1.png)
-
-<br />
-<br />
 
 ## Storage
 > This is also an optional step, if you did not create a separate dataset, you can skip this
 
-- It is vital that your mountpath matches your `value` for the environment variable you created above
+1. Ensure you are under `UserData Storage`
+2. `Type of Storage` should be `Hostpath (simple)`
+3. `Hostpath` should be the path to the dataset you created
 
 ![!Container: Env_Var](images/storage.png)
 
