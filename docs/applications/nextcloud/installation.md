@@ -35,7 +35,7 @@ PASSWORD
 
 
 ## Storage
-> This is also an optional step, if you did not create a separate dataset, you can skip this
+> This is an optional step, if you did not create a separate dataset, you can skip this
 
 1. Ensure you are under `UserData Storage`
 2. `Type of Storage` should be `Hostpath (simple)`
