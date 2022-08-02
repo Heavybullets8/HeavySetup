@@ -562,13 +562,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#environment-variables" class="md-nav__link">
-    Environment Variables
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#storage" class="md-nav__link">
     Storage
   </a>
@@ -1750,13 +1743,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#environment-variables" class="md-nav__link">
-    Environment Variables
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#storage" class="md-nav__link">
     Storage
   </a>
@@ -1816,26 +1802,15 @@
 </blockquote>
 <p><br />
 <br /></p>
-<h2 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">¶</a></h2>
-<blockquote>
-<p>This is the ONLY environment variable, and you can SKIP this if you did not create a separate dataset</p>
-</blockquote>
-<p><strong>Name</strong>
-<div class="highlight"><pre><span></span><code>NEXTCLOUD_DATA_DIR
-</code></pre></div>
-<strong>Value</strong>
-<div class="highlight"><pre><span></span><code>/cloud
-</code></pre></div></p>
-<p><img alt="!Container: Env_Var" src="../images/env1.png" /></p>
-<p><br />
-<br /></p>
 <h2 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">¶</a></h2>
 <blockquote>
 <p>This is also an optional step, if you did not create a separate dataset, you can skip this</p>
 </blockquote>
-<ul>
-<li>It is vital that your mountpath matches your <code>value</code> for the environment variable you created above</li>
-</ul>
+<ol>
+<li>Ensure you are under <code>UserData Storage</code></li>
+<li><code>Type of Storage</code> should be <code>Hostpath (simple)</code></li>
+<li><code>Hostpath</code> should be the path to the dataset you created</li>
+</ol>
 <p><img alt="!Container: Env_Var" src="../images/storage.png" /></p>
 <p><br />
 <br /></p>
