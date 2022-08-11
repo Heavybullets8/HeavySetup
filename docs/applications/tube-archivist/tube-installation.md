@@ -156,10 +156,20 @@ Ensure the mountpath is:
 
 ## Security
 
-Running the application without user:group `0` or `root`, resulted in a Django import error.
+
+
+1. Select __Show Advanced Security Settings__
+
+2. UN-Select __runASNonRoot__
+
+3. Change __runAsUser__ to `0`
+
+4. Change __runAsGroup__ to `0`
+
+>Running the application without user:group `0` or `root`, resulted in a Django import error.
 
 ![!Storage: Tube](images/ta-security1.png)
 
-![!Storage: Tube](images/ta-security2.png)
+
 
 <br />
