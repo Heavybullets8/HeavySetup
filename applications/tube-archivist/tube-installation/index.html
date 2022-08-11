@@ -1946,9 +1946,24 @@
 <p><img alt="!Storage: Tube" src="../images/ta-storage_config.png" /></p>
 <p><br /></p>
 <h2 id="security">Security<a class="headerlink" href="#security" title="Permanent link">¶</a></h2>
+<ol>
+<li>
+<p>Select <strong>Show Advanced Security Settings</strong></p>
+</li>
+<li>
+<p>UN-Select <strong>runASNonRoot</strong></p>
+</li>
+<li>
+<p>Change <strong>runAsUser</strong> to <code>0</code></p>
+</li>
+<li>
+<p>Change <strong>runAsGroup</strong> to <code>0</code></p>
+</li>
+</ol>
+<blockquote>
 <p>Running the application without user:group <code>0</code> or <code>root</code>, resulted in a Django import error.</p>
+</blockquote>
 <p><img alt="!Storage: Tube" src="../images/ta-security1.png" /></p>
-<p><img alt="!Storage: Tube" src="../images/ta-security2.png" /></p>
 <p><br /></p>
 
               
