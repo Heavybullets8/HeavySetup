@@ -110,9 +110,13 @@ Elasticsearch specifically looks to that mount point, its required
 
 ## Security
 
-- Just run the application as 568
+1. Select __Show Advanced Security Settings__
 
-- Add a `Supplemental Group` and input `0`
+2. Select __Allow Privilege Escalation__
+
+3. Next to __Configure Supplimental Groups__ Select __Add__
+
+4. Input `0` under __Supplimental Group__
 
 ![!Storage: Tube](images/es-security1.png)
 
