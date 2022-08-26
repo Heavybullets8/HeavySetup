@@ -38,6 +38,7 @@ sonarr:
         filter:
           exclude:
             - cec8880b847dd5d31d29167ee0112b57 # Golden rule
+            - ea83f4740cec4df8112f3d6dd7c82751 # Prefer Season Packs
         tags: [non-anime]
 
 
