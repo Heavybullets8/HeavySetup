@@ -130,8 +130,8 @@ radarr:
           #Misc
           - e7718d7a3ce595f289bfee26adc178f5 # Repack/Proper
           - ae43b294509409a6a13919dedd4764c4 # Repack2
-#          - 2899d84dc9372de3408e6d8cc18e9666 # x264
-#          - 9170d55c319f4fe40da8711ba9d8050d # x265
+          - 2899d84dc9372de3408e6d8cc18e9666 # x264
+          - 9170d55c319f4fe40da8711ba9d8050d # x265
 #          - 0d91270a7255a1e388fa85e959f359d8 # FreeLeech
 #          - 9de657fd3d327ecf144ec73dfe3a3e9a # Dutch Groups
           - ff86c4326018682f817830ced463332b # MPEG2
@@ -311,8 +311,8 @@ sonarr:
           - ec8fa7296b64e8cd390a1600981f3923 # Repack/Proper
           - eb3d5cc0a2be0db205fb823640db6a3c # Repack v2
           - 44e7c4de10ae50265753082e5dc76047 # Repack v3
-#          - cddfb4e32db826151d97352b8e37c648 # x264
-#          - c9eafd50846d299b862ca9bb6ea91950 # x265
+          - cddfb4e32db826151d97352b8e37c648 # x264
+          - c9eafd50846d299b862ca9bb6ea91950 # x265
 #          - d7c747094a7c65f4c2de083c24899e8b # FreeLeech (CURRENTLY BROKEN ANYWAY)
           - 4aee45b0868229c4fbd8bad3e315f1d0 # MPEG2
           - 7ba05c6e0e14e793538174c679126996 # Multi
@@ -455,8 +455,8 @@ radarr:
           #Misc
           - e7718d7a3ce595f289bfee26adc178f5 # Repack/Proper
           - ae43b294509409a6a13919dedd4764c4 # Repack2
-#          - 2899d84dc9372de3408e6d8cc18e9666 # x264
-#          - 9170d55c319f4fe40da8711ba9d8050d # x265
+          - 2899d84dc9372de3408e6d8cc18e9666 # x264
+          - 9170d55c319f4fe40da8711ba9d8050d # x265
 #          - 0d91270a7255a1e388fa85e959f359d8 # FreeLeech
 #          - 9de657fd3d327ecf144ec73dfe3a3e9a # Dutch Groups
           - ff86c4326018682f817830ced463332b # MPEG2
