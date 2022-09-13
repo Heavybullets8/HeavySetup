@@ -1,18 +1,21 @@
 ## Flag Table
 
 
-| Flag 	| Example                	| Parameter       	| Description                                                                                                                                                                                                                	|
-|------	|------------------------	|-----------------	|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
-| -U   	| -U <br>-U 5            	| None or Integer 	| Update applications, ignoring major version changes<br>_Optionally, you can supply a number after the argument to update multiple applications at once_                                                                    	|
-| -u   	| -u<br>-u 5             	| None or Integer 	| Update applications, do NOT update if there was a major version change<br>_Optionally, you can supply a number after the argument to update multiple applications at once_                                                 	|
-| -b   	| -b 14                  	| Integer         	| Backup `ix-appliactions` dataset<br>_Creates backups up to the number you've chosen_                                                                                                                                       	|
-| -i   	| -i nextcloud -i sonarr 	| String          	| Applications listed will be ignored during updating<br>_List one application after another as shown in the example_                                                                                                        	|
-| -r   	| -r                     	| None            	| Monitors applications after they update<br>If the app does not become "ACTIVE" after either:<br>The custom Timeout, or Default Timeout,<br>rollback the application.                                                       	|
-| -v   	| -v                     	| None            	| Verbose Output<br>_Look at the bottom of this page for an example_                                                                                                                                                         	|
-| -S   	| -S                     	| None            	| Shutdown the application prior to updating it                                                                                                                                                                              	|
-| -t   	| -t 150                 	| Integer         	| Set a custom timeout to be used with either:<br>`-m` <br>_Time the script will wait for application to be "STOPPED"_<br>or<br>`-(u\|U)` <br>_Time the script will wait for application to be either "STOPPED" or "ACTIVE"_ 	|
-| -s   	| -s                     	| None            	| Sync Catalogs prior to updating                                                                                                                                                                                            	|
-| -p   	| -p                     	| None            	| Prune old/unused docker images                                                                                                                                                                                             	|
+## Update Arguments
+| Flag          | Example                | Parameter        | Description                                                                                                                                                                |
+|---------------|------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| -U            | -U <br>-U 5            | Optional Integer | Update applications, ignoring major version changes<br>_Optionally, you can supply a number after the argument to update multiple applications at once_                    |
+| -u            | -u<br>-u 5             | Optional Integer | Update applications, do NOT update if there was a major version change<br>_Optionally, you can supply a number after the argument to update multiple applications at once_ |
+| -b            | -b 14                  | Integer          | Snapshot ix-applications dataset<br>_Creates backups UP TO the number you've chosen_                                                                                       |
+| -i            | -i nextcloud -i sonarr | String           | Applications listed will be ignored during updating<br>_List one application after another as shown in the example_                                                        |
+| -r            | -r                     |                  | Monitors applications after they update<br>If the app does not become "ACTIVE" after the timeout, rollback the application.                                                |
+| -v            | -v                     |                  | Verbose Output<br>_Look at the bottom of this page for an example_                                                                                                         |
+| -S            | -S                     |                  | Shutdown the application prior to updating it                                                                                                                              |
+| -t            | -t 400                 | Integer          | Time in seconds that HeavyScript will wait for an application to no longer be deploying before declaring failure<br>Default: 500                                           |
+| -s            | -s                     |                  | Sync Catalogs prior to updating                                                                                                                                            |
+| -p            | -p                     |                  | Prune unused docker images                                                                                                                                                 |
+| --ignore-img  | --ignore-img           |                  | Ignore container image updates                                                                                                                                             |
+
 
 <br >
 <br >
@@ -212,3 +215,12 @@ This just syncs the catalog prior to updating
 
 Prunes Old/Unused docker images
 > If this is not done regularly, you can waste a lot of space with old images
+
+<br >
+<br >
+
+### Ignore Image
+
+Ignore container image updates
+> This is helpful for the `launch docker image` button, and Truecharts `Custom-app`, since those do not receive a version change when your application has an update available. 
+

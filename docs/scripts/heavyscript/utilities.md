@@ -24,12 +24,11 @@ All of the options do just what you would expect
 1. Opens the help menu, so you can see all of the options for the script
 2. Lists all of your internal DNS names and their ports
 3. Opens the Mount and Unmount feature, so you can mount your volumes
-4. Creates a `ix-applications` backup
-5. Opens the menu to restore your `ix-applications` dataset to a previous version
-6. Opens the menu to delete an `ix-applications` backup
-7. Updates HeavyScript to the latest github version
-8. Opens a menu to create, then run a HeavyScript update
-
+4. Opens the Backup Menu
+> ix-application backups
+5. Updates HeavyScript to the latest github release
+6. Opens a menu to create, then run a HeavyScript update
+7. List all of your applications, so you can open a shell or send a command to the container/pod
 
 <br >
 <br >
@@ -160,7 +159,7 @@ bash heavy_script.sh
 
 ## Updating Applications
 
-This is something I am very proud of, it allows you to create a `bash heavy_script.sh` update with interactive options
+Allows you to create a `bash heavy_script.sh` update with interactive options
 
 <br >
 
@@ -194,3 +193,35 @@ Using the menu
 ```
 bash heavy_script.sh 
 ```
+
+
+<br >
+<br >
+
+## Command to Container
+
+Allows you to easily open a menu to send a command to one of your containers/pods
+
+<br >
+
+The first Menu:
+
+![!Update: Overview](images/cmd1.png)
+> Type the number associated with the option you want
+
+<br >
+
+If multiple containers are available for that application, it will ask which container you would like
+
+![!Update: Overview](images/cmd2.png)
+> Type the number associated with the option you want
+
+<br >
+
+![!Update: Overview](images/cmd3.png)
+> It will now show your App selection and container selection
+
+<br >
+
+![!Update: Overview](images/cmd4.png)
+> After choosing option 2, you will be in the containers shell, exit this shell by typing `exit` then pressing `enter`
