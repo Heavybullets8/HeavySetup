@@ -166,7 +166,7 @@ radarr:
           - e36a0ba1bc902b26ee40818a1d59b8bd # PMTP
           - 84272245b2988854bfb76a16e60baea5 # DSNP
           - 5763d1b0ce84aff3b21038eea8e9b8ad # HMAX
-          - 3472d276482257d68f7836a55ca24877 # APTV
+          - 40e9380490e748672c2522eaaeb692f7 # ATVP
           - b3b3a6ac74ecbd56bcdbefa4799fb9df # AMZN
           - 170b1d363bd8516fbf3a3eb05d4faff6 # NF
 
@@ -243,7 +243,7 @@ sonarr:
           - 89358767a60cc28783cdc3d0be9388a4 # DSNP
           - c67a75ae4a1715f2bb4d492755ba4195 # PMTP          
           - c30d2958827d1867c73318a5a2957eb1 # RED
-          - 7ea9e9c0fb7cfe4247ad8c915d289cfc # APTV          
+          - f67c9ca88f463a48346062e8ad07713f # ATVP         
           - a880d6abc21e7c16884f3ae393f84179 # HMAX
           - f6cce30f1733d5c8194222a7507909bb # HULU          
           - 1656adc6d7bb2c8cca6acfb6592db421 # PCOK          
@@ -491,7 +491,7 @@ radarr:
           - e36a0ba1bc902b26ee40818a1d59b8bd # PMTP
           - 84272245b2988854bfb76a16e60baea5 # DSNP
           - 5763d1b0ce84aff3b21038eea8e9b8ad # HMAX
-          - 3472d276482257d68f7836a55ca24877 # APTV
+          - 40e9380490e748672c2522eaaeb692f7 # ATVP
           - b3b3a6ac74ecbd56bcdbefa4799fb9df # AMZN
           - 170b1d363bd8516fbf3a3eb05d4faff6 # NF
 
