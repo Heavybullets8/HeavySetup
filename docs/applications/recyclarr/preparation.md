@@ -115,17 +115,17 @@ radarr:
           #Unwanted
           - ed38b889b31be83fda192888e2286d83 # BR-DISK
           - 90a6f9a284dff5103f6346090e6280c8 # LQ
-#          - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
-          - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV)
           - b8cd450cbfa689c0259a01d9e29ba3d6 # 3D
-          - 923b6abef9b17f937fab56cfcf89e1f1 # DV (WEBDL)
+#          - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
           
           #Optional
+          - b6832f586342ef70d9c128d40c07b872 # Bad Dual Groups
+          - 923b6abef9b17f937fab56cfcf89e1f1 # DV (WEBDL)
           - 90cedc1fea7ea5d11298bebd3d1d3223 # EVO (no WEBDL)
-          - ae9b7c9ebde1f3bd336a8cbd1ec4c5e5 # No-RlsGroup
+#          - ae9b7c9ebde1f3bd336a8cbd1ec4c5e5 # No-RlsGroup
           - 7357cf5161efbf8c4d5d0c30b4815ee2 # Obfuscated
           - 5c44f52a8714fdd79bb4d98e2673be1f # Retags
-          - b6832f586342ef70d9c128d40c07b872 # Bad Dual Groups
+          - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV)
           
           #Misc
           - e7718d7a3ce595f289bfee26adc178f5 # Repack/Proper
@@ -179,12 +179,8 @@ radarr:
         quality_profiles:
           - name: HD - 720p/1080p
 
+### Anime ###
       - trash_ids:
-#          - b23eae459cc960816f2d6ba84af45055 # Dubs Only
-          - 4a3b087eea2ce012fcc1ce319259a3be # Anime Dual Audio
-          - b0fdc5897f68c9a68c70c25169f77447 # Anime LQ Groups
-          - a5d148168c4506b55cf53984107c396e # 10bit
-          - 06b6542a47037d1e33b15aa3677c2365 # Anime Raws
           - fb3ccc5d5cc8f77c9055d4cb4561dded # Anime BD Tier 01 (Top SeaDex Muxers)
           - 66926c8fa9312bc74ab71bf69aae4f4a # Anime BD Tier 02 (SeaDex Muxers)
           - fa857662bad28d5ff21a6e611869a0ff # Anime BD Tier 03 (SeaDex Muxers)
@@ -195,16 +191,23 @@ radarr:
           - 6115ccd6640b978234cc47f2c1f2cadc # Anime BD Tier 08 (Mini Encodes)
           - 8167cffba4febfb9a6988ef24f274e7e # Anime Web Tier 01 (Muxers)
           - 8526c54e36b4962d340fce52ef030e76 # Anime Web Tier 02 (Top FanSubs)
-          - 5b1a5d3df27396373b4ce236fc337eaa # Anime Web Tier 03 (SubsPlease)
+          - de41e72708d2c856fa261094c85e965d # Anime Web Tier 03 (Official Subs)
           - 9edaeee9ea3bcd585da9b7c0ac3fc54f # Anime Web Tier 04 (Official Subs)
           - 22d953bbe897857b517928f3652b8dd3 # Anime Web Tier 05 (FanSubs)
           - a786fbc0eae05afe3bb51aee3c83a9d4 # Anime Web Tier 06 (FanSubs)
+          - 06b6542a47037d1e33b15aa3677c2365 # Anime Raws
+          - b0fdc5897f68c9a68c70c25169f77447 # Anime LQ Groups
+          - 064af5f084a0a24458cc8ecd3220f93f # Uncensored
           - c259005cbaeb5ab44c06eddb4751e70c # v0
           - 5f400539421b8fcf71d51e6384434573 # v1
           - 3df5e6dfef4b09bb6002f732bed5b774 # v2
           - db92c27ba606996b146b57fbe6d09186 # v3
           - d4e5e842fad129a3c097bdb2d20d31a0 # v4
           - 60f6d50cbd3cfc3e9a8c00e3a30c3114 # VRV
+          - a5d148168c4506b55cf53984107c396e # 10bit
+          - 4a3b087eea2ce012fcc1ce319259a3be # Anime Dual Audio          
+#          - b23eae459cc960816f2d6ba84af45055 # Dubs Only
+          - b0fdc5897f68c9a68c70c25169f77447 # Anime LQ Groups
         quality_profiles:
           - name: Anime
 ```
