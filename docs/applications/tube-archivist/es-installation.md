@@ -77,6 +77,20 @@ ES_JAVA_OPTS
 <br />
 
 
+**Name**
+```
+path.repo
+```
+**Value**
+```
+/usr/share/elasticsearch/data/snapshot
+```
+
+![!env1: Tube](images/es-env3.png)
+
+
+<br />
+
 ## Networking
 
 **Target Port**

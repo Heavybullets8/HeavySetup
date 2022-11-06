@@ -45,6 +45,17 @@ Current Cast integration: `True`
 
 <br />
 
+### Snapshots
+
+Use snapshots as a backup
+
+
+![!Snapshots: Tube](images/in-app_snapshot.png)
+
+
+
+<br />
+
 ### Scheduler Setup
 
 **Rescan Subscriptions**
