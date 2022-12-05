@@ -13,14 +13,14 @@ This is easily the best option if you are wanting to data horde Youtube channels
 
 #### [Website](https://www.tubearchivist.com/)
 
-Important information regarding Syncthing
+>Important information regarding TubeArchivist
 
 
 <br >
 
 #### [Github](https://github.com/tubearchivist/tubearchivist)
 
-Source code for the project, active issues etc. 
+>Source code for the project, active issues etc. 
 
 <br >
 
