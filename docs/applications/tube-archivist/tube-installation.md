@@ -97,7 +97,6 @@ youtube.myserver.com
 
 ## Networking
 
-### Ports
 
 **Target Port**
 ```
@@ -109,18 +108,8 @@ youtube.myserver.com
 ```
 
 ![!Networking: Tube](images/ta-networking.png)
+> You can change LoadBalancer to CluserIP if you only intend to use this through ingress (a domain name), if not, or you don't know, leave it as LoadBalancer
 
-
-### DNS
-
-A change is required here, otherwise sometimes the application will start and will be unable to find the `redis` and `elastic search` containers by DNS name
-
-**dnsPolicy**
-```
-ClusterFirst
-```
-
-![!Networking: Tube](images/ta-networking_dns.png)
 
 <br />
 
@@ -137,7 +126,7 @@ Ensure the mountpath is:
 
 TubeArchivist specifically looks to that mount point, its required
 
-![!Storage: Tube](images/ta-storage_data.png)
+![!Storage: Tube](images/ta-storage.png)
 
 <br />
 
@@ -148,8 +137,7 @@ Ensure the mountpath is:
 /cache
 ```
 
-
-![!Storage: Tube](images/ta-storage_config.png)
+> You of course can change `Size Quotum of Storage` to something lower. 
 
 
 <br />

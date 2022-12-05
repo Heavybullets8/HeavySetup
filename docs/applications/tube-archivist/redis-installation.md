@@ -43,7 +43,7 @@ latest
 ```
 
 ![!Networking: Tube](images/redis-networking.png)
-
+> ClusterIP is being used since no other services besides TA will be accessing this container, so the port only needs to be exposed within the kubernetes network. 
 <br />
 
 ## Storage
@@ -58,7 +58,7 @@ Ensure the mountpath is:
 Redis specifically looks to that mount point, its required
 
 ![!Storage: Tube](images/redis-storage.png)
-
+> You of course can change `Size Quotum of Storage` to something lower. I cannot though. I would recommend setting it to something a bit lower. You will receive a notification on Truenas if your PVC is filling up, so you can expand the size, but you cannot EVER retract to a lower size later on. 
 
 <br />
 
