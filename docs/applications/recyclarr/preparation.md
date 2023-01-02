@@ -19,7 +19,7 @@ sonarr:
     api_key: sdfgsadfhadfhadfgsdfgs
 
     # Quality definitions from the guide to sync to Sonarr. Choice: anime, series, hybrid
-    quality_definition: hybrid
+    quality_definition: anime
 
     # Release profiles from the guide to sync to Sonarr.
     # You can optionally add tags and make negative scores strictly ignored
@@ -232,7 +232,7 @@ sonarr:
     api_key: sdfvsdfbsdfbafdsb
 
     # Quality definitions from the guide to sync to Sonarr. Choice: anime, series, hybrid
-    quality_definition: hybrid
+    quality_definition: series
 
         # Set to 'true' to automatically remove custom formats from Radarr when they are removed from
     # the guide or your configuration. This will NEVER delete custom formats you manually created!
