@@ -19,7 +19,7 @@ You don't HAVE to follow my naming scheme, but if you don't, you'll have to also
 
 **Container Repository**
 ```
-redislabs/rejson
+redis/redis-stack-server
 ```
 **Container Tag**
 ```
