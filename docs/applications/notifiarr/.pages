@@ -1,5 +1,4 @@
 nav:
     - About: about.md
-    - Installation: 
-        - Notifiarr: notifiarr.md
+    - Installation: notifiarr.md
     - WebGUI Settings: in-app.md
