@@ -1,7 +1,5 @@
 nav:
     - About: about.md
-    - Preparation: datasets.md
     - Installation: 
         - Notifiarr: notifiarr.md
-        - External Services: ext_services.md
     - WebGUI Settings: in-app.md

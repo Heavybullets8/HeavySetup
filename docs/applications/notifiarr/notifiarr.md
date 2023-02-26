@@ -1,10 +1,12 @@
-## Container
+For this application I used the `Custom-App` provided by [TrueCharts](https://truecharts.org/manual/Quick-Start%20Guides/01-Adding-TrueCharts/).
 
-I use the big blue `Launch Docker Container` Button
+- Available under the `stable` train
 
-![!Networking: NZBGet](images/launch-docker-image.png)
+![!Container: Tube](images/custom-app.png)
 
 <br />
+
+### Container
 
 **Container Repository**
 
@@ -18,101 +20,107 @@ golift/notifiarr
 latest
 ```
 
-![!Networking: NZBGet](images/container.png)
+![!Container: Notifiarr](images/container.png)
 
 <br />
 
+## Environment Variables
+
+**Name**
+```
+DN_API_KEY
+```
+**Value**
+```
+API_KEY_FROM_NOTIFIARR.COM
+```
+
+??? picture "API Key Location"
+    [Link to Notifiarr Profile Page](https://notifiarr.com/user.php?page=profile "Click to visit the profile page") 
+    ![](images/profile.png)
+
+<br >
+
+**Name**
+```
+DN_UPSTREAMS_0
+```
+**Value**
+```
+172.16.0.0/16
+```
+> This is the default range of the kubernetes network for TrueNAS SCALE
+
+> You also can add your local network range here as well
+
+![!ENVVAR: Notifiarr](images/env_vars.png)
+
+
+<br />
 
 ## Networking
 
-### DNS Settings
+**Target Port**
+```
+5454
+```
 
-- I use the following setting so we can use the Kubernetes DNS names when linking applications together
+**Port**
+```
+5454
+```
 
-![!Networking: NZBGet](images/networking.png)
+![!Networking: Notifiarr](images/networking.png)
 
 <br >
 
-### Port Forwarding
 
-Configure both `TCP` and `UDP` for `54544`
+## Ingress
 
-We cannot use Ports Lower than 9000, which is why I did not use the default `5454` port as suggested in their documentation
+> This is optional, but I recommend it. It is a lot better than using the port forwarding method.
 
-Container Port
-```
-54544
-```
-Node Port 
-```
-54544
-```
-
-Protocol
-```
-UDP
-```
-<br >
-
-Container Port
-```
-54544
-```
-Node Port 
-```
-54544
-```
-
-Protocol
-```
-TCP
-```
-
-??? picture "Picture"
-    ![!Networking: NZBGet](images/networking1.png)
-
+![!Networking: Notifiarr](images/ingress-ingress.png)
 
 <br />
 
 ## Storage
 
-### Host Path
-
-**Host Path**
-
-- This is path you to the dataset you created on the [preparation page](https://heavysetup.info/applications/notifiarr/datasets/#dataset-permissions)
-
-```
-/mnt/speed/notifiarr
-```
+Here we are just going to make two Persistent Volumes. One for the config and one for utmp.
 
 **Mount Path**
-
-- The Mount Path is REQUIRED to be `/config`
-
 ```
 /config
 ```
-
-<br >
-
-### Volume
 
 **Mount Path**
 ```
 /var/run/utmp
 ```
 
-**Dataset Name**
-
-- This doesnt really matter, just make sure theres no special characters in the name
-
-```
-var
-```
-
-??? picture "Picture"
-    ![!Networking: NZBGet](images/storage_config.png)
+![!Networking: Notifiarr](images/storage.png)
 
 
-<br />
+<br >
+
+## Username and Password
+
+### Find your credentials
+
+> After you click save, the container will deploy for the first time. you absolutely need to check the logs, because your username and password will be in there. 
+
+
+View your logs
+![!Networking: Notifiarr](images/view_logs.png)
+
+
+Copy your username and password
+![!Networking: Notifiarr](images/username_password.png)
+
+
+### Set your credentials
+
+
+> After you have your username and password, you can change them in the WebGUI if you want.
+
+
+![!Networking: Notifiarr](images/reset_password.png)
