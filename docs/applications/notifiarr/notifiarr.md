@@ -35,8 +35,10 @@ DN_API_KEY
 API_KEY_FROM_NOTIFIARR.COM
 ```
 
+> The API Key needs to be an "ALL" integrations key. You can find this on your profile page on 
+[notifiarr.com](https://notifiarr.com/user.php?page=profile "Click to visit the profile page") 
+
 ??? picture "API Key Location"
-    [Link to Notifiarr Profile Page](https://notifiarr.com/user.php?page=profile "Click to visit the profile page") 
     ![](images/profile.png)
 
 <br >
@@ -55,6 +57,22 @@ DN_UPSTREAMS_0
 
 ![!ENVVAR: Notifiarr](images/env_vars.png)
 
+<br >
+
+**Name**
+```
+TMPDIR
+```
+**Value**
+```
+/tmpdir
+```
+
+> This is an optional environment variable. It is used to set the temporary directory for checking your *arr applications databases for corruption.
+
+> I highly reccomend running this and enabling the database checks on notifiarr.com
+
+![!ENVVAR: Notifiarr](images/env_vars1.png)
 
 <br />
 
@@ -85,6 +103,8 @@ DN_UPSTREAMS_0
 
 ## Storage
 
+### PVC's
+
 Here we are just going to make two Persistent Volumes. One for the config and one for utmp.
 
 **Mount Path**
@@ -98,6 +118,42 @@ Here we are just going to make two Persistent Volumes. One for the config and on
 ```
 
 ![!Networking: Notifiarr](images/storage.png)
+
+
+<br >
+
+### Host Path
+
+**Host Path**
+```
+/etc/machine-id
+```
+**Mount Path**
+```
+/etc/machine-id
+```
+
+> Also ensure *Read Only* is checked
+
+![!Networking: Notifiarr](images/storage_host_path.png)
+
+
+<br >
+
+
+### emptyDir
+
+
+**Mount Path**
+```
+/tmpdir
+```
+
+> I use EmptyDir Medium as Memory, meaning the database checks will be verified in ram. The databases are small enough (in the mb's) that this is not an issue. 
+
+> Also ensure the mount path matches the **TMPDIR** environment variable
+
+![!Networking: Notifiarr](images/storage_tmpdir.png)
 
 
 <br >
