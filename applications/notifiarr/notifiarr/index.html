@@ -657,6 +657,33 @@
     Storage
   </a>
   
+    <nav class="md-nav" aria-label="Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pvcs" class="md-nav__link">
+    PVC's
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#host-path" class="md-nav__link">
+    Host Path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emptydir" class="md-nav__link">
+    emptyDir
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1846,6 +1873,33 @@
     Storage
   </a>
   
+    <nav class="md-nav" aria-label="Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pvcs" class="md-nav__link">
+    PVC's
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#host-path" class="md-nav__link">
+    Host Path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emptydir" class="md-nav__link">
+    emptyDir
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1917,10 +1971,13 @@
 <strong>Value</strong>
 <div class="highlight"><pre><span></span><code>API_KEY_FROM_NOTIFIARR.COM
 </code></pre></div></p>
+<blockquote>
+<p>The API Key needs to be an "ALL" integrations key. You can find this on your profile page on 
+<a href="https://notifiarr.com/user.php?page=profile" title="Click to visit the profile page">notifiarr.com</a> </p>
+</blockquote>
 <details class="picture">
 <summary>API Key Location</summary>
-<p><a href="https://notifiarr.com/user.php?page=profile" title="Click to visit the profile page">Link to Notifiarr Profile Page</a> 
-<img alt="" src="../images/profile.png" /></p>
+<p><img alt="" src="../images/profile.png" /></p>
 </details>
 <p><br ></p>
 <p><strong>Name</strong>
@@ -1934,6 +1991,18 @@
 <p>You also can add your local network range here as well</p>
 </blockquote>
 <p><img alt="!ENVVAR: Notifiarr" src="../images/env_vars.png" /></p>
+<p><br ></p>
+<p><strong>Name</strong>
+<div class="highlight"><pre><span></span><code>TMPDIR
+</code></pre></div>
+<strong>Value</strong>
+<div class="highlight"><pre><span></span><code>/tmpdir
+</code></pre></div></p>
+<blockquote>
+<p>This is an optional environment variable. It is used to set the temporary directory for checking your *arr applications databases for corruption.</p>
+<p>I highly reccomend running this and enabling the database checks on notifiarr.com</p>
+</blockquote>
+<p><img alt="!ENVVAR: Notifiarr" src="../images/env_vars1.png" /></p>
 <p><br /></p>
 <h2 id="networking">Networking<a class="headerlink" href="#networking" title="Permanent link">¶</a></h2>
 <p><strong>Target Port</strong>
@@ -1951,6 +2020,7 @@
 <p><img alt="!Networking: Notifiarr" src="../images/ingress-ingress.png" /></p>
 <p><br /></p>
 <h2 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">¶</a></h2>
+<h3 id="pvcs">PVC's<a class="headerlink" href="#pvcs" title="Permanent link">¶</a></h3>
 <p>Here we are just going to make two Persistent Volumes. One for the config and one for utmp.</p>
 <p><strong>Mount Path</strong>
 <div class="highlight"><pre><span></span><code>/config
@@ -1959,6 +2029,28 @@
 <div class="highlight"><pre><span></span><code>/var/run/utmp
 </code></pre></div></p>
 <p><img alt="!Networking: Notifiarr" src="../images/storage.png" /></p>
+<p><br ></p>
+<h3 id="host-path">Host Path<a class="headerlink" href="#host-path" title="Permanent link">¶</a></h3>
+<p><strong>Host Path</strong>
+<div class="highlight"><pre><span></span><code>/etc/machine-id
+</code></pre></div>
+<strong>Mount Path</strong>
+<div class="highlight"><pre><span></span><code>/etc/machine-id
+</code></pre></div></p>
+<blockquote>
+<p>Also ensure <em>Read Only</em> is checked</p>
+</blockquote>
+<p><img alt="!Networking: Notifiarr" src="../images/storage_host_path.png" /></p>
+<p><br ></p>
+<h3 id="emptydir">emptyDir<a class="headerlink" href="#emptydir" title="Permanent link">¶</a></h3>
+<p><strong>Mount Path</strong>
+<div class="highlight"><pre><span></span><code>/tmpdir
+</code></pre></div></p>
+<blockquote>
+<p>I use EmptyDir Medium as Memory, meaning the database checks will be verified in ram. The databases are small enough (in the mb's) that this is not an issue. </p>
+<p>Also ensure the mount path matches the <strong>TMPDIR</strong> environment variable</p>
+</blockquote>
+<p><img alt="!Networking: Notifiarr" src="../images/storage_tmpdir.png" /></p>
 <p><br ></p>
 <h2 id="username-and-password">Username and Password<a class="headerlink" href="#username-and-password" title="Permanent link">¶</a></h2>
 <h3 id="find-your-credentials">Find your credentials<a class="headerlink" href="#find-your-credentials" title="Permanent link">¶</a></h3>
