@@ -801,68 +801,6 @@
 
             
           
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_3" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_5_3" id="__nav_3_5_3_label" tabindex="0">
-          Integrations
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_5_3">
-          <span class="md-nav__icon md-icon"></span>
-          Integrations
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../radarr/qbittorrent/" class="md-nav__link">
-        qBittorrent
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../nzbget.md" class="md-nav__link">
-        NZBGet
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -1007,7 +945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sonarr/in-app/" class="md-nav__link">
+      <a href="../../../in-app.md" class="md-nav__link">
         In App Settings
       </a>
     </li>
@@ -1877,9 +1815,32 @@
 <ul>
 <li>media is the dataset I created for my media here: <a href="general_guides/folder_structure/dataset.md">Folder Structure</a></li>
 <li>media is also the dataset that hosts all nested folders for my media, as shown in the tree structure here: <a href="general_guides/folder_structure/about.md#tree">Folder Structure</a></li>
-<li>Qbittorrent only needs to access the <code>/media/download/syncthing</code> folder, so I gave it access to that folder only</li>
+<li>Syncthing only needs to access the <code>/media/download/syncthing</code> folder, so I gave it access to that folder only</li>
 <li>Sonarr/Radarr will be able to hardlink files from the download directory, since they both will be seeing the folders they require</li>
 </ul>
+<details class="info">
+<summary>Syncthings Scope</summary>
+<div class="highlight"><pre><span></span><code>media (dataset) 
+├── download
+│   ├── usenet
+│   ├── syncthing &lt;Has access to everything below here&gt;
+│   └── torrent
+├── library
+│   ├── movies
+│   │     ├── anime
+│   │     ├── kids
+│   │     └── standard
+│   ├── series
+│   │     ├── anime
+│   │     ├── kids
+│   │     └── standard
+│   └── music
+│         ├── anime
+│         ├── kids
+│         └── standard
+└── backup
+</code></pre></div>
+</details>
 <p><img alt="!Storage: NZBGet" src="../images/installation/storage_data.png"></p>
 <p><br></p>
 <h2 id="vpn">VPN<a class="headerlink" href="#vpn" title="Permanent link">¶</a></h2>

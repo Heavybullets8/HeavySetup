@@ -18,7 +18,7 @@
         <link rel="prev" href="../about/">
       
       
-        <link rel="next" href="../qbittorrent/">
+        <link rel="next" href="../../recyclarr/about/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.4">
@@ -888,68 +888,6 @@
 
             
           
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_3" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_5_3" id="__nav_3_5_3_label" tabindex="0">
-          Integrations
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_5_3">
-          <span class="md-nav__icon md-icon"></span>
-          Integrations
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../qbittorrent/" class="md-nav__link">
-        qBittorrent
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../nzbget.md" class="md-nav__link">
-        NZBGet
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -1094,7 +1032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sonarr/in-app/" class="md-nav__link">
+      <a href="../../../in-app.md" class="md-nav__link">
         In App Settings
       </a>
     </li>
@@ -1815,7 +1753,7 @@
 <ul>
 <li>Available under the <code>stable</code> train</li>
 </ul>
-<p><img alt="!Container: Tube" src="images/custom-app.png"></p>
+<p><img alt="!Container: Tube" src="../images/custom-app.png"></p>
 <p><br></p>
 <h2 id="container">Container<a class="headerlink" href="#container" title="Permanent link">¶</a></h2>
 <p>I am using the <code>cr.hotio.dev/hotio/radarr</code> container</p>
@@ -1840,6 +1778,25 @@
 <li>media is also the dataset that hosts all nested folders for my media, as shown in the tree structure here: <a href="https://heavysetup.info/general_guides/folder_structure/about/#tree">Folder Structure</a></li>
 <li>Since Radarr will need to see all of the sub folders within media, I gave it access to the parent dataset</li>
 </ul>
+<details class="info">
+<summary>Radarrs Scope</summary>
+<div class="highlight"><pre><span></span><code>media (dataset) &lt;Has access to everything below here&gt;
+├── download
+│   ├── usenet
+│   ├── syncthing
+│   └── torrent
+├── library
+│   ├── movies
+│   │     ├── anime
+│   │     ├── kids
+│   │     └── standard
+│   ├── series
+│   │     ├── anime
+│   │     ├── kids
+│   │     └── standard
+│   └── music
+</code></pre></div>
+</details>
 <p><img alt="!Storage: NZBGet" src="../images/storage_data_media.png"></p>
 <p><br></p>
 <h3 id="backups">Backups<a class="headerlink" href="#backups" title="Permanent link">¶</a></h3>
