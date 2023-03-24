@@ -39,6 +39,24 @@ The setup is default
 - Qbittorrent only needs to access the `/media/download/torrent` folder, so I gave it access to that folder only
 - Sonarr/Radarr will be able to hardlink files from the download directory, since they both will be seeing the folders they require
 
+??? info "qBittorrents Scope"
+    ```
+    media (dataset) 
+    ├── download
+    │   ├── usenet
+    │   ├── syncthing
+    │   └── torrent <Has access to everything below here>
+    ├── library
+    │   ├── movies
+    │   │     ├── anime
+    │   │     ├── kids
+    │   │     └── standard
+    │   ├── series
+    │   │     ├── anime
+    │   │     ├── kids
+    │   │     └── standard
+    │   └── music
+    ```
 
 ![!Storage: NZBGet](images/storage_data.png)
 

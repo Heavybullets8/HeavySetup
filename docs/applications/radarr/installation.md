@@ -46,6 +46,25 @@ The setup is default
 - media is also the dataset that hosts all nested folders for my media, as shown in the tree structure here: [Folder Structure](https://heavysetup.info/general_guides/folder_structure/about/#tree)
 - Since Radarr will need to see all of the sub folders within media, I gave it access to the parent dataset
 
+??? info "Radarrs Scope"
+    ```
+    media (dataset) <Has access to everything below here>
+    ├── download
+    │   ├── usenet
+    │   ├── syncthing
+    │   └── torrent
+    ├── library
+    │   ├── movies
+    │   │     ├── anime
+    │   │     ├── kids
+    │   │     └── standard
+    │   ├── series
+    │   │     ├── anime
+    │   │     ├── kids
+    │   │     └── standard
+    │   └── music
+    ```
+
 ![!Storage: NZBGet](images/storage_data_media.png)
 
 <br >

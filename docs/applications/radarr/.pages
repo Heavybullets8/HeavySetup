@@ -1,6 +1,4 @@
 nav:
     - About: about.md
     - Installation: installation.md
-    - Integrations: 
-        - qBittorrent: qbittorrent.md
-        - NZBGet: nzbget.md
+
