@@ -1,9 +1,30 @@
+For this application I used the `Custom-App` provided by [TrueCharts](https://truecharts.org/manual/Quick-Start%20Guides/01-Adding-TrueCharts/).
+
+- Available under the `stable` train
+
+![!Container: Tube](images/custom-app.png)
+
+<br >
+
+
+
+## Container
+
+I am using the `cr.hotio.dev/hotio/radarr` container
+
+I also am using the `testing` tag, which is the latest version of Radarr
+
+![!Networking: qbittorrent](images/container.png)
+
+<br />
+
+
 ## Networking 
 
 
-If you are wanting to use ingress, its probably better to use clusterIP instead
+I personally use clusterIP, because I use ingress for all of my applications
 
-- I changed the UDP and TCP port to match the Mullvad ports allocated to me
+- You may want to keep this on LoadBalancer, if you are not using ingress
 
 ![!Networking: qbittorrent](images/networking.png)
 
@@ -19,10 +40,11 @@ The setup is default
 
 <br >
 
-### Media - Destination Folders
+### Media
 
-- Media is so that Radarr will have a location to place files once they're completed
-- This will be the folder Radarr places files for plex to then parse through.
+- media is the dataset I created for my media here: [Folder Structure](general_guides/folder_structure/dataset.md)
+- media is also the dataset that hosts all nested folders for my media, as shown in the tree structure here: [Folder Structure](general_guides/folder_structure/about.md#tree)
+- Since Radarr will need to see all of the sub folders within media, I gave it access to the parent dataset
 
 ![!Storage: NZBGet](images/storage_data_media.png)
 
@@ -37,29 +59,13 @@ The setup is default
 
 <br >
 
-### NZB 
 
-- This is obviously the location Radarr will look for completed NZB files
-- Its also the location NZBGet saves its completed movie files
+## Permissions
 
-![!Storage: NZBGet](images/storage_data_nzb.png)
+Again, you can bypass this step if you use the regular Truecharts version of the Radarr application
 
-<br >
+![!Storage: NZBGet](images/security_and_perms.png)
 
-### Bittorrent 
-
-- This is the location Radarr will look for completed qBittorrent files
-- Its also the location qBittorrent saves its completed movie files
-
-![!Storage: NZBGet](images/storage_data_qbit.png)
-
-<br >
-
-### Syncthing
-
-- This is the location Radarr will look for completed Syncthing files
-- Its also the location Syncthing saves its completed movie files
-
-![!Storage: NZBGet](images/storage_data_syncthing.png)
+![!Storage: NZBGet](images/security_user_group.png)
 
 <br />

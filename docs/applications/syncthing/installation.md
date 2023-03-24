@@ -12,9 +12,9 @@ For this application I used `Syncthing` provided by [TrueCharts](https://truecha
 
 ### WebUI
 
-Nothing changed here, this is just the port your app will use for its web service
+I personally use clusterIP, because I use ingress for all of my applications
 
-If you are wanting to use ingress, its probably better to use `clusterIP ` instead of `Simple`
+- You may want to keep this on LoadBalancer, if you are not using ingress
 
 ![!Networking: qbittorrent](images/installation/networking.png)
 
@@ -46,9 +46,12 @@ The setup is default
 
 ### Data
 
-I always mount to the root directory of the container
+- media is the dataset I created for my media here: [Folder Structure](general_guides/folder_structure/dataset.md)
+- media is also the dataset that hosts all nested folders for my media, as shown in the tree structure here: [Folder Structure](general_guides/folder_structure/about.md#tree)
+- Qbittorrent only needs to access the `/media/download/syncthing` folder, so I gave it access to that folder only
+- Sonarr/Radarr will be able to hardlink files from the download directory, since they both will be seeing the folders they require
 
-I also try to use the applications name for the mountpath, since its typically never going to be a file or folder thats already present 
+
 
 ![!Storage: NZBGet](images/installation/storage_data.png)
 
