@@ -76,11 +76,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://heavybullets8.github.io/HeavySetup/applications/radarr/nzbget/</loc>
-         <lastmod>2023-03-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://heavybullets8.github.io/HeavySetup/applications/radarr/qbittorrent/</loc>
          <lastmod>2023-03-24</lastmod>
          <changefreq>daily</changefreq>
