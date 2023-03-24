@@ -34,8 +34,8 @@ The setup is default
 
 ### Data
 
-- media is the dataset I created for my media here: [Folder Structure](general_guides/folder_structure/dataset.md)
-- media is also the dataset that hosts all nested folders for my media, as shown in the tree structure here: [Folder Structure](general_guides/folder_structure/about.md#tree)
+- media is the dataset I created for my media here: [Dataset Creation](https://heavysetup.info/general_guides/folder_structure/dataset/)
+- media is also the dataset that hosts all nested folders for my media, as shown in the tree structure here: [Folder Structure](https://heavysetup.info/general_guides/folder_structure/about/#tree)
 - Qbittorrent only needs to access the `/media/download/torrent` folder, so I gave it access to that folder only
 - Sonarr/Radarr will be able to hardlink files from the download directory, since they both will be seeing the folders they require
 

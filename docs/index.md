@@ -23,3 +23,11 @@ Also in the future, I would like the community to submit guides to this site as 
 This site takes a lot of inspiration from [TRaSH Guides](https://trash-guides.info/)
 
 This guide also references a lot of [TrueCharts](https://truecharts.org) guides and applications
+
+<br >
+
+## Contact
+
+If you have questions or would like to contribute, I have a sub discord category hosted on the Truecharts Discord.
+
+[https://discord.gg/tVsPTHWTtr](https://discord.gg/tVsPTHWTtr)

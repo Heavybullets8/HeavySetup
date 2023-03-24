@@ -40,8 +40,8 @@ The setup is default
 
 ### Media
 
-- media is the dataset I created for my media here: [Folder Structure](general_guides/folder_structure/dataset.md)
-- media is also the dataset that hosts all nested folders for my media, as shown in the tree structure here: [Folder Structure](general_guides/folder_structure/about.md#tree)
+- media is the dataset I created for my media here: [Dataset Creation](https://heavysetup.info/general_guides/folder_structure/dataset/)
+- media is also the dataset that hosts all nested folders for my media, as shown in the tree structure here: [Folder Structure](https://heavysetup.info/general_guides/folder_structure/about/#tree)
 - Since Sonarr will need to see all of the sub folders within media, I gave it access to the parent dataset
 
 ![!Storage: NZBGet](images/storage_data_media.png)

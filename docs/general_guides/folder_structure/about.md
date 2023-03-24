@@ -9,18 +9,18 @@ In this section I will outline my current folder structure that works with hardl
 media (dataset)
 ├── download
 │   ├── usenet
-|   ├── syncthing
+│   ├── syncthing
 │   └── torrent
 ├── library
 │   ├── movies
-│   |     ├── anime
-│   |     ├── kids
-│   |     └── standard
+│   │     ├── anime
+│   │     ├── kids
+│   │     └── standard
 │   ├── series
-│   |     ├── anime
-│   |     ├── kids
-│   |     └── standard
-|   └── music
+│   │     ├── anime
+│   │     ├── kids
+│   │     └── standard
+│   └── music
 ```
 
 The only dataset that is present is the media dataset, everything else is a folder created from the command line. 
