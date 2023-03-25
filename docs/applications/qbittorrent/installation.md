@@ -65,7 +65,7 @@ The setup is default
 ## VPN
 
 - Using a Wireguard setup
-- Added the kubernetes network, as well as my LAN network to the killswitch
+- Add your LAN network to the killswitch section (the interal 172.16.0.0/12 isn't necessary anymore)
 
 ![!Storage: NZBGet](images/vpn.png)
 
