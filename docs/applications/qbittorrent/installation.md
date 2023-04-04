@@ -65,7 +65,7 @@ The setup is default
 ## VPN
 
 - Using a Wireguard setup
-- Add your LAN network to the killswitch section (the interal 172.16.0.0/12 isn't necessary anymore)
+- Add your LAN network to the killswitch section (the internal 172.16.0.0/12 isn't necessary anymore)
 
 ![!Storage: NZBGet](images/vpn.png)
 

@@ -9,10 +9,10 @@
     | When Torrent Category changed:                 	| Relocate Torrent           	| This is to automatically move the files torrents based on catagory               	|
     | When Default Save Path changed:                	| Relocate Affected Torrents 	| This is to automatically move the files torrents based on catagory               	|
     | When Category Save Path changed:               	| Relocate Affected Torrents 	| This is to automatically move the files torrents based on catagory               	|
-    | Default Save Path:                             	| `/qbitvpn/complete `         	| Set this to what you set your dataset mountpoint as                              	|
-    | Keep incomplete torrents in:                   	| `/qbitvpn/temp`              	| Keep incomplete torrents in a folder no apps are monitoring                      	|
-    | Copy .torrent files for finished downloads to: 	| `/qbitvpn/backup`            	| Its nice to have a backup folder of all your `.torrents` in the event of a crash 	|
-    | Monitored Folder                               	| `/qbitvpn/monitor`           	| Place `.torrent` files in this directory to automatically start those torrents   	|
+    | Default Save Path:                             	| `/media/download/torrent/complete`         	| Set this to what you set your dataset mountpoint as                              	|
+    | Keep incomplete torrents in:                   	| `/media/download/torrent/temp`              	| Keep incomplete torrents in a folder no apps are monitoring                      	|
+    | Copy .torrent files for finished downloads to: 	| `/media/download/torrent/backup`            	| Its nice to have a backup folder of all your `.torrents` in the event of a crash 	|
+    | Monitored Folder                               	| `/media/download/torrent/monitor`           	| Place `.torrent` files in this directory to automatically start those torrents   	|
 
 
 ![!Downloads: qbit](images/settings_downloads.png)
