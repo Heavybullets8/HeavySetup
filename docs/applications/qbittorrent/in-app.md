@@ -1,18 +1,17 @@
 ## Downloads
 
 
-??? qBittorrent "qBittorrent Table + Explanation" 
-
-| Setting                                      | Value                                  | Explanation                                                                    |
-|----------------------------------------------|----------------------------------------|--------------------------------------------------------------------------------|
-| Default Torrent Management Mode:             | Automatic                              | Automatically move files based on category                                     |
-| When Torrent Category changed:               | Relocate Torrent                       | Automatically move files based on category                                     |
-| When Default Save Path changed:              | Relocate Affected Torrents             | Automatically move files based on category                                     |
-| When Category Save Path changed:             | Relocate Affected Torrents             | Automatically move files based on category                                     |
-| Default Save Path:                           | `/media/download/torrent/complete`     | Set to your dataset mountpoint + `/complete`                                   |
-| Keep incomplete torrents in:                 | `/media/download/torrent/temp`         | Store incomplete torrents in a folder not monitored by apps                    |
-| Copy .torrent files for finished downloads to:| `/media/download/torrent/backup`      | Backup folder for all .torrent files in case of a crash                        |
-| Monitored Folder                             | `/media/download/torrent/monitor`      | Place .torrent files here to automatically start those torrents                |
+??? qBittorrent "qBittorrent Configuration Settings" 
+    | Setting                                      | Value                                  | Explanation                                                                    |
+    |----------------------------------------------|----------------------------------------|--------------------------------------------------------------------------------|
+    | Default Torrent Management Mode:             | Automatic                              | Automatically move files based on category                                     |
+    | When Torrent Category changed:               | Relocate Torrent                       | Automatically move files based on category                                     |
+    | When Default Save Path changed:              | Relocate Affected Torrents             | Automatically move files based on category                                     |
+    | When Category Save Path changed:             | Relocate Affected Torrents             | Automatically move files based on category                                     |
+    | Default Save Path:                           | `/media/download/torrent/complete`     | Set to your dataset mountpoint + `/complete`                                   |
+    | Keep incomplete torrents in:                 | `/media/download/torrent/temp`         | Store incomplete torrents in a folder not monitored by apps                    |
+    | Copy .torrent files for finished downloads to:| `/media/download/torrent/backup`      | Backup folder for all .torrent files in case of a crash                        |
+    | Monitored Folder                             | `/media/download/torrent/monitor`      | Place .torrent files here to automatically start those torrents                |
 
 
 
