@@ -34,10 +34,19 @@ Once everything looks good remove `-n` or `--dry-run` are we are going to add `-
 
 > `-aH` retains permissions, and hardlinks while moving files recursively
 
-
 > `--progress` Shows the user the progress as `rsync` is running.
 
 > `--remove-source-files` will remove all files as they are transfered excluding folders.
+
 ```
 rsync -aH --progress --remove-source-files /mnt/old/dataset/ /mnt/new/dataset/folder
+```
+> If you get timed out during the move it's okay. In shell type `tmux a` to resume the session.
+## Renaming Dataset
+
+1.) Once all data has been moved, you are free to exit `tmux` using `exit`. You are now free to delete all remnants of the old dataset.
+
+2.) To rename the new media dataset in shell run:
+```
+zfs rename /old/dataset /new/dataset
 ```
