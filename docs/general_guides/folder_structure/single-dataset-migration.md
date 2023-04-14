@@ -5,7 +5,7 @@ This guide will help you migrate from multiple media datasets to one single data
 ## Preparing New Dataset
 
 Please See [Dataset](dataset.md) for a recommended structure of the new dataset. 
-Note: The name can be change later.
+> Note: The name can be change later.
 
 ## Moving Files to new dataset
 
@@ -30,7 +30,7 @@ rsync -aH --dryrun /mnt/old/dataset/ /mnt/new/dataset
 ```
 Append either ` | more` or ` | less` to the end to make to a bit easier if transfer a lot of files to make sure the structure stays how you want it with all files.
 
-Once everything looks good remove `-n` or `--dry-run` are we are going to add `--progress` and `--remove-source-files` to `rsync`.
+Once everything looks good remove `-n` / `--dry-run` from the command. We are then going to add `--progress` and `--remove-source-files` to `rsync`.
 
 > `-aH` retains permissions, and hardlinks while moving files recursively
 
@@ -42,11 +42,13 @@ Once everything looks good remove `-n` or `--dry-run` are we are going to add `-
 rsync -aH --progress --remove-source-files /mnt/old/dataset/ /mnt/new/dataset/folder
 ```
 > If you get timed out during the move it's okay. In shell type `tmux a` to resume the session.
+
 ## Renaming Dataset
 
 1.) Once all data has been moved, you are free to exit `tmux` using `exit`. You are now free to delete all remnants of the old dataset.
 
 2.) To rename the new media dataset in shell run:
+
 ```
 zfs rename /old/dataset /new/dataset
 ```
