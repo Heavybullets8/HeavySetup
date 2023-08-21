@@ -236,25 +236,67 @@ radarr:
 
 # Configuration specific to Sonarr
 sonarr:
-  instance_name:
+  sonarr:
     # Set the URL/API Key to your actual instance
     base_url: http://sonarrnll-custom-app.ix-sonarrnll.svc.cluster.local:8989
-    api_key: API_KEY_HERE
+    api_key: YOUR_API_KEY_HERE
 
     # Quality Definition Settings
     quality_definition:
-      type: anime
+      type: series
+
+    quality_profiles:
+      - name: Non-Anime
+        upgrade:
+          allowed: true
+          until_quality: Bluray-1080p
+          until_score: 99999
+        min_format_score: 0
+        quality_sort: top
+        qualities:
+          - name: Bluray-1080p
+          - name: WEB 1080p
+            qualities:
+              - WEBDL-1080p
+              - WEBRip-1080p
+          - name: Bluray-720p
+          - name: WEB 720p
+            qualities:
+              - WEBDL-720p
+              - WEBRip-720p
+          - name: HDTV-1080p
+          - name: HDTV-720p
+          - name: Bluray-480p
+          - name: DVD
+          - name: WEB 480p
+            qualities:
+              - WEBDL-480p
+              - WEBRip-480p
+          - name: SDTV
+
+      - name: Anime
+        upgrade:
+          allowed: true
+          until_quality: Combined 1080p
+          until_score: 99999
+        min_format_score: 0
+        quality_sort: top
+        qualities:
+          - name: Combined 1080p
+            qualities:
+              - WEBDL-1080p
+              - HDTV-1080p
+              - WEBRip-1080p
+              - Bluray-1080p
 
     # Custom Format Settings
-    delete_old_custom_formats: true
+    # delete_old_custom_formats: true
     custom_formats:
       - trash_ids:
-
           # [No Category]
           - 290078c8b266272a5cc8e251b5e2eb0b # 1080p
           - 1bef6c151fa35093015b0bfef18279e5 # 2160p
-#          - 180c1f36241300dc27ff42918a81e9e3 # FR Anime Tier Optional
-
+          #          - 180c1f36241300dc27ff42918a81e9e3 # FR Anime Tier Optional
 
           # Audio Advanced #1
           - b6fbafa7942952a13e17e2b1152b539a # ATMOS (undefined)
@@ -287,30 +329,30 @@ sonarr:
           - a377864de6228b252d6e28962673cedd # 9.1 Surround
 
           # French Audio Version
-#          - 84f0acbda9c0c9de783894fb66df25aa # FanSUB
-#          - ea0bb4b6ba388992fad1092703b5ff7b # FastSUB
-#          - 4721382d9ee05f1b4967a25e75072911 # French Audio
-#          - 2f6e84efc47246ec9071e311e71c4953 # Multi-Audio
-#          - 7982e39789f17864f57b11f1996844f4 # Multi-French
-#          - 0ce1e39a4676c6692ce47935278dac76 # VFB
-#          - 2c29a39a4fdfd6d258799bc4c09731b9 # VFF
-#          - b6816a0e1d4b64bf3550ad3b74b009b6 # VFI
-#          - 7a7f4e4f58bd1058440236d033a90b67 # VFQ
-#          - 7ae924ee9b2f39df3283c6c0beb8a2aa # VOF
-#          - 07a32f77690263bb9fda1842db7e273f # VOSTFR
-#          - 82085412d9a53ba8d8e46fc624eb701d # VQ
+          #          - 84f0acbda9c0c9de783894fb66df25aa # FanSUB
+          #          - ea0bb4b6ba388992fad1092703b5ff7b # FastSUB
+          #          - 4721382d9ee05f1b4967a25e75072911 # French Audio
+          #          - 2f6e84efc47246ec9071e311e71c4953 # Multi-Audio
+          #          - 7982e39789f17864f57b11f1996844f4 # Multi-French
+          #          - 0ce1e39a4676c6692ce47935278dac76 # VFB
+          #          - 2c29a39a4fdfd6d258799bc4c09731b9 # VFF
+          #          - b6816a0e1d4b64bf3550ad3b74b009b6 # VFI
+          #          - 7a7f4e4f58bd1058440236d033a90b67 # VFQ
+          #          - 7ae924ee9b2f39df3283c6c0beb8a2aa # VOF
+          #          - 07a32f77690263bb9fda1842db7e273f # VOSTFR
+          #          - 82085412d9a53ba8d8e46fc624eb701d # VQ
 
           # French Source Groups
-#          - 44b6c964dad997577d793fd004a39224 # FR Anime FanSub
-#          - db13a377f7afb29975ea39470434d2ef # FR Anime Tier 01
-#          - 4e6134a384dbc0ef166234cc0e45d26d # FR Anime Tier 02
-#          - d844321db5e126d2e7e46152f0706532 # FR HD Bluray Tier 01
-#          - 3ba797e5dc13af4b8d9bb25e83d90de2 # FR LQ
-#          - b8e91cc8fb2bd96468fab74730c30d18 # FR Remux Tier 01
-#          - 2f3422339d185eb227a324644a2fbfca # FR Scene Groups
-#          - ddb8eaa9c85a549c50034d280539d54d # FR WEB Tier 01
-#          - a4c51febd4d8b2a0db10a3c974f21d92 # FR WEB Tier 02
-#          - dbfc0a4b5cb4cbd693311c4482ae9683 # FR WEB Tier 03
+          #          - 44b6c964dad997577d793fd004a39224 # FR Anime FanSub
+          #          - db13a377f7afb29975ea39470434d2ef # FR Anime Tier 01
+          #          - 4e6134a384dbc0ef166234cc0e45d26d # FR Anime Tier 02
+          #          - d844321db5e126d2e7e46152f0706532 # FR HD Bluray Tier 01
+          #          - 3ba797e5dc13af4b8d9bb25e83d90de2 # FR LQ
+          #          - b8e91cc8fb2bd96468fab74730c30d18 # FR Remux Tier 01
+          #          - 2f3422339d185eb227a324644a2fbfca # FR Scene Groups
+          #          - ddb8eaa9c85a549c50034d280539d54d # FR WEB Tier 01
+          #          - a4c51febd4d8b2a0db10a3c974f21d92 # FR WEB Tier 02
+          #          - dbfc0a4b5cb4cbd693311c4482ae9683 # FR WEB Tier 03
 
           # HDR Formats
           - 6d0d8de7b57e35518ac0308b0ddf404e # DV
@@ -353,7 +395,7 @@ sonarr:
           - e1a997ddb54e3ecbfe06341ad323c458 # Obfuscated
           - 06d66ab109d4d2eddb2794d21526d140 # Retags
           - 2016d1676f5ee13a5b7257ff86ac9a93 # SDR
-#          - 1b3994c551cbb92a2c781af061f4ab44 # Scene
+          #          - 1b3994c551cbb92a2c781af061f4ab44 # Scene
           - 3bc5f395426614e155e585a2f056cdf1 # Season Pack
           - 9b64dff695c2115facf1b6ea59c9bd07 # x265 (no HDR/DV)
 
@@ -387,12 +429,12 @@ sonarr:
           # Unwanted
           - 85c61753df5da1fb2aab6f2a47426b09 # BR-DISK
           - 9c11cd3f07101cdba90a2d81cf0e56b4 # LQ
-#          - 47435ece6b99a0b477caf360e79ba0bb # x265 (HD)
+          #          - 47435ece6b99a0b477caf360e79ba0bb # x265 (HD)
+          - 6f808933a71bd9666531610cb8c059cc # BR-DISK (BTN)
         quality_profiles:
           - name: Non-Anime
 
-
-### Anime ###
+      ### Anime ###
       - trash_ids:
           # Anime Misc/Streaming Services
           - d54cd2bf1326287275b56bccedb72ee2 # ADN
@@ -428,33 +470,84 @@ sonarr:
           - dc262f88d74c651b12e9d90b39f6c753 # Anime Web Tier 06 (FanSubs)
           # Anime Optional
           - b2550eb333d27b75833e25b8c2557b38 # 10bit
-          - 418f50b10f1907201b6cfdf881f467b7 # Anime Dual Audio
-#          - 9c14d194486c4014d422adc64092d794 # Dubs Only
           - 026d5aadd1a6b4e550b134cb6c72b3ca # Uncensored
         quality_profiles:
           - name: Anime
 
+      # Dual Audio
+      - trash_ids:
+          - 418f50b10f1907201b6cfdf881f467b7 # Anime Dual Audio
+        quality_profiles:
+          - name: Anime
+            score: 2000
 
-
-
+      # Dubs Only
+      - trash_ids:
+          - 9c14d194486c4014d422adc64092d794 # Dubs Only
+        quality_profiles:
+          - name: Anime
+            score: 1900
 
 # Configuration specific to Radarr.
 radarr:
-  instance_name:
+  radarr:
     # Set the URL/API Key to your actual instance
-    base_url: http://radarrnl-custom-app.ix-radarrnl.svc.cluster.local:7878
-    api_key: API_KEY_HERE
+    base_url: http://radarr.ix-radarr.svc.cluster.local:7878
+    api_key: YOUR_API_KEY_HERE
 
     # Which quality definition in the guide to sync to Radarr. Only choice right now is 'movie'
     quality_definition:
       type: movie
+
+    quality_profiles:
+      - name: Non-Anime
+        upgrade:
+          allowed: true
+          until_quality: Bluray-1080p
+          until_score: 99999
+        min_format_score: 0
+        quality_sort: top
+        qualities:
+          - name: Bluray-1080p
+          - name: WEB 1080p
+            qualities:
+              - WEBDL-1080p
+              - WEBRip-1080p
+          - name: Bluray-720p
+          - name: WEB 720p
+            qualities:
+              - WEBDL-720p
+              - WEBRip-720p
+          - name: HDTV-1080p
+          - name: HDTV-720p
+          - name: Bluray-480p
+          - name: DVD
+          - name: WEB 480p
+            qualities:
+              - WEBDL-480p
+              - WEBRip-480p
+          - name: SDTV
+
+      - name: Anime
+        upgrade:
+          allowed: true
+          until_quality: Combined 1080p
+          until_score: 99999
+        min_format_score: 0
+        quality_sort: top
+        qualities:
+          - name: Combined 1080p
+            qualities:
+              - WEBDL-1080p
+              - HDTV-1080p
+              - WEBRip-1080p
+              - Bluray-1080p
 
     # Set to 'true' to automatically remove custom formats from Radarr when they are removed from
     # the guide or your configuration. This will NEVER delete custom formats you manually created!
     delete_old_custom_formats: true
     custom_formats:
       - trash_ids:
-
           # [No Category]
           - 820b09bb9acbfde9c35c71e0e565dad8 # 1080p
           - fb392fb0d61a010ae38e49ceaa24a1ef # 2160p
@@ -495,28 +588,28 @@ radarr:
           - f2aacebe2c932337fe352fa6e42c1611 # 9.1 Surround
 
           # French Audio Version
-#          - 6d27683346c78d6a3f772e30877910a7 # French Audio
-#          - 72b1548df1ac3175ca105a9ce7043c91 # Multi-Audio
-#          - d5f3a1afdb77e6b95e489f7654532d04 # Multi-French
-#          - b3fb499641d7b3c2006be1d9eb014cb3 # VFB
-#          - 404c08fd0bd67f39b4d8e5709319094e # VFF
-#          - 52772f1cad6b5d26c2551f79bc538a50 # VFI
-#          - b6ace47331a1d3b77942fc18156f6df6 # VFQ
-#          - 4cafa20d5584f6ba1871d1b8941aa3cb # VOF
-#          - 9172b2f683f6223e3a1846427b417a3d # VOSTFR
-#          - 95aa50f71a01c82354a7a2b385f1c4d8 # VQ
+          #          - 6d27683346c78d6a3f772e30877910a7 # French Audio
+          #          - 72b1548df1ac3175ca105a9ce7043c91 # Multi-Audio
+          #          - d5f3a1afdb77e6b95e489f7654532d04 # Multi-French
+          #          - b3fb499641d7b3c2006be1d9eb014cb3 # VFB
+          #          - 404c08fd0bd67f39b4d8e5709319094e # VFF
+          #          - 52772f1cad6b5d26c2551f79bc538a50 # VFI
+          #          - b6ace47331a1d3b77942fc18156f6df6 # VFQ
+          #          - 4cafa20d5584f6ba1871d1b8941aa3cb # VOF
+          #          - 9172b2f683f6223e3a1846427b417a3d # VOSTFR
+          #          - 95aa50f71a01c82354a7a2b385f1c4d8 # VQ
 
           # French Source Groups
-#          - 5322da05b19d857acc1e75be3edf47b3 # FR HD Bluray Tier 01
-#          - 57f34251344be2e283fc30e00e458be6 # FR HD Bluray Tier 02
-#          - 48f031e76111f17ea94898f4cdc34fdc # FR LQ
-#          - 5583260016e0b9f683f53af41fb42e4a # FR Remux Tier 01
-#          - 9019d81307e68cd4a7eb06a567e833b8 # FR Remux Tier 02
-#          - 0d94489c0d5828cd3bf9409d309fb32b # FR Scene Groups
-#          - 64f8f12bbf7472a6ccf838bfd6b5e3e8 # FR UHD Bluray Tier 01
-#          - 0dcf0c8a386d82e3f2d424189af14065 # FR UHD Bluray Tier 02
-#          - 9790a618cec1aeac8ce75601a17ea40d # FR WEB Tier 01
-#          - 3c83a765f84239716bd5fd2d7af188f9 # FR WEB Tier 02
+          #          - 5322da05b19d857acc1e75be3edf47b3 # FR HD Bluray Tier 01
+          #          - 57f34251344be2e283fc30e00e458be6 # FR HD Bluray Tier 02
+          #          - 48f031e76111f17ea94898f4cdc34fdc # FR LQ
+          #          - 5583260016e0b9f683f53af41fb42e4a # FR Remux Tier 01
+          #          - 9019d81307e68cd4a7eb06a567e833b8 # FR Remux Tier 02
+          #          - 0d94489c0d5828cd3bf9409d309fb32b # FR Scene Groups
+          #          - 64f8f12bbf7472a6ccf838bfd6b5e3e8 # FR UHD Bluray Tier 01
+          #          - 0dcf0c8a386d82e3f2d424189af14065 # FR UHD Bluray Tier 02
+          #          - 9790a618cec1aeac8ce75601a17ea40d # FR WEB Tier 01
+          #          - 3c83a765f84239716bd5fd2d7af188f9 # FR WEB Tier 02
 
           # HDR Formats
           - 58d6a88f13e2db7f5059c41047876f00 # DV
@@ -543,8 +636,8 @@ radarr:
           - af94e0fe497124d1f9ce732069ec8c3b # WEB Tier 03
 
           # Misc
-#          - 9de657fd3d327ecf144ec73dfe3a3e9a # Dutch Groups
-#          - 0d91270a7255a1e388fa85e959f359d8 # FreeLeech
+          #          - 9de657fd3d327ecf144ec73dfe3a3e9a # Dutch Groups
+          #          - 0d91270a7255a1e388fa85e959f359d8 # FreeLeech
           - ff86c4326018682f817830ced463332b # MPEG2
           - 4b900e171accbfb172729b63323ea8ca # Multi
           - e7718d7a3ce595f289bfee26adc178f5 # Repack/Proper
@@ -599,12 +692,12 @@ radarr:
           - ed38b889b31be83fda192888e2286d83 # BR-DISK
           - 90a6f9a284dff5103f6346090e6280c8 # LQ
           - bfd8eb01832d646a0a89c4deb46f8564 # Upscaled
-#          - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
+        #          - dc98083864ea246d05a42df0d05f81cc # x265 (HD)
+
         quality_profiles:
           - name: Non-Anime
 
-
-### Anime ###
+      ### Anime ###
       - trash_ids:
           # Anime
           - fb3ccc5d5cc8f77c9055d4cb4561dded # Anime BD Tier 01 (Top SeaDex Muxers)
@@ -632,9 +725,20 @@ radarr:
 
           # Anime Optional
           - a5d148168c4506b55cf53984107c396e # 10bit
-          - 4a3b087eea2ce012fcc1ce319259a3be # Anime Dual Audio
-#          - b23eae459cc960816f2d6ba84af45055 # Dubs Only
           - 064af5f084a0a24458cc8ecd3220f93f # Uncensored
         quality_profiles:
           - name: Anime
+      #Dual Audio
+      - trash_ids:
+          - 4a3b087eea2ce012fcc1ce319259a3be # Anime Dual Audio
+        quality_profiles:
+          - name: Anime
+            score: 2000
+
+      # Dubs Only
+      - trash_ids:
+          - b23eae459cc960816f2d6ba84af45055 # Dubs Only
+        quality_profiles:
+          - name: Anime
+            score: 1900
 ```
