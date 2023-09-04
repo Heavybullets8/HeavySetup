@@ -234,11 +234,19 @@ radarr:
 # For more details on the configuration, see the Configuration Reference on the wiki here:
 # https://recyclarr.dev/wiki/reference/config-reference
 
-# Configuration specific to Sonarr
+#
+#   _______   ____   ____  _____      __      _______    _______    
+#  /  ___  |.'    \.|_   \|_   _|    /  \    |_   __ \  |_   __ \   
+# |  (__ \_|  .--.  \ |   \ | |     / /\ \     | |__) |   | |__) |  
+#  '.___\-.| |    | | | |\ \| |    / ____ \    |  __ /    |  __ /   
+# |\\____) |  \--'  /_| |_\   |_ _/ /    \ \_ _| |  \ \_ _| |  \ \_ 
+# |_______.'\.____.'|_____|\____|____|  |____|____| |___|____| |___|
+#
+#
 sonarr:
   sonarr:
     # Set the URL/API Key to your actual instance
-    base_url: http://sonarrnll-custom-app.ix-sonarrnll.svc.cluster.local:8989
+    base_url: http://YOUR_URL_HERE:8989
     api_key: YOUR_API_KEY_HERE
 
     # Quality Definition Settings
@@ -296,7 +304,7 @@ sonarr:
           # [No Category]
           - 290078c8b266272a5cc8e251b5e2eb0b # 1080p
           - 1bef6c151fa35093015b0bfef18279e5 # 2160p
-          #          - 180c1f36241300dc27ff42918a81e9e3 # FR Anime Tier Optional
+          - 5d9fd1b1e06cd8a475462f40214b7df6 # FLUX
 
           # Audio Advanced #1
           - b6fbafa7942952a13e17e2b1152b539a # ATMOS (undefined)
@@ -391,14 +399,17 @@ sonarr:
           - ef4963043b0987f8485bc9106f16db38 # DV (FEL)
           - 9b27ab6498ec0f31a3353992e19434ca # DV (WEBDL)
           - 0dad0a507451acddd754fe6dc3a7f5e7 # HDR10+ Boost
+          - 1bd69272e23c5e6c5b1d6c8a36fce95e # HFR
           - 82d40da2bc6923f41e14394075dd4b03 # No-RlsGroup
           - e1a997ddb54e3ecbfe06341ad323c458 # Obfuscated
           - 06d66ab109d4d2eddb2794d21526d140 # Retags
           - 2016d1676f5ee13a5b7257ff86ac9a93 # SDR
-          #          - 1b3994c551cbb92a2c781af061f4ab44 # Scene
+          # - 1b3994c551cbb92a2c781af061f4ab44 # Scene
           - 3bc5f395426614e155e585a2f056cdf1 # Season Pack
+          - 90501962793d580d011511155c97e4e5 # VP9
           - 9b64dff695c2115facf1b6ea59c9bd07 # x265 (no HDR/DV)
-
+          
+          
           # Series Versions
           - 3a4127d8aa781b44120d907f2cd62627 # Hybrid
           - b735f09d3c025cbb7d75a5d38325b73b # Remaster
@@ -408,13 +419,16 @@ sonarr:
           - f67c9ca88f463a48346062e8ad07713f # ATVP
           - f27d46a831e6b16fa3fee2c4e5d10984 # CANAL+
           - 77a7b25585c18af08f60b1547bb9b4fb # CC
+          - 4e9a630db98d5391aec1368a0256e2fe # CRAV
           - 36b72f59f4ea20aad9316f475f2d9fbb # DCU
           - 89358767a60cc28783cdc3d0be9388a4 # DSNP
           - 7a235133c87f7da4c8cccceca7e3c7a6 # HBO
           - a880d6abc21e7c16884f3ae393f84179 # HMAX
           - f6cce30f1733d5c8194222a7507909bb # HULU
+          - 81d1fbf600e2540cee87f3a23f9d3c1c # MAX
           - d34870697c9db575f17700212167be23 # NF
           - b2b980877494b560443631eb1f473867 # NLZ
+          - fb1a91cdc0f26f7ca0696e0e95274645 # OViD
           - 1656adc6d7bb2c8cca6acfb6592db421 # PCOK
           - c67a75ae4a1715f2bb4d492755ba4195 # PMTP
           - 3ac5d84fce98bab1b531393e9c82f467 # QIBI
@@ -423,14 +437,18 @@ sonarr:
           - 0455d6519a550dbf648c97b56e7231d2 # SALTO
           - ae58039e1319178e6be73caab5c42166 # SHO
           - 1efe8da11bfd74fbbcd4d8117ddb9213 # STAN
+          - 43b3cf48cb385cd3eac608ee6bca7f09 # UHD Streaming Boost
+          - d2d299244a92b8a52d4921ce3897a256 # UHD Streaming Cut
           - 5d2317d99af813b6529c7ebf01c83533 # VDL
           - 0ac24a2a68a9700bcb7eeca8e5cd644c # iT
 
           # Unwanted
           - 85c61753df5da1fb2aab6f2a47426b09 # BR-DISK
-          - 9c11cd3f07101cdba90a2d81cf0e56b4 # LQ
-          #          - 47435ece6b99a0b477caf360e79ba0bb # x265 (HD)
           - 6f808933a71bd9666531610cb8c059cc # BR-DISK (BTN)
+          - 9c11cd3f07101cdba90a2d81cf0e56b4 # LQ
+          - fbcb31d8dabd2a319072b84fc0b7249c # Extras
+          # - 47435ece6b99a0b477caf360e79ba0bb # x265 (HD)
+
         quality_profiles:
           - name: Non-Anime
 
@@ -488,11 +506,25 @@ sonarr:
           - name: Anime
             score: 1900
 
-# Configuration specific to Radarr.
+      # Only French Subs
+      - trash_ids:
+          - 07a32f77690263bb9fda1842db7e273f # VOSTFR
+        quality_profiles:
+          - name: Anime
+            score: -10000
+
+#
+#  _______         __      ________        __      _______    _______    
+# |_   __ \       /  \    |_   ___ \.     /  \    |_   __ \  |_   __ \   
+#   | |__) |     / /\ \     | |   \. \   / /\ \     | |__) |   | |__) |  
+#   |  __ /     / ____ \    | |    | |  / ____ \    |  __ /    |  __ /   
+#  _| |  \ \_ _/ /    \ \_ _| |___.' /_/ /    \ \_ _| |  \ \_ _| |  \ \_ 
+# |____| |___|____|  |____|________.'|____|  |____|____| |___|____| |___|
+#
 radarr:
   radarr:
     # Set the URL/API Key to your actual instance
-    base_url: http://radarr.ix-radarr.svc.cluster.local:7878
+    base_url: http://YOUR_URL_HERE:7878
     api_key: YOUR_API_KEY_HERE
 
     # Which quality definition in the guide to sync to Radarr. Only choice right now is 'movie'
@@ -554,6 +586,7 @@ radarr:
           - b2be17d608fc88818940cd1833b0b24c # 720p
           - 5153ec7413d9dae44e24275589b5e944 # BHDStudio
           - 0a3f082873eb454bde444150b70253cc # Extras
+          - e098247bc6652dd88c76644b275260ed # FLUX
           - ff5bc9e8ce91d46c997ca3ac6994d6f8 # FraMeSToR
           - 8cd3ac70db7ac318cf9a0e01333940a4 # SiC
 
@@ -588,28 +621,31 @@ radarr:
           - f2aacebe2c932337fe352fa6e42c1611 # 9.1 Surround
 
           # French Audio Version
-          #          - 6d27683346c78d6a3f772e30877910a7 # French Audio
-          #          - 72b1548df1ac3175ca105a9ce7043c91 # Multi-Audio
-          #          - d5f3a1afdb77e6b95e489f7654532d04 # Multi-French
-          #          - b3fb499641d7b3c2006be1d9eb014cb3 # VFB
-          #          - 404c08fd0bd67f39b4d8e5709319094e # VFF
-          #          - 52772f1cad6b5d26c2551f79bc538a50 # VFI
-          #          - b6ace47331a1d3b77942fc18156f6df6 # VFQ
-          #          - 4cafa20d5584f6ba1871d1b8941aa3cb # VOF
-          #          - 9172b2f683f6223e3a1846427b417a3d # VOSTFR
-          #          - 95aa50f71a01c82354a7a2b385f1c4d8 # VQ
+          # - 02e48d30a176c91baf9e15de05e5dc6a # FanSUB
+          # - 7f9b93f82b7e996391525f2be1d891e0 # FastSUB
+          # - 6d27683346c78d6a3f772e30877910a7 # French Audio
+          # - 72b1548df1ac3175ca105a9ce7043c91 # Multi-Audio
+          # - d5f3a1afdb77e6b95e489f7654532d04 # Multi-French
+          # - 29b5f7b1a5f20f64228786c3ab1bdc7d # VF2
+          # - b3fb499641d7b3c2006be1d9eb014cb3 # VFB
+          # - 404c08fd0bd67f39b4d8e5709319094e # VFF
+          # - 52772f1cad6b5d26c2551f79bc538a50 # VFI
+          # - b6ace47331a1d3b77942fc18156f6df6 # VFQ
+          # - 4cafa20d5584f6ba1871d1b8941aa3cb # VOF
+          # - 9172b2f683f6223e3a1846427b417a3d # VOSTFR
+          # - 95aa50f71a01c82354a7a2b385f1c4d8 # VQ
 
-          # French Source Groups
-          #          - 5322da05b19d857acc1e75be3edf47b3 # FR HD Bluray Tier 01
-          #          - 57f34251344be2e283fc30e00e458be6 # FR HD Bluray Tier 02
-          #          - 48f031e76111f17ea94898f4cdc34fdc # FR LQ
-          #          - 5583260016e0b9f683f53af41fb42e4a # FR Remux Tier 01
-          #          - 9019d81307e68cd4a7eb06a567e833b8 # FR Remux Tier 02
-          #          - 0d94489c0d5828cd3bf9409d309fb32b # FR Scene Groups
-          #          - 64f8f12bbf7472a6ccf838bfd6b5e3e8 # FR UHD Bluray Tier 01
-          #          - 0dcf0c8a386d82e3f2d424189af14065 # FR UHD Bluray Tier 02
-          #          - 9790a618cec1aeac8ce75601a17ea40d # FR WEB Tier 01
-          #          - 3c83a765f84239716bd5fd2d7af188f9 # FR WEB Tier 02
+          # # French Source Groups
+          # - 5322da05b19d857acc1e75be3edf47b3 # FR HD Bluray Tier 01
+          # - 57f34251344be2e283fc30e00e458be6 # FR HD Bluray Tier 02
+          # - 48f031e76111f17ea94898f4cdc34fdc # FR LQ
+          # - 5583260016e0b9f683f53af41fb42e4a # FR Remux Tier 01
+          # - 9019d81307e68cd4a7eb06a567e833b8 # FR Remux Tier 02
+          # - 0d94489c0d5828cd3bf9409d309fb32b # FR Scene Groups
+          # - 64f8f12bbf7472a6ccf838bfd6b5e3e8 # FR UHD Bluray Tier 01
+          # - 0dcf0c8a386d82e3f2d424189af14065 # FR UHD Bluray Tier 02
+          # - 9790a618cec1aeac8ce75601a17ea40d # FR WEB Tier 01
+          # - 3c83a765f84239716bd5fd2d7af188f9 # FR WEB Tier 02
 
           # HDR Formats
           - 58d6a88f13e2db7f5059c41047876f00 # DV
@@ -626,8 +662,10 @@ radarr:
           # HQ Release Groups
           - ed27ebfef2f323e964fb1f61391bcb35 # HD Bluray Tier 01
           - c20c8647f2746a1f4c4262b0fbbeeeae # HD Bluray Tier 02
+          - 5608c71bcebba0a5e666223bae8c9227 # HD Bluray Tier 03
           - 3a3ff47579026e76d6504ebea39390de # Remux Tier 01
           - 9f98181fe5a3fbeb0cc29340da2a468a # Remux Tier 02
+          - 8baaf0b3142bf4d94c42a724f034e27a # Remux Tier 03
           - 4d74ac4c4db0b64bff6ce0cffef99bf0 # UHD Bluray Tier 01
           - a58f517a70193f8e578056642178419d # UHD Bluray Tier 02
           - e71939fae578037e7aed3ee219bbe7c1 # UHD Bluray Tier 03
@@ -656,6 +694,7 @@ radarr:
           - 570bc9ebecd92723d2d21500f4be314c # Remaster
           - 957d0f44b592285f26449575e8b1167e # Special Edition
           - e9001909a4c88013a359d0b9920d7bea # Theatrical Cut
+          - db9b4c4b53d312a3ca5f1378f6440fc9 # Vinegar Syndrome
 
           # Optional
           - cae4ca30163749b891686f95532519bd # AV1
@@ -664,24 +703,30 @@ radarr:
           - 923b6abef9b17f937fab56cfcf89e1f1 # DV (WEBDL)
           - 90cedc1fea7ea5d11298bebd3d1d3223 # EVO (no WEBDL)
           - b17886cb4158d9fea189859409975758 # HDR10+ Boost
+          - 73613461ac2cea99d52c4cd6e177ab82 # HFR
           - c465ccc73923871b3eb1802042331306 # Line/Mic Dubbed
           - ae9b7c9ebde1f3bd336a8cbd1ec4c5e5 # No-RlsGroup
           - 7357cf5161efbf8c4d5d0c30b4815ee2 # Obfuscated
           - 5c44f52a8714fdd79bb4d98e2673be1f # Retags
           - 9c38ebb7384dada637be8899efa68e6f # SDR
           - f537cf427b64c38c8e36298f657e4828 # Scene
+          - ae4cfaa9283a4f2150ac3da08e388723 # VP9
           - 839bea857ed2c0a8e084f3cbdbd65ecb # x265 (no HDR/DV)
 
           # Streaming Services
           - b3b3a6ac74ecbd56bcdbefa4799fb9df # AMZN
           - 40e9380490e748672c2522eaaeb692f7 # ATVP
           - cc5e51a9e85a6296ceefe097a77f12f4 # BCORE
+          - f6ff65b3f4b464a79dcc75950fe20382 # CRAV
+          - 16622a6911d1ab5d5b8b713d5b0036d4 # CRiT
           - 84272245b2988854bfb76a16e60baea5 # DSNP
           - 509e5f41146e278f9eab1ddaceb34515 # HBO
           - 5763d1b0ce84aff3b21038eea8e9b8ad # HMAX
           - 526d445d4c16214309f0fd2b3be18a89 # Hulu
           - 2a6039655313bf5dab1e43523b62c374 # MA
+          - 6a061313d22e51e0f25b7cd4dc065233 # MAX
           - 170b1d363bd8516fbf3a3eb05d4faff6 # NF
+          - fbca986396c5e695ef7b2def3c755d01 # OViD
           - c9fd353f8f5f1baf56dc601c4cb29920 # PCOK
           - e36a0ba1bc902b26ee40818a1d59b8bd # PMTP
           - bf7e73dd1d85b12cc527dc619761c840 # Pathe
@@ -741,4 +786,11 @@ radarr:
         quality_profiles:
           - name: Anime
             score: 1900
+
+      # Only French Subs
+      - trash_ids:
+          - 9172b2f683f6223e3a1846427b417a3d # VOSTFR
+        quality_profiles:
+          - name: Anime
+            score: -10000
 ```
