@@ -8,33 +8,64 @@ All it does is sends a command to the container
 
 ```bash
 #!/bin/bash
+set -e
 
-# Application Name Here:
-app_name='nextcloud'
+# Variables: Please fill these out before running the script.
 
-# Container Name Here:
-container='hpb'
-# You may not need this, if that is the case, comment it out, Then delete the `--container "$container"` in the last line below, chances are you don't need it. 
+# app_name: The name of the application you are targeting.
+# Example: "nextcloud"
+app_name="nextcloud"
 
+# container: The specific container within the pod you are targeting.
+# Leave this blank if you want to target the pod itself.
+# Example: "web-server"
+container="hpb"
 
-# Command to Container/Pod here:
-command='php occ files:scan --all'
+# command: The command you want to run inside the container or pod.
+# NOTE: If the command includes special characters, you will need to escape them.
+# Example: "ls -la" or "echo \"Hello, World!\""
+command="php occ files:scan --all"
 
+# ignore: A pipe-separated list of pod or container names to ignore.
+# These names will be excluded from the selection of target pods.
+# Example: "mariadb|redis|postgres"
+ignore="mariadb|redis|postgres|memcached|cron|coredns|nvidia|openebs|cnpg"
 
-# Note: if the command has single quotes in it, you will have
-# to switch to double quotes and escape all the special characters between the double quotes
-# More info here: https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_03.html
+# Functions (No changes needed below this line)
+get_namespace() {
+    k3s kubectl get namespaces | awk '{print $1}' | grep -i ^ix-"$1" || echo "Are you sure, you used the right app name?" >&2
+}
 
+get_pod() {
+    k3s kubectl get -n "$1" pods --field-selector=status.phase=Running --no-headers | awk '{print $1}' | grep -oE ^"$2-[[:alnum:]]{9,10}-[[:alnum:]]{5}" | grep -iEv "$3" | head -n 1
+}
 
-#ignored dependency pods, No change required
-ignore="mariadb|redis|postgres|memcached|cron|coredns|nvidia|openebs"
+check_container() {
+    [ -n "$1" ] && k3s kubectl get -n "$2" pod "$3" -o=jsonpath="{.spec.containers[*].name}" | grep -w "$1" || echo ""
+}
 
-namespace=$(k3s kubectl get namespaces | awk '{print $1}' | grep -i ^ix-"$app_name"$ || echo "Are you sure, you used the right app name?")
+# Main script
+namespace=$(get_namespace "$app_name")
 
-pod=$(k3s kubectl get -n "$namespace" pods | awk '{print $1}' | grep ^"$app_name" | grep -Ev "$ignore")
+if [ -z "$namespace" ]; then
+    echo "Namespace for the app not found. Exiting." >&2
+    exit 1
+fi
 
-k3s kubectl exec -n "$namespace" --stdin --tty "$pod" --container "$container" -- $command
+pod=$(get_pod "$namespace" "$app_name" "$ignore")
 
+if [ -z "$pod" ]; then
+    echo "Pod for the app not found. Exiting." >&2
+    exit 1
+fi
+
+container_exists=$(check_container "$container" "$namespace" "$pod")
+
+if [ -n "$container_exists" ]; then
+    k3s kubectl exec -n "$namespace" "$pod" --container "$container" -- $command
+else
+    k3s kubectl exec -n "$namespace" "$pod" -- $command
+fi
 ```
 
 > This specific example will send the command `php occ files:scan --all` to Nextcloud's `hpb` container (which will then re-scan all of the files, adding them to the WEB-GUI if they are not already there)
