@@ -26,7 +26,7 @@ tmux
 Dry Run Examples:
 ```
 rsync -aHn /mnt/old/dataset/ /mnt/new/dataset
-rsync -aH --dryrun /mnt/old/dataset/ /mnt/new/dataset
+rsync -aH --dry-run /mnt/old/dataset/ /mnt/new/dataset
 ```
 Append either ` | more` or ` | less` to the end to make to a bit easier if transfer a lot of files to make sure the structure stays how you want it with all files.
 
