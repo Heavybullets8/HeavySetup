@@ -37,6 +37,7 @@ The setup is default
 - media is the dataset I created for my media here: [Dataset Creation](https://heavysetup.info/general_guides/folder_structure/dataset/)
 - media is also the dataset that hosts all nested folders for my media, as shown in the tree structure here: [Folder Structure](https://heavysetup.info/general_guides/folder_structure/about/#tree)
 - Qbittorrent only needs to access the `/media/download/torrent` folder, so I gave it access to that folder only
+--NOTE-- If you are using a path that is shared with an SMB share, the app will get stuck deploying. The work around is to turn off the share for that path, launch the app, after it successfully deploys you can turn the SMB share back on.
 - Sonarr/Radarr will be able to hardlink files from the download directory, since they both will be seeing the folders they require
 
 ??? info "qBittorrents Scope"
